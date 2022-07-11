@@ -1,0 +1,45 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ScrapeWhatsNew
+{
+    public class DescriptionRow
+    {
+        public string NodeName { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string ContactName { get; set; }
+        public string EmailAddress { get; set; }
+        public string ImageFileName { get; set; }
+        public string ExternalURL { get; set; }
+        public string InternalURL { get; set; }
+        public string ExternalOnePage { get; set; }
+        public string EmailSubject { get; set; }
+        public string HTMLResult { get; set; }
+        public string PublicPreview { get; set; }
+        public string GeneralAvailability { get; set; }
+
+        public string BusinessValue {  get; set; }
+
+        public string FeatureDetails { get; set; }
+
+        public string ParentNodeName { get; set; }
+
+        public DescriptionRow()
+        {
+            PublicPreview = "";
+            GeneralAvailability = "";
+            BusinessValue = "";
+            FeatureDetails = "";
+            Description = "";
+        }
+
+        public static string GetCSVString(List<DescriptionRow> _descriptionRows)
+        {
+            var output = PowerWheelRow.GenerateReport<DescriptionRow>(_descriptionRows);
+            return output;
+        }
+    }
+}
+

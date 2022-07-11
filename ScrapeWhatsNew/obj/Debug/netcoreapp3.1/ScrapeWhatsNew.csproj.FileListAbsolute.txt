@@ -1,0 +1,30 @@
+C:\Repository\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.csproj.AssemblyReference.cache
+C:\Repository\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.AssemblyInfoInputs.cache
+C:\Repository\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.AssemblyInfo.cs
+C:\Repository\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.csproj.CoreCompileInputs.cache
+C:\Repository\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\ScrapeWhatsNew.exe
+C:\Repository\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\ScrapeWhatsNew.deps.json
+C:\Repository\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\ScrapeWhatsNew.runtimeconfig.json
+C:\Repository\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\ScrapeWhatsNew.runtimeconfig.dev.json
+C:\Repository\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\ScrapeWhatsNew.dll
+C:\Repository\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\ScrapeWhatsNew.pdb
+C:\Repository\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\HtmlAgilityPack.dll
+C:\Repository\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.csproj.CopyComplete
+C:\Repository\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.dll
+C:\Repository\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.pdb
+C:\Repository\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.genruntimeconfig.cache
+C:\Users\E059525\OneDrive - RSM\Repository\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\ScrapeWhatsNew.exe
+C:\Users\E059525\OneDrive - RSM\Repository\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\ScrapeWhatsNew.deps.json
+C:\Users\E059525\OneDrive - RSM\Repository\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\ScrapeWhatsNew.runtimeconfig.json
+C:\Users\E059525\OneDrive - RSM\Repository\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\ScrapeWhatsNew.runtimeconfig.dev.json
+C:\Users\E059525\OneDrive - RSM\Repository\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\ScrapeWhatsNew.dll
+C:\Users\E059525\OneDrive - RSM\Repository\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\ScrapeWhatsNew.pdb
+C:\Users\E059525\OneDrive - RSM\Repository\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\HtmlAgilityPack.dll
+C:\Users\E059525\OneDrive - RSM\Repository\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.csproj.AssemblyReference.cache
+C:\Users\E059525\OneDrive - RSM\Repository\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\E059525\OneDrive - RSM\Repository\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.AssemblyInfoInputs.cache
+C:\Users\E059525\OneDrive - RSM\Repository\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.AssemblyInfo.cs
+C:\Users\E059525\OneDrive - RSM\Repository\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.csproj.CoreCompileInputs.cache
+C:\Users\E059525\OneDrive - RSM\Repository\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.dll
+C:\Users\E059525\OneDrive - RSM\Repository\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.pdb
+C:\Users\E059525\OneDrive - RSM\Repository\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.genruntimeconfig.cache

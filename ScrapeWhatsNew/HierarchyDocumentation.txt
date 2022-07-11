@@ -1,0 +1,22 @@
+ReleaseWave /html/body/div[3]/div/div/nav/ul/li[1]/a
+	URL  
+	Name (ex: 2021 release wave 1 plan)
+
+	Area (Ex: Marketing) /html/body/div[3]/div/div/nav/ul/li[5]/span
+			     /html/body/div[3]/div/div/nav/ul/li[6]/span
+	
+		Product (ex Dynamics 365 Marketing)
+			Group (ex AI-powered
+				Feature (ex AI-driven recommendations for images)
+					Name
+					URL
+					FeatureDetails
+					BusinessValue
+
+
+
+/html/body/div[3]/div/div/nav/ul
+
+/html/body/div[3]
+
+/html/body/div[2]/div/section/div/div[1]/main/h3[1]

@@ -1,0 +1,356 @@
+NodeName,Recommendation,UpgradeType,FoodAndBeverage,Retail,Industrials,LifeSciences,PublicSector,HealthCare,NonProfit,BusinessAndProfessionalServices,GroupNode
+0,G,x,x,x,x,x,x,x,x,x,Yes
+CE,G,x,x,x,x,x,x,x,x,x,Yes
+Marketing,G,x,x,x,x,x,x,x,x,x,Yes
+Dynamics 365 Marketing,G,x,x,x,x,x,x,x,x,x,Yes
+Collaborative apps,G,x,x,x,x,x,x,x,x,x,Yes
+Take action with your customers in more ways by raising triggers from a journey to run another journey or Power Automate flow,G,x,x,x,x,x,x,x,x,x,null
+Personalize interactions using a unified view of customer activity across Dynamics 365 Marketing Sales and Customer Service,G,x,x,x,x,x,x,x,x,x,null
+Trigger journeys based on data changes in any Dynamics 365 app to engage customers at the right time without writing any code,G,x,x,x,x,x,x,x,x,x,null
+Collaborate across your organization to create the best marketing campaigns possible using the built-in Microsoft Teams chat,G,x,x,x,x,x,x,x,x,x,null
+Data and AI,G,x,x,x,x,x,x,x,x,x,Yes
+Delight your customers with hyper-personalized next-best content selection and boost your marketing ROI by optimizing with AI,G,x,x,x,x,x,x,x,x,x,null
+Connect Dynamics 365 Customer Insights with customer journey orchestration when using your own data lake,G,x,x,x,x,x,x,x,x,x,null
+Quickly personalize emails using predefined dynamic text without the need to know the underlying data structure,G,x,x,x,x,x,x,x,x,x,null
+Quickly create emails with enhanced reusable content fragments,G,x,x,x,x,x,x,x,x,x,null
+Win customer attention by creating conditional dynamic content with easy-to-use no-code experiences,G,x,x,x,x,x,x,x,x,x,null
+Moments-based,G,x,x,x,x,x,x,x,x,x,Yes
+Create individualized journeys by adding conditions based on attributes captured as part of the event trigger,G,x,x,x,x,x,x,x,x,x,null
+Continue the conversation with your customers by taking action on their SMS replies,G,x,x,x,x,x,x,x,x,x,null
+Easily create journeys to send reminders encouraging customers to respond to a call to action,G,x,x,x,x,x,x,x,x,x,null
+Target the right contacts and leads using the reimagined easy-to-use segmentation builder,G,x,x,x,x,x,x,x,x,x,null
+Sales,G,x,x,x,x,x,x,x,x,x,Yes
+Dynamics 365 Sales,G,x,x,x,x,x,x,x,x,x,Yes
+Conversation intelligence,G,x,x,x,x,x,x,x,x,x,Yes
+Get the right insight at the right time at the right place,G,x,x,x,x,x,x,x,x,x,null
+Facilitating digital selling,G,x,x,x,x,x,x,x,x,x,Yes
+Experience sales accelerator conversation intelligence and predictive scoring with Dynamics 365 Sales Enterprise license,G,x,x,x,x,x,x,x,x,x,null
+Sales Hub is now preinstalled on all environments,G,x,x,x,x,x,x,x,x,x,null
+Forecasting and pipeline intelligence,G,x,x,x,x,x,x,x,x,x,Yes
+Assign attributes per sales stage to improve predictive score accuracy,G,x,x,x,x,x,x,x,x,x,null
+Streamline your forecasting workflow with default experiences,G,x,x,x,x,x,x,x,x,x,null
+Filter the underlying opportunities of a forecast,G,x,x,x,x,x,x,x,x,x,null
+Monitor stagnated deals and how they impact the predictive score,G,x,x,x,x,x,x,x,x,x,null
+Measure the performance of predictive scoring model with accuracy reports,G,x,x,x,x,x,x,x,x,x,null
+Update quotas quickly with inline editing and quota rollups,G,x,x,x,x,x,x,x,x,x,null
+Compare annual projections with actual progress over multiple periods,G,x,x,x,x,x,x,x,x,x,null
+Support for yearly and weekly forecast periods,G,x,x,x,x,x,x,x,x,x,null
+Mobile,G,x,x,x,x,x,x,x,x,x,Yes
+Capture mobile phone contacts and recent calls,G,x,x,x,x,x,x,x,x,x,null
+Effortlessly log information using the mobile phone camera,G,x,x,x,x,x,x,x,x,x,null
+Outlook deep-link integration with templates autofill and emails to meeting participants,G,x,x,x,x,x,x,x,x,x,null
+Relationship intelligence,G,x,x,x,x,x,x,x,x,x,Yes
+Discover accounts and contacts from email interactions,G,x,x,x,x,x,x,x,x,x,null
+Sales accelerator and process automation,G,x,x,x,x,x,x,x,x,x,Yes
+Choose the right engagement plan for your customers,G,x,x,x,x,x,x,x,x,x,null
+Personalize the prioritized worklist using advanced filtering,G,x,x,x,x,x,x,x,x,x,null
+Enable Outlook integration to avoid double booking,G,x,x,x,x,x,x,x,x,x,null
+Engage efficiently with your customers,G,x,x,x,x,x,x,x,x,x,null
+Make quick decisions with enhancement to worklist cards,G,x,x,x,x,x,x,x,x,x,null
+Update activities from sequence step and correlate it with timeline activities,G,x,x,x,x,x,x,x,x,x,null
+Move sequences between environments seamlessly to enable sellers to get started quickly,G,x,x,x,x,x,x,x,x,x,null
+High-quality leads ensure higher success rates,G,x,x,x,x,x,x,x,x,x,null
+Customizable worklist cards for right contextual information to the seller,G,x,x,x,x,x,x,x,x,x,null
+Get notified when customers actively engage with you,G,x,x,x,x,x,x,x,x,x,null
+Service,G,x,x,x,x,x,x,x,x,x,Yes
+Dynamics 365 Customer Service,G,x,x,x,x,x,x,x,x,x,Yes
+Administrator experiences,G,x,x,x,x,x,x,x,x,x,Yes
+Simplify administration with new Customer Service admin center application,G,x,x,x,x,x,x,x,x,x,null
+Agent experiences,G,x,x,x,x,x,x,x,x,x,Yes
+Improvements to the Case grid,G,x,x,x,x,x,x,x,x,x,null
+Enhanced experience of using email templates while composing an e-mail,G,x,x,x,x,x,x,x,x,x,null
+Inbox enhancements to help improve agent productivity,G,x,x,x,x,x,x,x,x,x,null
+Scheduling and IoT capabilities in Customer Service workspace,G,x,x,x,x,x,x,x,x,x,null
+User-initiated feedback in product,G,x,x,x,x,x,x,x,x,x,null
+Enhanced experience for creating email templates,G,x,x,x,x,x,x,x,x,x,null
+Communities,G,x,x,x,x,x,x,x,x,x,Yes
+Engage with customers in Dynamics 365 Customer Service Community,G,x,x,x,x,x,x,x,x,x,null
+Knowledge management,G,x,x,x,x,x,x,x,x,x,Yes
+Relevance search integration for knowledge management in portals,G,x,x,x,x,x,x,x,x,x,null
+Analytics for knowledge articles and search terms,G,x,x,x,x,x,x,x,x,x,null
+Usability enhancements to knowledge article search,G,x,x,x,x,x,x,x,x,x,null
+Configure knowledge search control for application side pane,G,x,x,x,x,x,x,x,x,x,null
+Omnichannel,G,x,x,x,x,x,x,x,x,x,Yes
+APIs for queue and agent availability,G,x,x,x,x,x,x,x,x,x,null
+Service-level agreements,G,x,x,x,x,x,x,x,x,x,Yes
+Custom time calculation in service-level agreements,G,x,x,x,x,x,x,x,x,x,null
+Usability enhancements in service-level agreements,G,x,x,x,x,x,x,x,x,x,null
+Teams integration,G,x,x,x,x,x,x,x,x,x,Yes
+AI-generated conversation summary sets context for Teams-based collaboration,G,x,x,x,x,x,x,x,x,x,null
+Contextual collaboration using embedded Microsoft Teams,G,x,x,x,x,x,x,x,x,x,null
+Provide AI-suggested contacts for Teams-based collaboration,G,x,x,x,x,x,x,x,x,x,null
+Unified routing,G,x,x,x,x,x,x,x,x,x,Yes
+Enhancement in default queues for unified routing,G,x,x,x,x,x,x,x,x,x,null
+Enhancements in diagnostics for unified routing,G,x,x,x,x,x,x,x,x,x,null
+Dynamics 365 Field Service,G,x,x,x,x,x,x,x,x,x,Yes
+Dynamics 365 Field Service Feature,G,x,x,x,x,x,x,x,x,x,Yes
+Dynamics 365 Field Service mobile usability enhancements,G,x,x,x,x,x,x,x,x,x,null
+Windows 10 support for Dynamics 365 Field Service mobile,G,x,x,x,x,x,x,x,x,x,null
+Finance and operations,G,x,x,x,x,x,x,x,x,x,Yes
+Finance and operations,G,x,x,x,x,x,x,x,x,x,Yes
+Dynamics 365 Finance,G,x,x,x,x,x,x,x,x,x,Yes
+Core financials,G,x,x,x,x,x,x,x,x,x,Yes
+New vendor invoice management experience,G,x,x,x,x,x,x,x,x,x,null
+Vendor invoice OCR  advanced configurations for OCR service,G,x,x,x,x,x,x,x,x,x,null
+Vendor invoice OCR  deployment wizard for vendor invoice OCR integration,G,x,x,x,x,x,x,x,x,x,null
+Vendor invoice OCR  vendor invoice OCR hub,G,x,x,x,x,x,x,x,x,x,null
+Vendor invoice OCR  business rules in staging area,G,x,x,x,x,x,x,x,x,x,null
+Enhancements around ledger settlements,G,x,x,x,x,x,x,x,x,x,null
+New button added to view settlement voucher,G,x,x,x,x,x,x,x,x,x,null
+Post in batch for bill of exchange related journals,G,x,x,x,x,x,x,x,x,x,null
+Reverse reconciled advanced bank reconciliation,G,x,x,x,x,x,x,x,x,x,null
+Validate vendor bank account before submitting vendor payment journal to workflow,G,x,x,x,x,x,x,x,x,x,null
+New vendor invoice data entity for OCR integration,G,x,x,x,x,x,x,x,x,x,null
+Subscription billing  recurring contract billing,G,x,x,x,x,x,x,x,x,x,null
+Subscription billing  revenue allocation,G,x,x,x,x,x,x,x,x,x,null
+Subscription billing  revenue and expense deferrals,G,x,x,x,x,x,x,x,x,x,null
+Financial tags,G,x,x,x,x,x,x,x,x,x,null
+General ledger year-end enhancements  specify balance sheet dimensions and year-end close micro-service,G,x,x,x,x,x,x,x,x,x,null
+Ledger settlement automation,G,x,x,x,x,x,x,x,x,x,null
+Globalization,G,x,x,x,x,x,x,x,x,x,Yes
+Tax audit and reporting service,G,x,x,x,x,x,x,x,x,x,null
+Configurable business documents  specific destinations via printer management settings in the reports (phase 2),G,x,x,x,x,x,x,x,x,x,null
+Russian fixed assets  integration with Asset Management lifecycle,G,x,x,x,x,x,x,x,x,x,null
+Tax Calculation service  inheriting origin tax information for reversal transactions,G,x,x,x,x,x,x,x,x,x,null
+Electronic reporting  order by function in queries,G,x,x,x,x,x,x,x,x,x,null
+Configurable business documents  business document management workspace integration with global repo,G,x,x,x,x,x,x,x,x,x,null
+Russian fixed assets  integration with Asset leasing,G,x,x,x,x,x,x,x,x,x,null
+Tax Calculation service  accepting multiple documents in one API call,G,x,x,x,x,x,x,x,x,x,null
+Globalization Studio,G,x,x,x,x,x,x,x,x,x,null
+Dynamics 365 Supply Chain Management,G,x,x,x,x,x,x,x,x,x,Yes
+Inventory and logistics,G,x,x,x,x,x,x,x,x,x,Yes
+Available-to-promise for the Inventory Visibility Add-in,G,x,x,x,x,x,x,x,x,x,null
+Inventory allocation for the Inventory Visibility Add-in,G,x,x,x,x,x,x,x,x,x,null
+Inventory Visibility onhand query to support advanced warehouse management items,G,x,x,x,x,x,x,x,x,x,null
+Global Inventory Accounting Add-in for Dynamics 365 Supply Chain Management,G,x,x,x,x,x,x,x,x,x,null
+Landed cost integration entities for third-party freight forwarders,G,x,x,x,x,x,x,x,x,x,null
+Enhanced warehouse execution workloads on scale units,G,x,x,x,x,x,x,x,x,x,null
+Manufacturing,G,x,x,x,x,x,x,x,x,x,Yes
+Material consumption and reservations in the production floor execution interface,G,x,x,x,x,x,x,x,x,x,null
+Register material consumption on scale units,G,x,x,x,x,x,x,x,x,x,null
+Catch weight items for the production floor execution interface,G,x,x,x,x,x,x,x,x,x,null
+Planning,G,x,x,x,x,x,x,x,x,x,Yes
+Planning Optimization suggestions to optimize existing supply,G,x,x,x,x,x,x,x,x,x,null
+Planning Optimization centralized calendar maintenance,G,x,x,x,x,x,x,x,x,x,null
+Planning Optimization support for subcontracting,G,x,x,x,x,x,x,x,x,x,null
+Planning Optimization support for shelf life,G,x,x,x,x,x,x,x,x,x,null
+Planning Optimization support for resource scheduling with finite capacity,G,x,x,x,x,x,x,x,x,x,null
+Demand Driven Material Requirements Planning (DDMRP),G,x,x,x,x,x,x,x,x,x,null
+Make-to-order supply automation,G,x,x,x,x,x,x,x,x,x,null
+Planning Optimization for select manufactured items,G,x,x,x,x,x,x,x,x,x,null
+Planning Optimization support for capable-to-promise (CTP),G,x,x,x,x,x,x,x,x,x,null
+Dynamics 365 Intelligent Order Management,G,x,x,x,x,x,x,x,x,x,Yes
+Application monitoring and troubleshooting,G,x,x,x,x,x,x,x,x,x,Yes
+Improved monitoring and debugging experience for admins and business users,G,x,x,x,x,x,x,x,x,x,null
+Business to consumer (B2C) enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Enable real-time order status communications to your e-commerce site,G,x,x,x,x,x,x,x,x,x,null
+Core orchestration functionality,G,x,x,x,x,x,x,x,x,x,Yes
+Fulfillment optimization using reinforcement learning,G,x,x,x,x,x,x,x,x,x,null
+Improved integration with Inventory Visibility Add-in for Dynamics 365 Supply Chain Management,G,x,x,x,x,x,x,x,x,x,null
+Order visibility and insights,G,x,x,x,x,x,x,x,x,x,Yes
+Expanded visibility and insights in the order journey,G,x,x,x,x,x,x,x,x,x,null
+Provider integrations,G,x,x,x,x,x,x,x,x,x,Yes
+Expanded ecosystem of providers,G,x,x,x,x,x,x,x,x,x,null
+Dynamics 365 Project Operations,G,x,x,x,x,x,x,x,x,x,Yes
+Dynamics 365 Project Operations Feature,G,x,x,x,x,x,x,x,x,x,Yes
+Modern approvals,G,x,x,x,x,x,x,x,x,x,null
+Per diem expenses in the modern interface experience,G,x,x,x,x,x,x,x,x,x,null
+Pay-when-paid support for resource-based nonstocked scenarios,G,x,x,x,x,x,x,x,x,x,null
+Transfer all lines with posting errors to new integration journal,G,x,x,x,x,x,x,x,x,x,null
+Time-zone agnostic price defaulting on Project Operations actuals,G,x,x,x,x,x,x,x,x,x,null
+External Project Operations planning,G,x,x,x,x,x,x,x,x,x,null
+Upgrade from Dynamics 365 Project Service Automation to Dynamics 365 Project Operations Lite Deployment - Phase 2,G,x,x,x,x,x,x,x,x,x,null
+Date-effective overrides in Project Operations pricing and costing,G,x,x,x,x,x,x,x,x,x,null
+Editing resource assignment contours,G,x,x,x,x,x,x,x,x,x,null
+Revision and activation of quotes,G,x,x,x,x,x,x,x,x,x,null
+Support vendor payment of expense liability in foreign currency,G,x,x,x,x,x,x,x,x,x,null
+Project-based vendor invoice reconciliation for Project Operations for resource and nonstocked scenarios,G,x,x,x,x,x,x,x,x,x,null
+Finance and Operations cross-app capabilities,G,x,x,x,x,x,x,x,x,x,Yes
+Cross-application features,G,x,x,x,x,x,x,x,x,x,Yes
+Updates to client feature states with version 10.0.25,G,x,x,x,x,x,x,x,x,x,null
+Updates to saved views and personalization,G,x,x,x,x,x,x,x,x,x,null
+Vertically scrolling workspaces,G,x,x,x,x,x,x,x,x,x,null
+Data and process integration,G,x,x,x,x,x,x,x,x,x,Yes
+Specify which data is exported to Azure Data Lake,G,x,x,x,x,x,x,x,x,x,null
+One Azure Synapse experience for all Dynamics 365 data,G,x,x,x,x,x,x,x,x,x,null
+Regression suite automation tool improvements,G,x,x,x,x,x,x,x,x,x,Yes
+Support of test case variants,G,x,x,x,x,x,x,x,x,x,null
+Improved integration with Azure DevOps,G,x,x,x,x,x,x,x,x,x,null
+Improvements to the Task recorder experience,G,x,x,x,x,x,x,x,x,x,null
+Improved Azure DevOps experience,G,x,x,x,x,x,x,x,x,x,null
+Other,G,x,x,x,x,x,x,x,x,x,Yes
+Human Resources,G,x,x,x,x,x,x,x,x,x,Yes
+Dynamics 365 Human Resources,G,x,x,x,x,x,x,x,x,x,Yes
+Employee development,G,x,x,x,x,x,x,x,x,x,Yes
+Intelligent talent management improves workforce,G,x,x,x,x,x,x,x,x,x,null
+General,G,x,x,x,x,x,x,x,x,x,Yes
+Migration to Finance and Operations infrastructure,G,x,x,x,x,x,x,x,x,x,null
+Integrations and extensibility,G,x,x,x,x,x,x,x,x,x,Yes
+Enable simplified integration with learning management system providers,G,x,x,x,x,x,x,x,x,x,null
+Organization and personnel management,G,x,x,x,x,x,x,x,x,x,Yes
+Improved business process automation  active employees,G,x,x,x,x,x,x,x,x,x,null
+Improved business process automation  employees joining,G,x,x,x,x,x,x,x,x,x,null
+Improved business process automation  employees leaving,G,x,x,x,x,x,x,x,x,x,null
+FS,G,x,x,x,x,x,x,x,x,x,Yes
+Commerce,G,x,x,x,x,x,x,x,x,x,Yes
+Dynamics 365 Commerce,G,x,x,x,x,x,x,x,x,x,Yes
+Dynamics 365 Commerce Feature,G,x,x,x,x,x,x,x,x,x,Yes
+Direct fiscal integration from POS,G,x,x,x,x,x,x,x,x,x,null
+Enhanced fiscal connector configuration,G,x,x,x,x,x,x,x,x,x,null
+Integration with Sitecore Content Hub,G,x,x,x,x,x,x,x,x,x,null
+Additional filter options in POS inventory operations,G,x,x,x,x,x,x,x,x,x,null
+Integrated experimentation in Dynamics 365 Commerce,G,x,x,x,x,x,x,x,x,x,null
+Order cancellation for e-commerce,G,x,x,x,x,x,x,x,x,x,null
+Chat in Commerce with Power Virtual Agents and Omnichannel for Customer Service,G,x,x,x,x,x,x,x,x,x,null
+Payments in installments with the Dynamics 365 Payment Connector for Adyen for Brazil,G,x,x,x,x,x,x,x,x,x,null
+Edit customer information asynchronously in POS and e-commerce channels,G,x,x,x,x,x,x,x,x,x,null
+Honor site and warehouse settings on trade agreement in Commerce pricing engine,G,x,x,x,x,x,x,x,x,x,null
+PayPal Cart Checkout support in e-commerce,G,x,x,x,x,x,x,x,x,x,null
+Personalization with Dynamics 365 Customer Insights,G,x,x,x,x,x,x,x,x,x,null
+Show or hide tax breakdown in e-commerce when prices include sales tax,G,x,x,x,x,x,x,x,x,x,null
+Support for catalogs in e-commerce channel,G,x,x,x,x,x,x,x,x,x,null
+Apple Pay with Dynamics 365 Payment Connector for Adyen,G,x,x,x,x,x,x,x,x,x,null
+Copy CMS content using site builder and manage it with API or Power Platform connector,G,x,x,x,x,x,x,x,x,x,null
+Integrated omnichannel media asset management improvements,G,x,x,x,x,x,x,x,x,x,null
+Store Commerce app for Windows,G,x,x,x,x,x,x,x,x,x,null
+B2B e-commerce enhancements including ordering by account managers contract pricing customer-specific catalogs and quotes,G,x,x,x,x,x,x,x,x,x,null
+Google Pay with Dynamics 365 Payment Connector for Adyen,G,x,x,x,x,x,x,x,x,x,null
+Fraud Protection,G,x,x,x,x,x,x,x,x,x,Yes
+Dynamics 365 Fraud Protection,G,x,x,x,x,x,x,x,x,x,Yes
+Dynamics 365 Fraud Protection Feature,G,x,x,x,x,x,x,x,x,x,Yes
+Canadian provisioning of Dynamics 365 Fraud Protection,G,x,x,x,x,x,x,x,x,x,null
+Enhance ability of fraud solution providers to manage fraud at scale,G,x,x,x,x,x,x,x,x,x,null
+Natively integrated case management for purchase protection,G,x,x,x,x,x,x,x,x,x,null
+Protect native mobile applications against fraud,G,x,x,x,x,x,x,x,x,x,null
+Protect Power Apps portals products against fraud,G,x,x,x,x,x,x,x,x,x,null
+Search functionality for fraud managers,G,x,x,x,x,x,x,x,x,x,null
+BC,G,x,x,x,x,x,x,x,x,x,Yes
+SMB,G,x,x,x,x,x,x,x,x,x,Yes
+Dynamics 365 Business Central,G,x,x,x,x,x,x,x,x,x,Yes
+Application,G,x,x,x,x,x,x,x,x,x,Yes
+Blocking deletion of G/L accounts,G,x,x,x,x,x,x,x,x,x,null
+Allow the sell-to and bill-to customers to be different for jobs,G,x,x,x,x,x,x,x,x,x,null
+Bank reconciliation,G,x,x,x,x,x,x,x,x,x,null
+Change default company bank account on sales and service documents,G,x,x,x,x,x,x,x,x,x,null
+Check documents and journals in background,G,x,x,x,x,x,x,x,x,x,null
+Consolidate customer and vendor balances,G,x,x,x,x,x,x,x,x,x,null
+Fixed Quantity in product bills of materials,G,x,x,x,x,x,x,x,x,x,null
+Improved and extensible Adjust Exchange Rates batch job,G,x,x,x,x,x,x,x,x,x,null
+Map to Dataverse option sets such as payment terms freight terms and shipping agents without code,G,x,x,x,x,x,x,x,x,x,null
+More control over deferrals posting,G,x,x,x,x,x,x,x,x,x,null
+New UI for entering demand forecasts to add support for variant code and other improvements,G,x,x,x,x,x,x,x,x,x,null
+Payment reconciliation journal,G,x,x,x,x,x,x,x,x,x,null
+Report selection for projects,G,x,x,x,x,x,x,x,x,x,null
+Set default dimensions on locations,G,x,x,x,x,x,x,x,x,x,null
+Shopify connector,G,x,x,x,x,x,x,x,x,x,null
+Standardizing the bank reconciliation process in North American versions,G,x,x,x,x,x,x,x,x,x,null
+Support inventory pick and warehouse pick operations for jobs,G,x,x,x,x,x,x,x,x,x,null
+Synchronize sales quotes and orders in both directions between Business Central and Dynamics 365 Sales,G,x,x,x,x,x,x,x,x,x,null
+Use different G/L accounts for payables and receivables transactions,G,x,x,x,x,x,x,x,x,x,null
+Better with Microsoft 365,G,x,x,x,x,x,x,x,x,x,Yes
+Enhancements to Microsoft Teams integration,G,x,x,x,x,x,x,x,x,x,null
+Outlook add-in  add email attachments to Business Central records,G,x,x,x,x,x,x,x,x,x,null
+Development,G,x,x,x,x,x,x,x,x,x,Yes
+Isolated events,G,x,x,x,x,x,x,x,x,x,null
+New isolated event OnCompanyOpenCompleted,G,x,x,x,x,x,x,x,x,x,null
+Auto-deploy dependent projects in workspace,G,x,x,x,x,x,x,x,x,x,null
+Demo tool and demo data for manufacturing scenarios,G,x,x,x,x,x,x,x,x,x,null
+In-client performance profiler,G,x,x,x,x,x,x,x,x,x,null
+AL-Go for GitHub  modern DevOps for partners,G,x,x,x,x,x,x,x,x,x,null
+Telemetry  company name as a custom dimension in AL LogMessage,G,x,x,x,x,x,x,x,x,x,null
+Users can export report datasets to XML,G,x,x,x,x,x,x,x,x,x,null
+Governance and administration,G,x,x,x,x,x,x,x,x,x,Yes
+Customer-managed encryption key for encrypting customer data at-rest,G,x,x,x,x,x,x,x,x,x,null
+Customers can consent to Microsoft Support accessing their data through a Lockbox consent flow,G,x,x,x,x,x,x,x,x,x,null
+Allow security administrator to define default permission set assignments when user is signing up,G,x,x,x,x,x,x,x,x,x,null
+Updating only licensed users from Microsoft 365 runs faster and more efficiently,G,x,x,x,x,x,x,x,x,x,null
+Permission set handling enhancements,G,x,x,x,x,x,x,x,x,x,null
+Microsoft Power Platform,G,x,x,x,x,x,x,x,x,x,Yes
+Dataverse data change events,G,x,x,x,x,x,x,x,x,x,null
+Improvements to the Power Automate and Power Apps connector,G,x,x,x,x,x,x,x,x,x,null
+Modern clients,G,x,x,x,x,x,x,x,x,x,Yes
+Copy link from Share menu,G,x,x,x,x,x,x,x,x,x,null
+New desktop app delivering full web client experience on desktop is listed in the Microsoft Store,G,x,x,x,x,x,x,x,x,x,null
+Usability improvements to the web client,G,x,x,x,x,x,x,x,x,x,null
+Onboarding,G,x,x,x,x,x,x,x,x,x,Yes
+Context-aware links in the Help pane from Microsoft and partners,G,x,x,x,x,x,x,x,x,x,null
+Guided tour that helps users find settings and personalization tools,G,x,x,x,x,x,x,x,x,x,null
+Support for rich text in teaching tips and tours,G,x,x,x,x,x,x,x,x,x,null
+Tour of the Role Explorer and how to filter it,G,x,x,x,x,x,x,x,x,x,null
+Reporting,G,x,x,x,x,x,x,x,x,x,Yes
+New capabilities for financial reporting with account schedules,G,x,x,x,x,x,x,x,x,x,null
+Use Excel to design layouts for reports,G,x,x,x,x,x,x,x,x,x,null
+Service and platform,G,x,x,x,x,x,x,x,x,x,Yes
+Performance  partners can get database insights through virtual tables and in-client pages,G,x,x,x,x,x,x,x,x,x,null
+Telemetry  error dialogs are logged to telemetry,G,x,x,x,x,x,x,x,x,x,null
+Telemetry  the action of enabling detailed telemetry is logged to telemetry,G,x,x,x,x,x,x,x,x,x,null
+Telemetry  when a database deadlock occurs it is logged to telemetry,G,x,x,x,x,x,x,x,x,x,null
+Telemetry  support engineers can now see user IDs in telemetry,G,x,x,x,x,x,x,x,x,x,null
+Customer Insights,G,x,x,x,x,x,x,x,x,x,Yes
+Dynamics 365 Customer Insights,G,x,x,x,x,x,x,x,x,x,Yes
+Activities,G,x,x,x,x,x,x,x,x,x,Yes
+Expand semantic type support for activities and entities,G,x,x,x,x,x,x,x,x,x,null
+B2B,G,x,x,x,x,x,x,x,x,x,Yes
+Accelerate sales through intent data and account prospecting,G,x,x,x,x,x,x,x,x,x,null
+Provide templates and libraries of industry standard metrics,G,x,x,x,x,x,x,x,x,x,null
+Consent management,G,x,x,x,x,x,x,x,x,x,Yes
+Import consent data almost in real time,G,x,x,x,x,x,x,x,x,x,null
+Enrichment,G,x,x,x,x,x,x,x,x,x,Yes
+Enrich your customer data safely with safe data collaboration,G,x,x,x,x,x,x,x,x,x,null
+Intelligence,G,x,x,x,x,x,x,x,x,x,Yes
+Provide automated transaction churn out-of-the-box model,G,x,x,x,x,x,x,x,x,x,null
+Supply Chain Insights,G,x,x,x,x,x,x,x,x,x,Yes
+Supply Chain Insights,G,x,x,x,x,x,x,x,x,x,Yes
+Dynamics 365 Supply Chain Insights,G,x,x,x,x,x,x,x,x,x,Yes
+Dynamics 365 Supply Chain Insights Feature,G,x,x,x,x,x,x,x,x,x,Yes
+Embedded Supply Chain Management experiences,G,x,x,x,x,x,x,x,x,x,null
+Try smart case manager,G,x,x,x,x,x,x,x,x,x,null
+Use AI-driven surveys in Dynamics 365 Supply Chain Insights,G,x,x,x,x,x,x,x,x,x,null
+Use what-if analysis in Dynamics 365 Supply Chain Insights,G,x,x,x,x,x,x,x,x,x,null
+Guides,G,x,x,x,x,x,x,x,x,x,Yes
+Dynamics 365 Guides,G,x,x,x,x,x,x,x,x,x,Yes
+Dynamics 365 Guides Feature,G,x,x,x,x,x,x,x,x,x,Yes
+Support for mobile devices,G,x,x,x,x,x,x,x,x,x,null
+Grant guide access to third parties,G,x,x,x,x,x,x,x,x,x,null
+Remote Assist,G,x,x,x,x,x,x,x,x,x,Yes
+Dynamics 365 Remote Assist,G,x,x,x,x,x,x,x,x,x,Yes
+Dynamics 365 Remote Assist Feature,G,x,x,x,x,x,x,x,x,x,Yes
+Enable a customer or vendor to join a one-time call,G,x,x,x,x,x,x,x,x,x,null
+Support for screen sharing in the mobile app,G,x,x,x,x,x,x,x,x,x,null
+Microsoft cloud for industry solutions,G,x,x,x,x,x,x,x,x,x,Yes
+Microsoft cloud for industry solutions,G,x,x,x,x,x,x,x,x,x,Yes
+Microsoft Cloud for Healthcare,G,x,x,x,x,x,x,x,x,x,Yes
+Enhance patient engagement,G,x,x,x,x,x,x,x,x,x,Yes
+Patient view updates,G,x,x,x,x,x,x,x,x,x,null
+Expand healthcare solutions to payor and pharma verticals,G,x,x,x,x,x,x,x,x,x,Yes
+Payor data model support,G,x,x,x,x,x,x,x,x,x,null
+Decentralized clinical trials data model support,G,x,x,x,x,x,x,x,x,x,null
+Improve clinical and operational insights,G,x,x,x,x,x,x,x,x,x,Yes
+Enhanced data model,G,x,x,x,x,x,x,x,x,x,null
+Enhanced patient links,G,x,x,x,x,x,x,x,x,x,null
+Microsoft Cloud for Financial Services,G,x,x,x,x,x,x,x,x,x,Yes
+Data orchestration,G,x,x,x,x,x,x,x,x,x,Yes
+Data movement and transformation,G,x,x,x,x,x,x,x,x,x,null
+Financial services data models,G,x,x,x,x,x,x,x,x,x,Yes
+General insurance data model,G,x,x,x,x,x,x,x,x,x,null
+Wealth management data model,G,x,x,x,x,x,x,x,x,x,null
+Retail banking,G,x,x,x,x,x,x,x,x,x,Yes
+Customer onboarding enhancements,G,x,x,x,x,x,x,x,x,x,null
+Unified customer profile for retail banking enhancements,G,x,x,x,x,x,x,x,x,x,null
+Microsoft Cloud for Nonprofit,G,x,x,x,x,x,x,x,x,x,Yes
+Deliver effective programming,G,x,x,x,x,x,x,x,x,x,Yes
+Program impact dashboard enhancements,G,x,x,x,x,x,x,x,x,x,null
+Know your donors and supporters,G,x,x,x,x,x,x,x,x,x,Yes
+Automated Azure post-deployment configuration for Fundraising and Engagement,G,x,x,x,x,x,x,x,x,x,null
+New Getting started experiences,G,x,x,x,x,x,x,x,x,x,null
+Payment processing enhancements,G,x,x,x,x,x,x,x,x,x,null
+Microsoft Cloud for Sustainability,G,x,x,x,x,x,x,x,x,x,Yes
+Record,G,x,x,x,x,x,x,x,x,x,Yes
+Common Data Model for Microsoft Cloud for Sustainability,G,x,x,x,x,x,x,x,x,x,null
+Dynamic calculation service,G,x,x,x,x,x,x,x,x,x,null
+Ecosystem of prebuilt data connectors,G,x,x,x,x,x,x,x,x,x,null
+Reduce,G,x,x,x,x,x,x,x,x,x,Yes
+Data-driven scorecards and goals,G,x,x,x,x,x,x,x,x,x,null
+Report,G,x,x,x,x,x,x,x,x,x,Yes
+Emissions and operational-specific dashboards,G,x,x,x,x,x,x,x,x,x,null
+Public reporting,G,x,x,x,x,x,x,x,x,x,null
