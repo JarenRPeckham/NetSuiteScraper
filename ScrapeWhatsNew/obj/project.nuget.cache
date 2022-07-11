@@ -1,18 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "L+MReCcxzbI8/NtV0GSjdI8GSBjZkG527Lnp09rF/61t1Qt42xtexou0YAqbmxcSG5lbbeTU4ltmd0ZDXlqYkQ==",
-  "success": false,
-  "projectFilePath": "C:\\Users\\e093947\\source\\repos\\NetSuiteScraper\\ScrapeWhatsNew\\ScrapeWhatsNew.csproj",
-  "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "NU1101",
-      "level": "Error",
-      "message": "Unable to find package HtmlAgilityPack. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages",
-      "libraryId": "HtmlAgilityPack",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    }
-  ]
+  "dgSpecHash": "ACeYsN3Z3PKXfitxKrd5LAKFuZXGpi86eejd2HT1VWtio3rrgWv83oIoiJkA95Je/d6xW3ribPN4oLX7zhTLrQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\e093947\\Source\\Repos\\NetSuiteScraper\\ScrapeWhatsNew\\ScrapeWhatsNew.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\e093947\\.nuget\\packages\\htmlagilitypack\\1.11.43\\htmlagilitypack.1.11.43.nupkg.sha512"
+  ],
+  "logs": []
 }

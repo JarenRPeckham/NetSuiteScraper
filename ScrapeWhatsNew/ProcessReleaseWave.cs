@@ -10,10 +10,11 @@ namespace ScrapeWhatsNew
 {
     public class ProcessReleaseWave
     {
+        //TODO
         const string baseURL = "https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html"; //"https://docs.microsoft.com/en-us/dynamics365-release-plan/2021wave2/"; //"https://docs.microsoft.com/en-us/dynamics365-release-plan/2021wave1/";
         const string releaseWaveName = "2022 Wave 1";//"2021 Wave 2";
         string releaseWaveURL = "";
-        const string homepage = baseURL + "get-started/whats-new-home-page";
+        //const string homepage = baseURL + "get-started/whats-new-home-page";
         const string docsMicrosoftBaseURL = "https://docs.oracle.com";
         const string topHomePage = "https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html";
         public List<ColorSet> colorSetList = new List<ColorSet>();
@@ -31,9 +32,10 @@ namespace ScrapeWhatsNew
 
             releaseWave.AreaList = GetAreaList(releaseWave.Url);
 
-            string fileName = @"MicrosoftWhatsNew2022.csv";
-            string descriptionFileName = @"MicrosoftWhatsNewDescriptionData2022.csv";
-            string userAddedFileName = @"MicrosoftWhatsNewUserAddedData2022.csv";
+            //TODO?
+            string fileName = @"NetSuiteWhatsNew2022.csv";
+            string descriptionFileName = @"NetSuiteWhatsNewDescriptionData2022.csv";
+            string userAddedFileName = @"NetSuiteWhatsNewUserAddedData2022.csv";
             string excelFileName = @"ReleaseWaveData2022.csv";
 
             SetColorSetList();
@@ -101,6 +103,7 @@ namespace ScrapeWhatsNew
             string parentAreaName = _areaName;
             switch (_areaName)
             {
+                //TODO
                 case "Marketing":
                 case "Sales":
                 case "Service":
@@ -140,6 +143,7 @@ namespace ScrapeWhatsNew
             string parentFriendlyName = "";
             switch (_parentAreaName)
             {
+                //TODO
                 case "FS":
                     parentFriendlyName = "Finance and Operations";
                     break;
@@ -188,6 +192,7 @@ namespace ScrapeWhatsNew
                 { 
                     row.Color = colorSet.colorName;
                 }
+                //TODO?
                 row.color = colorSet.color;
                 row.color1 = colorSet.color1;
                 row.color2 = colorSet.color2;
@@ -265,6 +270,7 @@ namespace ScrapeWhatsNew
 
             if (_feature != null)
             { 
+                //TODO
                 row.FeatureTitle = _feature.Name;
                 row.BusinessValue = _feature.BusinessValue;
                 row.FeatureDetails = _feature.FeatureDetails;
@@ -281,6 +287,7 @@ namespace ScrapeWhatsNew
                 row.PublicPreview = "";
                 row.DateAvailable = "";
             }
+            //TODO?
             row.ImpactLevel = "";
             row.BusinessAndProfessionalServices = "";
             row.FoodAndBeverage = "";
@@ -383,6 +390,7 @@ namespace ScrapeWhatsNew
 
             if (descriptionRows.Where(x => x.NodeName == _parentName).FirstOrDefault() == null)
             {
+                //TODO?
                 descriptionRow.ParentNodeName = _parentName;
                 descriptionRow.NodeName = _parentName;
                 descriptionRow.Title = _parentName;
@@ -406,6 +414,7 @@ namespace ScrapeWhatsNew
         {
             DescriptionRow descriptionRow = new DescriptionRow();
 
+            //TODO?
             descriptionRow.ParentNodeName = GetParentAreaName(_area.Name);
             descriptionRow.NodeName = _area.Name;
             descriptionRow.Title = _area.Name;
@@ -429,6 +438,7 @@ namespace ScrapeWhatsNew
         {
             DescriptionRow descriptionRow = new DescriptionRow();
 
+            //TODO?
             descriptionRow.ParentNodeName = GetParentAreaName(_area.Name);
             descriptionRow.NodeName = _product.Name;
             descriptionRow.Title = _product.Name;
@@ -451,6 +461,7 @@ namespace ScrapeWhatsNew
         {
             DescriptionRow descriptionRow = new DescriptionRow();
 
+            //TODO?
             descriptionRow.ParentNodeName = GetParentAreaName(_area.Name);
             descriptionRow.NodeName = _group.Name;
             descriptionRow.Title = _group.Name;
@@ -477,6 +488,7 @@ namespace ScrapeWhatsNew
             descriptionRow.NodeName = _feature.Name;
             descriptionRow.Title = _feature.Name;
 
+            //TODO/UPDATE
             string businessValue = "";
             if (!String.IsNullOrEmpty(_feature.BusinessValue))
             {
@@ -489,6 +501,7 @@ namespace ScrapeWhatsNew
                 featureDetails = "<h2>Feature details</h2> <p>" + _feature.FeatureDetails + "</p>";
             }
 
+            //TODO?
             //descriptionRow.Description =  businessValue + featureDetails;
             descriptionRow.ContactName = "";
             descriptionRow.EmailAddress = "";
@@ -517,8 +530,9 @@ namespace ScrapeWhatsNew
 
             try
             {
+                //TODO
                 var body = doc.DocumentNode.SelectNodes(
-                   @"/html/body/div[2]/div/section/div/div[1]/main").First();
+                   @"/html/body/main/div/div/div/article/header/h1").First();
 
                 var tdList = body.SelectNodes("//h3");
                 var tdArray = tdList.ToArray();
@@ -527,6 +541,8 @@ namespace ScrapeWhatsNew
                 {
                     var areaNode = tdArray[i];
                     if (areaNode != null
+                        //TODO
+                        //Find areas not needed in the same list
                         && areaNode.ChildNodes != null
                         && areaNode.ChildNodes.Count > 0
                         && areaNode.InnerHtml != "In this article"
@@ -567,6 +583,7 @@ namespace ScrapeWhatsNew
                 
                 HtmlNodeCollection tdList = null;
                 var checkNode = _areaNode.NextSibling.NextSibling;
+                //TODO
                 if (checkNode.Name == "p")  //checkNode is a 'paragraph' node.
                 {
                     while (checkNode.Name == "p") //loop through each paragraph as there may be more than one within a 'header' tag.
@@ -595,6 +612,7 @@ namespace ScrapeWhatsNew
                 }
                 else if (checkNode.Name == "ul")
                 {
+                    //TODO
                     var body = _areaNode.NextSibling.NextSibling; //this is the ul node
                     tdList = body.ChildNodes;
 
@@ -613,6 +631,7 @@ namespace ScrapeWhatsNew
                             HtmlNode strongTag = null;
                             HtmlNode href = null;
                             string productName = "";
+                            //TODO
                             if (node.Name == "li")  //wave 1 has a bullet point
                             {
                                 strongTag = node.FirstChild;
@@ -659,6 +678,7 @@ namespace ScrapeWhatsNew
 
             try
             {
+                //TODO
                 var body = doc.DocumentNode.SelectNodes(
                        @"/html/body/div[2]/div/section/div/div[1]/main").First();
                 var tdList = body.SelectNodes("//h2");
@@ -677,6 +697,7 @@ namespace ScrapeWhatsNew
                 }
                 else
                 {
+                    //TODO
                     var tdArray = tdList.ToArray();
                     for (int i = 0; i < tdArray.Count(); i++)
                     {
@@ -832,6 +853,7 @@ namespace ScrapeWhatsNew
                 HtmlNode busvalueNode = null;
                 HtmlNode featdetailNode = null;
 
+                //TODO
                 var Avail = doc.DocumentNode.SelectNodes("/html/body/div[2]/div/section/div/div[1]/main/div[3]/table/tbody/tr").First(); //added div[3] after the 'main'
                 var bodyChildren = Avail.ChildNodes;
                 var tdArray = bodyChildren.ToArray();
@@ -853,6 +875,7 @@ namespace ScrapeWhatsNew
 
                 if (trList.Count() == 4)
                 {
+                    //TODO?
                     Pubprev = CleanInput(trList[1].InnerText);
                     GenAv = CleanInput(trList[3].InnerText);
                 }
@@ -886,10 +909,11 @@ namespace ScrapeWhatsNew
                     }
                 }
 
+                //TODO
                 string BusinessValueString = GetBusinessValuesString(busvalueNode);
                 string FeatureDetailString = GetFeatureDetailsString(featdetailNode);
 
-
+                //TODO
                 feature = new Feature(FeatureDetailString, BusinessValueString, GenAv, Pubprev, _url, _featureName);
             }
             catch (Exception ex)
@@ -935,6 +959,7 @@ namespace ScrapeWhatsNew
 
         public List<ColorSet> SetColorSetList()
         {
+            //TODO?
             var colorSet = new ColorSet("#F1B434", "#F4C35D", "#F7D285", "#F9E1AE", "#F9E1AE", "#F9E1AE", "Yello");
             colorSetList.Add(colorSet);
 

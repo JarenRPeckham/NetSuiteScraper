@@ -6,6 +6,7 @@ namespace ScrapeWhatsNew
 {
     public class Feature
     {
+        //TODO
         public string FeatureDetails { get; set; }
         public string BusinessValue { get; set; }
 

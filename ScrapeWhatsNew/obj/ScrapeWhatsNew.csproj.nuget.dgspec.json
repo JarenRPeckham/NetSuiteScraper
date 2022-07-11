@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\e093947\\source\\repos\\NetSuiteScraper\\ScrapeWhatsNew\\ScrapeWhatsNew.csproj": {}
+    "C:\\Users\\e093947\\Source\\Repos\\NetSuiteScraper\\ScrapeWhatsNew\\ScrapeWhatsNew.csproj": {}
   },
   "projects": {
-    "C:\\Users\\e093947\\source\\repos\\NetSuiteScraper\\ScrapeWhatsNew\\ScrapeWhatsNew.csproj": {
+    "C:\\Users\\e093947\\Source\\Repos\\NetSuiteScraper\\ScrapeWhatsNew\\ScrapeWhatsNew.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\e093947\\source\\repos\\NetSuiteScraper\\ScrapeWhatsNew\\ScrapeWhatsNew.csproj",
+        "projectUniqueName": "C:\\Users\\e093947\\Source\\Repos\\NetSuiteScraper\\ScrapeWhatsNew\\ScrapeWhatsNew.csproj",
         "projectName": "ScrapeWhatsNew",
-        "projectPath": "C:\\Users\\e093947\\source\\repos\\NetSuiteScraper\\ScrapeWhatsNew\\ScrapeWhatsNew.csproj",
+        "projectPath": "C:\\Users\\e093947\\Source\\Repos\\NetSuiteScraper\\ScrapeWhatsNew\\ScrapeWhatsNew.csproj",
         "packagesPath": "C:\\Users\\e093947\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\e093947\\source\\repos\\NetSuiteScraper\\ScrapeWhatsNew\\obj\\",
         "projectStyle": "PackageReference",
@@ -21,7 +21,8 @@
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -41,7 +42,7 @@
           "dependencies": {
             "HtmlAgilityPack": {
               "target": "Package",
-              "version": "[1.11.32, )"
+              "version": "[1.11.43, )"
             }
           },
           "imports": [

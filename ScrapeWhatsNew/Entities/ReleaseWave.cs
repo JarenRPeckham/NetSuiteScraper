@@ -19,6 +19,8 @@ namespace ScrapeWhatsNew
 					FeatureDetails
 					BusinessValue
     */
+
+    //MAY NOT NEED TODO****
     public class ReleaseWave
     {
         public string Name { get; set;}

@@ -11,7 +11,7 @@ namespace ScrapeWhatsNew
     class ProcessWebsites
     {
 
-        
+        //TODO
         const string baseURL = "https://docs.microsoft.com/en-us/dynamics365/finance/";
         const string homepage = baseURL + "get-started/whats-new-home-page";
         const string docsMicrosoftBaseURL = "https://docs.microsoft.com";
@@ -26,6 +26,7 @@ namespace ScrapeWhatsNew
 
         public void Process()
         {
+            //TODO
             string fileName = @"MicrosoftWhatsNew.csv";
             string descriptionFileName = @"MicrosoftWhatsNew_DescriptionData.csv";
 
@@ -325,6 +326,7 @@ namespace ScrapeWhatsNew
 
             try
             { 
+                //TODO
                 var body = doc.DocumentNode.SelectNodes(
                    @"/html/body/div[2]/div/section/div/div/main/table[1]/tbody"
                     ).First();
@@ -395,6 +397,7 @@ namespace ScrapeWhatsNew
             HtmlNodeCollection featureNodeList = null;;
 
             try {
+                //TODO
                 featureNodeList = doc.DocumentNode.SelectNodes(
                     @"/html/body/div[2]/div/section/div/div[1]/main/ul[3]/li/a"
                     ); //path to link on page: https://docs.microsoft.com/en-us/dynamics365/finance/get-started/whats-new-changed-10-0-16
@@ -454,6 +457,7 @@ namespace ScrapeWhatsNew
 
             try
             { 
+                //TODO
                 var businessValue = doc.DocumentNode.SelectNodes(
                    @"/html/body/div[2]/div/section/div/div[1]/main/p[1]" 
                     ).First();

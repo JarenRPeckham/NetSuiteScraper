@@ -8,17 +8,17 @@
     ".NETCoreApp,Version=v3.1": {
       "ScrapeWhatsNew/1.0.0": {
         "dependencies": {
-          "HtmlAgilityPack": "1.11.32"
+          "HtmlAgilityPack": "1.11.43"
         },
         "runtime": {
           "ScrapeWhatsNew.dll": {}
         }
       },
-      "HtmlAgilityPack/1.11.32": {
+      "HtmlAgilityPack/1.11.43": {
         "runtime": {
           "lib/netstandard2.0/HtmlAgilityPack.dll": {
-            "assemblyVersion": "1.11.32.0",
-            "fileVersion": "1.11.32.0"
+            "assemblyVersion": "1.11.43.0",
+            "fileVersion": "1.11.43.0"
           }
         }
       }
@@ -30,12 +30,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "HtmlAgilityPack/1.11.32": {
+    "HtmlAgilityPack/1.11.43": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-c5eNfxPDvQSh7YClPuo+xkD1d5F4Qms4g+MG1UktytdHk/mvCFsbopLIsk+AKqByPmPvSl/xVmyogRBejf0DyQ==",
-      "path": "htmlagilitypack/1.11.32",
-      "hashPath": "htmlagilitypack.1.11.32.nupkg.sha512"
+      "sha512": "sha512-C2gpt+S2tdFlQMOC3DK7rHZ8iv6EpDuIo4v0UTUSGX1F1bZ+NAQ3gp77HK8/JfCDszUm3Y2rHoyTp/TpO4KOIA==",
+      "path": "htmlagilitypack/1.11.43",
+      "hashPath": "htmlagilitypack.1.11.43.nupkg.sha512"
     }
   }
 }
