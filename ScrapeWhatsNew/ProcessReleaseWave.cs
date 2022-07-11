@@ -10,11 +10,11 @@ namespace ScrapeWhatsNew
 {
     public class ProcessReleaseWave
     {
-        const string baseURL = "https://docs.microsoft.com/en-us/dynamics365-release-plan/2022wave1/"; //"https://docs.microsoft.com/en-us/dynamics365-release-plan/2021wave2/"; //"https://docs.microsoft.com/en-us/dynamics365-release-plan/2021wave1/";
+        const string baseURL = "https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html"; //"https://docs.microsoft.com/en-us/dynamics365-release-plan/2021wave2/"; //"https://docs.microsoft.com/en-us/dynamics365-release-plan/2021wave1/";
         const string releaseWaveName = "2022 Wave 1";//"2021 Wave 2";
         string releaseWaveURL = "";
         const string homepage = baseURL + "get-started/whats-new-home-page";
-        const string docsMicrosoftBaseURL = "https://docs.microsoft.com";
+        const string docsMicrosoftBaseURL = "https://docs.oracle.com";
         const string topHomePage = "https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html";
         public List<ColorSet> colorSetList = new List<ColorSet>();
         public int colorIndex = 0;
@@ -159,7 +159,6 @@ namespace ScrapeWhatsNew
             }
             return parentFriendlyName;
         }
-
         //Need to re-order by the first ring, since that is a ring we are adding after scrubbing the data.
         public List<PowerWheelRow> ReorderPowerWheelRows(List<PowerWheelRow> _powerWheelRowsUnordered)
         {
