@@ -12,11 +12,11 @@ namespace ScrapeWhatsNew
     {
 
         //TODO
-        const string baseURL = "https://docs.microsoft.com/en-us/dynamics365/finance/";
-        const string homepage = baseURL + "get-started/whats-new-home-page";
-        const string docsMicrosoftBaseURL = "https://docs.microsoft.com";
+        const string baseURL = "https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/";//https://docs.microsoft.com/en-us/dynamics365/finance/
+        //const string homepage = baseURL + "get-started/whats-new-home-page";
+        const string docsMicrosoftBaseURL = "https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/";
 
-        const string topHomePage = "https://docs.microsoft.com/en-us/dynamics365/get-started/whats-new/";
+        //const string topHomePage = "https://docs.microsoft.com/en-us/dynamics365/get-started/whats-new/";
 
         public List<ColorSet> colorSetList = new List<ColorSet>();
 
@@ -27,8 +27,8 @@ namespace ScrapeWhatsNew
         public void Process()
         {
             //TODO
-            string fileName = @"MicrosoftWhatsNew.csv";
-            string descriptionFileName = @"MicrosoftWhatsNew_DescriptionData.csv";
+            string fileName = @"NetSuiteWhatsNew.csv";
+            string descriptionFileName = @"NetSuiteWhatsNew_DescriptionData.csv";
 
             SetColorSetList();
             AddDummyDescriptionRow();
@@ -281,8 +281,8 @@ namespace ScrapeWhatsNew
         {
             List<ProductLine> productLineList = new List<ProductLine>();
 
-            var productLine = GetProductLine("Finance", "https://docs.microsoft.com/en-us/dynamics365/finance/"
-                            , "https://docs.microsoft.com/en-us/dynamics365/finance/get-started/whats-new-home-page");
+            var productLine = GetProductLine("Accounting", "https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/"//https://docs.microsoft.com/en-us/dynamics365/finance/
+                            , "https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/");//https://docs.microsoft.com/en-us/dynamics365/finance/get-started/whats-new-home-page
             if (productLine != null)
             {
                 productLineList.Add(productLine);
@@ -466,7 +466,7 @@ namespace ScrapeWhatsNew
                    @"/html/body/div[2]/div/section/div/div[1]/main/p[2]"
                     ).First();
                 //TODODOODODOODO
-                //feature = new Feature(ProcessWebsites.CleanInput(featureDetails.InnerText), ProcessWebsites.CleanInput(businessValue.InnerText), "", "", _url, _featureName);
+                feature = new Feature(ProcessWebsites.CleanInput(featureDetails.InnerText), ProcessWebsites.CleanInput(businessValue.InnerText), _url, _featureName);
             }
             catch (Exception ex)
             {

@@ -28,19 +28,19 @@ C:\Users\E059525\OneDrive - RSM\Repository\ScrapeWhatsNew\obj\Debug\netcoreapp3.
 C:\Users\E059525\OneDrive - RSM\Repository\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.dll
 C:\Users\E059525\OneDrive - RSM\Repository\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.pdb
 C:\Users\E059525\OneDrive - RSM\Repository\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.genruntimeconfig.cache
-C:\Users\e093947\source\repos\NetSuiteScraper\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.dll
-C:\Users\e093947\source\repos\NetSuiteScraper\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.pdb
-C:\Users\e093947\source\repos\NetSuiteScraper\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\ScrapeWhatsNew.exe
-C:\Users\e093947\source\repos\NetSuiteScraper\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\ScrapeWhatsNew.deps.json
-C:\Users\e093947\source\repos\NetSuiteScraper\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\ScrapeWhatsNew.runtimeconfig.json
-C:\Users\e093947\source\repos\NetSuiteScraper\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\ScrapeWhatsNew.runtimeconfig.dev.json
-C:\Users\e093947\source\repos\NetSuiteScraper\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\ScrapeWhatsNew.dll
-C:\Users\e093947\source\repos\NetSuiteScraper\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\ScrapeWhatsNew.pdb
-C:\Users\e093947\source\repos\NetSuiteScraper\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\HtmlAgilityPack.dll
-C:\Users\e093947\source\repos\NetSuiteScraper\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.csproj.AssemblyReference.cache
-C:\Users\e093947\source\repos\NetSuiteScraper\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\e093947\source\repos\NetSuiteScraper\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.AssemblyInfoInputs.cache
-C:\Users\e093947\source\repos\NetSuiteScraper\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.AssemblyInfo.cs
-C:\Users\e093947\source\repos\NetSuiteScraper\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.csproj.CoreCompileInputs.cache
-C:\Users\e093947\source\repos\NetSuiteScraper\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.csproj.CopyComplete
-C:\Users\e093947\source\repos\NetSuiteScraper\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.genruntimeconfig.cache
+C:\Users\e093947\Source\Repos\NetSuiteScraper\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\ScrapeWhatsNew.exe
+C:\Users\e093947\Source\Repos\NetSuiteScraper\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\ScrapeWhatsNew.dll
+C:\Users\e093947\Source\Repos\NetSuiteScraper\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\HtmlAgilityPack.dll
+C:\Users\e093947\Source\Repos\NetSuiteScraper\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.csproj.AssemblyReference.cache
+C:\Users\e093947\Source\Repos\NetSuiteScraper\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\e093947\Source\Repos\NetSuiteScraper\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.AssemblyInfoInputs.cache
+C:\Users\e093947\Source\Repos\NetSuiteScraper\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.AssemblyInfo.cs
+C:\Users\e093947\Source\Repos\NetSuiteScraper\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.csproj.CoreCompileInputs.cache
+C:\Users\e093947\Source\Repos\NetSuiteScraper\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.csproj.CopyComplete
+C:\Users\e093947\Source\Repos\NetSuiteScraper\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.dll
+C:\Users\e093947\Source\Repos\NetSuiteScraper\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.pdb
+C:\Users\e093947\Source\Repos\NetSuiteScraper\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\ScrapeWhatsNew.deps.json
+C:\Users\e093947\Source\Repos\NetSuiteScraper\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\ScrapeWhatsNew.runtimeconfig.json
+C:\Users\e093947\Source\Repos\NetSuiteScraper\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\ScrapeWhatsNew.runtimeconfig.dev.json
+C:\Users\e093947\Source\Repos\NetSuiteScraper\ScrapeWhatsNew\bin\Debug\netcoreapp3.1\ScrapeWhatsNew.pdb
+C:\Users\e093947\Source\Repos\NetSuiteScraper\ScrapeWhatsNew\obj\Debug\netcoreapp3.1\ScrapeWhatsNew.genruntimeconfig.cache

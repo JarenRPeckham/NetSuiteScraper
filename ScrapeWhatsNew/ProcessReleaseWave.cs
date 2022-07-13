@@ -33,43 +33,43 @@ namespace ScrapeWhatsNew
             releaseWave.AreaList = GetAreaList(releaseWave.Url);
 
             ////TODO?
-            //string fileName = @"NetSuiteWhatsNew2022.csv";
-            //string descriptionFileName = @"NetSuiteWhatsNewDescriptionData2022.csv";
-            //string userAddedFileName = @"NetSuiteWhatsNewUserAddedData2022.csv";
-            //string excelFileName = @"ReleaseWaveData2022.csv";
+            string fileName = @"NetSuiteWhatsNew2024.csv";
+            string descriptionFileName = @"NetSuiteWhatsNewDescriptionData2022.csv";
+            string userAddedFileName = @"NetSuiteWhatsNewUserAddedData2022.csv";
+            string excelFileName = @"ReleaseWaveData2022.csv";
 
-            //SetColorSetList();
-            //AddDummyDescriptionRow();
+            SetColorSetList();
+            AddDummyDescriptionRow();
 
-            //var powerWheelRowsUnordered = ConvertToPowerWheelRows(releaseWave);
+            var powerWheelRowsUnordered = ConvertToPowerWheelRows(releaseWave);
 
-            //var powerWheelRows = powerWheelRowsUnordered.OrderBy(o => o.Ring0).ToList(); //reorder powerwheel rows by ring0.
-            //powerWheelRows = ApplyColors(powerWheelRows);
+            var powerWheelRows = powerWheelRowsUnordered.OrderBy(o => o.Ring0).ToList(); //reorder powerwheel rows by ring0.
+            powerWheelRows = ApplyColors(powerWheelRows);
 
-            //var csvString = PowerWheelRow.GetCSVString(powerWheelRows);
-            //WriteFile(csvString, fileName);
+            var csvString = PowerWheelRow.GetCSVString(powerWheelRows);
+            WriteFile(csvString, fileName);
 
-            //if (descriptionRows.Count > 0)
-            //{
-            //    var csvStringDescriptionData = DescriptionRow.GetCSVString(descriptionRows);
-            //    WriteFile(csvStringDescriptionData, descriptionFileName);
-            //}
+            if (descriptionRows.Count > 0)
+            {
+                var csvStringDescriptionData = DescriptionRow.GetCSVString(descriptionRows);
+                WriteFile(csvStringDescriptionData, descriptionFileName);
+            }
 
-            //CreateUserAddedRows();
-            //if (userAddedRows.Count > 0)
-            //{
-            //    var csvStringUserAddedData = UserAddedRow.GetCSVString(userAddedRows);
-            //    WriteFile(csvStringUserAddedData, userAddedFileName);
-            //}
+            CreateUserAddedRows();
+            if (userAddedRows.Count > 0)
+            {
+                var csvStringUserAddedData = UserAddedRow.GetCSVString(userAddedRows);
+                WriteFile(csvStringUserAddedData, userAddedFileName);
+            }
 
-            ////ReleaseWave client facing excel spreadsheet.
-            ////excelRows = excelRows.OrderBy(o => o.Product).ToList(); //reorder powerwheel rows by Product, which is the first column.
+            //ReleaseWave client facing excel spreadsheet.
+            //excelRows = excelRows.OrderBy(o => o.Product).ToList(); //reorder powerwheel rows by Product, which is the first column.
 
-            //if (excelRows.Count > 0)
-            //{
-            //    var csvStringUserAddedData = ExcelRow.GetCSVString(excelRows);
-            //    WriteFile(csvStringUserAddedData, excelFileName);
-            //}
+            if (excelRows.Count > 0)
+            {
+                var csvStringUserAddedData = ExcelRow.GetCSVString(excelRows);
+                WriteFile(csvStringUserAddedData, excelFileName);
+            }
 
             return releaseWave;
         }
@@ -104,30 +104,33 @@ namespace ScrapeWhatsNew
             switch (_areaName)
             {
                 //TODO
-                case "Marketing":
-                case "Sales":
-                case "Service":
-                case "Guides":
-                case "Remote Assist":
+                case "Account Setup and Maintenance":
+                case "Authentication":
+                case "CSV Import":
+                case "NetSuite Connector":
                     parentAreaName = "CE";
                     break;
 
-                case "Finance and Operations":
-                case "Finance and operations":
+                case "Accounting":
+                case "Banking":
                 case "Commerce":
-                case "Fraud Protection":
-                case "Connected Store":
-                case "Supply Chain Insights":
+                case "Commerce Sales and Marketing":
+                case "SC/SCMA/SCA-SuiteCommerce Solutions":
+                case "SuiteCommerce InStore":
+                case "Manufacturing":
                     parentAreaName = "FS";
                     break;
 
-                case "SMB":
+                case "Employee Management":
+                case "Inventory Management":
+                case "Order Management":
+                case "Projects":
+                case "SuiteAnalytics":
                     parentAreaName = "BC";
                     break;
 
-                case "Human Resources":
-                case "Customer Insights":
-                case "Customer Voice":
+                case "Globalization":
+                case "Mobile":
                     parentAreaName = "Other";
                     break;
 
@@ -206,320 +209,320 @@ namespace ScrapeWhatsNew
             return _powerWheelRows;
         }
 
-        //public List<PowerWheelRow> ConvertToPowerWheelRows(ReleaseWave _releaseWave)
-        //{
-        //    List<PowerWheelRow> powerWheelRows = new List<PowerWheelRow>();
+        public List<PowerWheelRow> ConvertToPowerWheelRows(ReleaseWave _releaseWave)
+        {
+            List<PowerWheelRow> powerWheelRows = new List<PowerWheelRow>();
 
-        //    foreach (var area in _releaseWave.AreaList)
-        //    {
-        //        SetDescriptionDataForAreaParent(GetParentAreaName(area.Name), _releaseWave, area);
-        //        //excelRows.Add(populateExcelRow(_releaseWave, area, null, null, null, "Yes")); //TODO, the area is using the parentName every time.  Does this need to change?
-        //        SetDescriptionDataForArea(_releaseWave, area);
-        //        //excelRows.Add(populateExcelRow(_releaseWave, area, null, null, null, "Yes"));
+            foreach (var area in _releaseWave.AreaList)
+            {
+                SetDescriptionDataForAreaParent(GetParentAreaName(area.Name), _releaseWave, area);
+                //excelRows.Add(populateExcelRow(_releaseWave, area, null, null, null, "Yes")); //TODO, the area is using the parentName every time.  Does this need to change?
+                SetDescriptionDataForArea(_releaseWave, area);
+                //excelRows.Add(populateExcelRow(_releaseWave, area, null, null, null, "Yes"));
 
-        //        foreach (var product in area.ProductList)
-        //        {
-        //            SetDescriptionDataForProduct(_releaseWave, area, product);
-        //            foreach (var group in product.GroupList)
-        //            {
-        //                SetDescriptionDataForGroup(_releaseWave, area, product, group);
-        //                //excelRows.Add(populateExcelRow(_releaseWave, area, product, group, null, "Yes"));
+                foreach (var product in area.ProductList)
+                {
+                    SetDescriptionDataForProduct(_releaseWave, area, product);
+                    foreach (var group in product.GroupList)
+                    {
+                        SetDescriptionDataForGroup(_releaseWave, area, product, group);
+                        //excelRows.Add(populateExcelRow(_releaseWave, area, product, group, null, "Yes"));
 
-        //                foreach (var feature in group.FeatureList)
-        //                {
-        //                    powerWheelRows.Add(populatePowerWheelRow(_releaseWave, area, product, group, feature));
+                        foreach (var feature in group.FeatureList)
+                        {
+                            powerWheelRows.Add(populatePowerWheelRow(_releaseWave, area, product, group, feature));
 
-        //                    //excelRows.Add(populateExcelRow(_releaseWave, area, product, group, feature, "No"));
+                            //excelRows.Add(populateExcelRow(_releaseWave, area, product, group, feature, "No"));
 
-        //                    SetDescriptionDataForFeature(_releaseWave, area, product, group, feature);
-        //                }
-        //            }
+                            SetDescriptionDataForFeature(_releaseWave, area, product, group, feature);
+                        }
+                    }
 
-        //        }
+                }
 
-        //        //if (colorIndex < colorSetList.Count - 1)
-        //        //{
-        //        //    colorIndex++; //Change color for each Area
-        //        //}
-        //    }
+                if (colorIndex < colorSetList.Count - 1)
+                {
+                    colorIndex++; //Change color for each Area
+                }
+            }
 
-        //    return powerWheelRows;
-        //}
+            return powerWheelRows;
+        }
 
-        //public ExcelRow populateExcelRow(string _parentProduct, ReleaseWave _releaseWave, Area _area, Product _product, Group _group, Feature _feature, string _groupNode = "")
-        //{
-        //    ExcelRow row = new ExcelRow();
+        public ExcelRow populateExcelRow(string _parentProduct, ReleaseWave _releaseWave, Area _area, Product _product, Group _group, Feature _feature, string _groupNode = "")
+        {
+            ExcelRow row = new ExcelRow();
 
-        //    row.Product = _parentProduct;
-        //    string productName = "";
-        //    if (_product != null)
-        //    {
-        //        productName = _product.Name;
-        //    }
-        //    row.Category = productName; //_area.Name;
+            row.Product = _parentProduct;
+            string productName = "";
+            if (_product != null)
+            {
+                productName = _product.Name;
+            }
+            row.Category = productName; //_area.Name;
 
-        //    string groupName = "";
-        //    if (_group != null)
-        //    {
-        //        groupName = _group.Name;
-        //    }
-        //    row.SubCategory = groupName;
-        //    //row.Group = groupName;
+            string groupName = "";
+            if (_group != null)
+            {
+                groupName = _group.Name;
+            }
+            row.SubCategory = groupName;
+            //row.Group = groupName;
 
-        //    row.FeatureType = "";
+            row.FeatureType = "";
 
-        //    if (_feature != null)
-        //    { 
-        //        //TODO
-        //        row.FeatureTitle = _feature.Name;
-        //        row.BusinessValue = _feature.BusinessValue;
-        //        row.FeatureDetails = _feature.FeatureDetails;
-        //        row.ReleaseWave = _releaseWave.Name;
-        //        row.PublicPreview = _feature.PublicPreview;
-        //        row.DateAvailable = _feature.GeneralAvailability;
-        //    }
-        //    else
-        //    {
-        //        row.FeatureTitle = "";
-        //        row.BusinessValue = "";
-        //        row.FeatureDetails = "";
-        //        row.ReleaseWave = "";
-        //        row.PublicPreview = "";
-        //        row.DateAvailable = "";
-        //    }
-        //    //TODO?
-        //    row.ImpactLevel = "";
-        //    row.BusinessAndProfessionalServices = "";
-        //    row.FoodAndBeverage = "";
-        //    row.Retail = "";
-        //    row.LifeSciences = "";
-        //    row.NonProfit = "";
-        //    row.HealthCare = "";
-        //    row.Industrials = "";
-        //    row.PublicSector = "";
+            if (_feature != null)
+            {
+                //TODO
+                row.FeatureTitle = _feature.Name;
+                row.BusinessValue = _feature.BusinessValue;
+                row.FeatureDetails = _feature.FeatureDetails;
+                row.ReleaseWave = _releaseWave.Name;
+                //row.PublicPreview = _feature.PublicPreview;
+                //row.DateAvailable = _feature.GeneralAvailability;
+            }
+            else
+            {
+                row.FeatureTitle = "";
+                row.BusinessValue = "";
+                row.FeatureDetails = "";
+                row.ReleaseWave = "";
+                row.PublicPreview = "";
+                row.DateAvailable = "";
+            }
+            //TODO?
+            row.ImpactLevel = "";
+            row.BusinessAndProfessionalServices = "";
+            row.FoodAndBeverage = "";
+            row.Retail = "";
+            row.LifeSciences = "";
+            row.NonProfit = "";
+            row.HealthCare = "";
+            row.Industrials = "";
+            row.PublicSector = "";
 
-        //    row.GroupNode = _groupNode;
+            row.GroupNode = _groupNode;
 
-        //    return row;
-        //}
+            return row;
+        }
 
-        //public PowerWheelRow populatePowerWheelRow(ReleaseWave __releaseWave, Area _area, Product _product, Group _group, Feature _feature)
-        //{
-        //    PowerWheelRow row = new PowerWheelRow();
+        public PowerWheelRow populatePowerWheelRow(ReleaseWave __releaseWave, Area _area, Product _product, Group _group, Feature _feature)
+        {
+            PowerWheelRow row = new PowerWheelRow();
 
-        //    //row.Ring0 = GetParentAreaName(_area.Name);
-        //    //row.Ring1 = _area.Name;
-        //    //row.Ring2 = _product.Name;
-        //    //row.Ring3 = _group.Name;
-        //    //row.Ring4 = _feature.Name;
-        //    //row.Ring5 = "";
+            //row.Ring0 = GetParentAreaName(_area.Name);
+            //row.Ring1 = _area.Name;
+            //row.Ring2 = _product.Name;
+            //row.Ring3 = _group.Name;
+            //row.Ring4 = _feature.Name;
+            //row.Ring5 = "";
 
-        //    //row.friendlyname = GetParentAreaFriendlyName(row.Ring0);
-        //    //row.friendlyname1 = _area.Name;
-        //    //row.friendlyname2 = _product.Name;
-        //    //row.friendlyname3 = _group.Name;
-        //    //row.friendlyname4 = _feature.Name;
-        //    //row.friendlyname5 = "";
+            //row.friendlyname = GetParentAreaFriendlyName(row.Ring0);
+            //row.friendlyname1 = _area.Name;
+            //row.friendlyname2 = _product.Name;
+            //row.friendlyname3 = _group.Name;
+            //row.friendlyname4 = _feature.Name;
+            //row.friendlyname5 = "";
 
-        //    //row.hyperlink = "";
-        //    //row.hyperlink1 = _area.Url;
-        //    //row.hyperlink2 = _product.Url;
-        //    //row.hyperlink3 = _group.Url;
-        //    //row.hyperlink4 = _feature.URL;
-        //    //row.hyperlink5 = "";
+            //row.hyperlink = "";
+            //row.hyperlink1 = _area.Url;
+            //row.hyperlink2 = _product.Url;
+            //row.hyperlink3 = _group.Url;
+            //row.hyperlink4 = _feature.URL;
+            //row.hyperlink5 = "";
 
-        //    //We decided to get rid of the 'Area', and just move everything up a ring.
-        //    row.Ring0 = GetParentAreaName(_area.Name);
-        //    row.Ring1 = _product.Name;
-        //    row.Ring2 = _group.Name;
-        //    row.Ring3 = _feature.Name;
-        //    row.Ring4 = "";
-        //    row.Ring5 = "";
+            //We decided to get rid of the 'Area', and just move everything up a ring.
+            row.Ring0 = GetParentAreaName(_area.Name);
+            row.Ring1 = _product.Name;
+            row.Ring2 = _group.Name;
+            row.Ring3 = _feature.Name;
+            row.Ring4 = "";
+            row.Ring5 = "";
 
-        //    row.friendlyname = GetParentAreaFriendlyName(row.Ring0);
-        //    row.friendlyname1 = _product.Name;
-        //    row.friendlyname2 = _group.Name;
-        //    row.friendlyname3 = _feature.Name;
-        //    row.friendlyname4 = "";
-        //    row.friendlyname5 = "";
+            row.friendlyname = GetParentAreaFriendlyName(row.Ring0);
+            row.friendlyname1 = _product.Name;
+            row.friendlyname2 = _group.Name;
+            row.friendlyname3 = _feature.Name;
+            row.friendlyname4 = "";
+            row.friendlyname5 = "";
 
-        //    row.hyperlink = "";
-        //    row.hyperlink1 = _product.Url;
-        //    row.hyperlink2 = _group.Url;
-        //    row.hyperlink3 = _feature.URL;
-        //    row.hyperlink4 = "";
-        //    row.hyperlink5 = "";
+            row.hyperlink = "";
+            row.hyperlink1 = _product.Url;
+            row.hyperlink2 = _group.Url;
+            row.hyperlink3 = _feature.URL;
+            row.hyperlink4 = "";
+            row.hyperlink5 = "";
 
-        //    row.Color = "Blue"; //not used anymore, but still needed
-        //    row.size = "1"; //this can always be set to 1.
+            row.Color = "Blue"; //not used anymore, but still needed
+            row.size = "1"; //this can always be set to 1.
 
-        //    row.description = "";
-        //    row.description1 = "";
-        //    row.description2 = "";
-        //    row.description3 = "";
-        //    row.description4 = "";
-        //    row.description5 = "";
+            row.description = "";
+            row.description1 = "";
+            row.description2 = "";
+            row.description3 = "";
+            row.description4 = "";
+            row.description5 = "";
 
-        //    row.state = "Enable";
-        //    row.state1 = "Enable";
-        //    row.state2 = "Enable";
-        //    row.state3 = "Enable";
-        //    row.state4 = "Enable";
-        //    row.state5 = "Enable";
+            row.state = "Enable";
+            row.state1 = "Enable";
+            row.state2 = "Enable";
+            row.state3 = "Enable";
+            row.state4 = "Enable";
+            row.state5 = "Enable";
 
-        //    row.level = "0";
-        //    row.level1 = "0";
-        //    row.level2 = "0";
-        //    row.level3 = "0";
-        //    row.level4 = "0";
-        //    row.level5 = "0";
+            row.level = "0";
+            row.level1 = "0";
+            row.level2 = "0";
+            row.level3 = "0";
+            row.level4 = "0";
+            row.level5 = "0";
 
-        //    row.metadata = "";
-        //    row.metadata1 = "";
-        //    row.metadata2 = "";
-        //    row.metadata3 = "";
-        //    row.metadata4 = "";
-        //    row.metadata5 = "";
+            row.metadata = "";
+            row.metadata1 = "";
+            row.metadata2 = "";
+            row.metadata3 = "";
+            row.metadata4 = "";
+            row.metadata5 = "";
 
-        //    return row;
-        //}
+            return row;
+        }
 
-        //public void SetDescriptionDataForAreaParent(string _parentName, ReleaseWave _releaseWave, Area _area)
-        //{
-        //    DescriptionRow descriptionRow = new DescriptionRow();
+        public void SetDescriptionDataForAreaParent(string _parentName, ReleaseWave _releaseWave, Area _area)
+        {
+            DescriptionRow descriptionRow = new DescriptionRow();
 
-        //    if (descriptionRows.Where(x => x.NodeName == _parentName).FirstOrDefault() == null)
-        //    {
-        //        //TODO?
-        //        descriptionRow.ParentNodeName = _parentName;
-        //        descriptionRow.NodeName = _parentName;
-        //        descriptionRow.Title = _parentName;
-        //        descriptionRow.Description = _parentName;
-        //        descriptionRow.ContactName = "";
-        //        descriptionRow.EmailAddress = "";
-        //        descriptionRow.ImageFileName = "";
-        //        descriptionRow.ExternalURL = "";
-        //        descriptionRow.InternalURL = "";
-        //        descriptionRow.ExternalOnePage = "";
-        //        descriptionRow.EmailSubject = "";
-        //        descriptionRow.HTMLResult = "";
+            if (descriptionRows.Where(x => x.NodeName == _parentName).FirstOrDefault() == null)
+            {
+                //TODO?
+                descriptionRow.ParentNodeName = _parentName;
+                descriptionRow.NodeName = _parentName;
+                descriptionRow.Title = _parentName;
+                descriptionRow.Description = _parentName;
+                descriptionRow.ContactName = "";
+                descriptionRow.EmailAddress = "";
+                descriptionRow.ImageFileName = "";
+                descriptionRow.ExternalURL = "";
+                descriptionRow.InternalURL = "";
+                descriptionRow.ExternalOnePage = "";
+                descriptionRow.EmailSubject = "";
+                descriptionRow.HTMLResult = "";
 
-        //        descriptionRows.Add(descriptionRow);
+                descriptionRows.Add(descriptionRow);
 
-        //        excelRows.Add(populateExcelRow(descriptionRow.ParentNodeName, null, _area, null, null, null, "Yes"));
-        //    }
-        //}
+                excelRows.Add(populateExcelRow(descriptionRow.ParentNodeName, null, _area, null, null, null, "Yes"));
+            }
+        }
 
-        //public void SetDescriptionDataForArea(ReleaseWave _releaseWave, Area _area)
-        //{
-        //    DescriptionRow descriptionRow = new DescriptionRow();
+        public void SetDescriptionDataForArea(ReleaseWave _releaseWave, Area _area)
+        {
+            DescriptionRow descriptionRow = new DescriptionRow();
 
-        //    //TODO?
-        //    descriptionRow.ParentNodeName = GetParentAreaName(_area.Name);
-        //    descriptionRow.NodeName = _area.Name;
-        //    descriptionRow.Title = _area.Name;
-        //    descriptionRow.Description = _area.Name;
-        //    descriptionRow.ContactName = "";
-        //    descriptionRow.EmailAddress = "";
-        //    descriptionRow.ImageFileName = "";
-        //    descriptionRow.ExternalURL = ""; //_area.Url;
-        //    descriptionRow.InternalURL = "";
-        //    descriptionRow.ExternalOnePage = _area.Url;
-        //    descriptionRow.EmailSubject = "";
-        //    descriptionRow.HTMLResult = "";
+            //TODO?
+            descriptionRow.ParentNodeName = GetParentAreaName(_area.Name);
+            descriptionRow.NodeName = _area.Name;
+            descriptionRow.Title = _area.Name;
+            descriptionRow.Description = _area.Name;
+            descriptionRow.ContactName = "";
+            descriptionRow.EmailAddress = "";
+            descriptionRow.ImageFileName = "";
+            descriptionRow.ExternalURL = ""; //_area.Url;
+            descriptionRow.InternalURL = "";
+            descriptionRow.ExternalOnePage = _area.Url;
+            descriptionRow.EmailSubject = "";
+            descriptionRow.HTMLResult = "";
 
-        //    descriptionRows.Add(descriptionRow);
+            descriptionRows.Add(descriptionRow);
 
-        //    excelRows.Add(populateExcelRow(descriptionRow.ParentNodeName, _releaseWave, _area, null, null, null, "Yes"));
-        //}
-        
+            excelRows.Add(populateExcelRow(descriptionRow.ParentNodeName, _releaseWave, _area, null, null, null, "Yes"));
+        }
 
-        //public void SetDescriptionDataForProduct(ReleaseWave _releaseWave, Area _area, Product _product)
-        //{
-        //    DescriptionRow descriptionRow = new DescriptionRow();
 
-        //    //TODO?
-        //    descriptionRow.ParentNodeName = GetParentAreaName(_area.Name);
-        //    descriptionRow.NodeName = _product.Name;
-        //    descriptionRow.Title = _product.Name;
-        //    descriptionRow.Description = _product.Name;
-        //    descriptionRow.ContactName = "";
-        //    descriptionRow.EmailAddress = "";
-        //    descriptionRow.ImageFileName = "";
-        //    descriptionRow.ExternalURL = ""; //_product.Url;
-        //    descriptionRow.InternalURL = "";
-        //    descriptionRow.ExternalOnePage = _product.Url;
-        //    descriptionRow.EmailSubject = "";
-        //    descriptionRow.HTMLResult = "";
+        public void SetDescriptionDataForProduct(ReleaseWave _releaseWave, Area _area, Product _product)
+        {
+            DescriptionRow descriptionRow = new DescriptionRow();
 
-        //    descriptionRows.Add(descriptionRow);
+            //TODO?
+            descriptionRow.ParentNodeName = GetParentAreaName(_area.Name);
+            descriptionRow.NodeName = _product.Name;
+            descriptionRow.Title = _product.Name;
+            descriptionRow.Description = _product.Name;
+            descriptionRow.ContactName = "";
+            descriptionRow.EmailAddress = "";
+            descriptionRow.ImageFileName = "";
+            descriptionRow.ExternalURL = ""; //_product.Url;
+            descriptionRow.InternalURL = "";
+            descriptionRow.ExternalOnePage = _product.Url;
+            descriptionRow.EmailSubject = "";
+            descriptionRow.HTMLResult = "";
 
-        //    excelRows.Add(populateExcelRow(descriptionRow.ParentNodeName, _releaseWave, _area, _product, null, null, "Yes"));
-        //}
+            descriptionRows.Add(descriptionRow);
 
-        //public void SetDescriptionDataForGroup(ReleaseWave _releaseWave, Area _area, Product _product, Group _group)
-        //{
-        //    DescriptionRow descriptionRow = new DescriptionRow();
+            excelRows.Add(populateExcelRow(descriptionRow.ParentNodeName, _releaseWave, _area, _product, null, null, "Yes"));
+        }
 
-        //    //TODO?
-        //    descriptionRow.ParentNodeName = GetParentAreaName(_area.Name);
-        //    descriptionRow.NodeName = _group.Name;
-        //    descriptionRow.Title = _group.Name;
-        //    descriptionRow.Description = _group.Name;
-        //    descriptionRow.ContactName = "";
-        //    descriptionRow.EmailAddress = "";
-        //    descriptionRow.ImageFileName = "";
-        //    descriptionRow.ExternalURL = ""; //_group.Url;
-        //    descriptionRow.InternalURL = "";
-        //    descriptionRow.ExternalOnePage = _group.Url;
-        //    descriptionRow.EmailSubject = "";
-        //    descriptionRow.HTMLResult = "";
+        public void SetDescriptionDataForGroup(ReleaseWave _releaseWave, Area _area, Product _product, Group _group)
+        {
+            DescriptionRow descriptionRow = new DescriptionRow();
 
-        //    descriptionRows.Add(descriptionRow);
+            //TODO?
+            descriptionRow.ParentNodeName = GetParentAreaName(_area.Name);
+            descriptionRow.NodeName = _group.Name;
+            descriptionRow.Title = _group.Name;
+            descriptionRow.Description = _group.Name;
+            descriptionRow.ContactName = "";
+            descriptionRow.EmailAddress = "";
+            descriptionRow.ImageFileName = "";
+            descriptionRow.ExternalURL = ""; //_group.Url;
+            descriptionRow.InternalURL = "";
+            descriptionRow.ExternalOnePage = _group.Url;
+            descriptionRow.EmailSubject = "";
+            descriptionRow.HTMLResult = "";
 
-        //    excelRows.Add(populateExcelRow(descriptionRow.ParentNodeName, _releaseWave, _area, _product, _group, null, "Yes"));
-        //}
+            descriptionRows.Add(descriptionRow);
 
-        //public void SetDescriptionDataForFeature(ReleaseWave _releaseWave, Area _area, Product _product, Group _group, Feature _feature)
-        //{
-        //    DescriptionRow descriptionRow = new DescriptionRow();
+            excelRows.Add(populateExcelRow(descriptionRow.ParentNodeName, _releaseWave, _area, _product, _group, null, "Yes"));
+        }
 
-        //    descriptionRow.ParentNodeName = GetParentAreaName(_area.Name);
-        //    descriptionRow.NodeName = _feature.Name;
-        //    descriptionRow.Title = _feature.Name;
+        public void SetDescriptionDataForFeature(ReleaseWave _releaseWave, Area _area, Product _product, Group _group, Feature _feature)
+        {
+            DescriptionRow descriptionRow = new DescriptionRow();
 
-        //    //TODO/UPDATE
-        //    string businessValue = "";
-        //    if (!String.IsNullOrEmpty(_feature.BusinessValue))
-        //    {
-        //        businessValue = "<h2>Business Value</h2> <p>" + _feature.BusinessValue + "</p>";
-        //    }
+            descriptionRow.ParentNodeName = GetParentAreaName(_area.Name);
+            descriptionRow.NodeName = _feature.Name;
+            descriptionRow.Title = _feature.Name;
 
-        //    string featureDetails = "";
-        //    if (!String.IsNullOrEmpty(_feature.FeatureDetails))
-        //    {
-        //        featureDetails = "<h2>Feature details</h2> <p>" + _feature.FeatureDetails + "</p>";
-        //    }
+            //TODO/UPDATE
+            //string businessValue = "";
+            //if (!String.IsNullOrEmpty(_feature.BusinessValue))
+            //{
+            //    businessValue = "<h2>Business Value</h2> <p>" + _feature.BusinessValue + "</p>";
+            //}
 
-        //    //TODO?
-        //    //descriptionRow.Description =  businessValue + featureDetails;
-        //    descriptionRow.ContactName = "";
-        //    descriptionRow.EmailAddress = "";
-        //    descriptionRow.ImageFileName = "";
-        //    descriptionRow.ExternalURL = ""; //_feature.URL;
-        //    descriptionRow.InternalURL = "";
-        //    descriptionRow.ExternalOnePage = _feature.URL;
-        //    descriptionRow.EmailSubject = "";
-        //    descriptionRow.HTMLResult = "";
-        //    descriptionRow.PublicPreview = _feature.PublicPreview;
-        //    descriptionRow.GeneralAvailability = _feature.GeneralAvailability;
-        //    descriptionRow.BusinessValue = _feature.BusinessValue;
-        //    descriptionRow.FeatureDetails = _feature.FeatureDetails;
+            //string featureDetails = "";
+            //if (!String.IsNullOrEmpty(_feature.FeatureDetails))
+            //{
+            //    featureDetails = "<h2>Feature details</h2> <p>" + _feature.FeatureDetails + "</p>";
+            //}
 
-        //    descriptionRows.Add(descriptionRow);
+            //TODO?
+            //descriptionRow.Description =  businessValue + featureDetails;
+            descriptionRow.ContactName = "";
+            descriptionRow.EmailAddress = "";
+            descriptionRow.ImageFileName = "";
+            descriptionRow.ExternalURL = ""; //_feature.URL;
+            descriptionRow.InternalURL = "";
+            descriptionRow.ExternalOnePage = _feature.URL;
+            descriptionRow.EmailSubject = "";
+            descriptionRow.HTMLResult = "";
+            //descriptionRow.PublicPreview = _feature.PublicPreview;
+            //descriptionRow.GeneralAvailability = _feature.GeneralAvailability;
+            descriptionRow.BusinessValue = _feature.BusinessValue;
+            descriptionRow.FeatureDetails = _feature.FeatureDetails;
 
-        //    excelRows.Add(populateExcelRow(descriptionRow.ParentNodeName, _releaseWave, _area, _product, _group, _feature, "No"));
-        //}
+            descriptionRows.Add(descriptionRow);
+
+            excelRows.Add(populateExcelRow(descriptionRow.ParentNodeName, _releaseWave, _area, _product, _group, _feature, "No"));
+        }
 
         public List<Area> GetAreaList(string _releaseWaveUrl)
         {
@@ -552,11 +555,12 @@ namespace ScrapeWhatsNew
                         //Find areas not needed in the same list
                         && areaNode.ChildNodes != null
                         && areaNode.ChildNodes.Count > 0
-                        && areaNode.InnerHtml != "In this article"
-                        && areaNode.InnerHtml != "Is this page helpful?"
-                        && areaNode.InnerHtml != "Industry accelerators"
-                        && areaNode.InnerHtml != "Microsoft Cloud For Industry"
-                        && areaNode.InnerHtml != "Microsoft Cloud for Industry Solutions") //purposely exclude this node and everything in it.
+                        //&& areaNode.InnerHtml != "In this article"
+                        //&& areaNode.InnerHtml != "Is this page helpful?"
+                        //&& areaNode.InnerHtml != "Industry accelerators"
+                        //&& areaNode.InnerHtml != "Microsoft Cloud For Industry"
+                        //&& areaNode.InnerHtml != "Microsoft Cloud for Industry Solutions"
+                        ) //purposely exclude this node and everything in it.
                     {
                         if (showDebugMessages)
                         {
@@ -679,7 +683,7 @@ namespace ScrapeWhatsNew
                 var Thref = _areaNode.ChildNodes[1].Attributes[0].Value;
                 var url = docsMicrosoftBaseURL + Thref;
                 Console.WriteLine("        Product:  " + productName);
-                Product product = new Product(productName, url, AltGetFeatureList(_areaNode, url));
+                Product product = new Product(productName, url, GetGroupList(url, productName));
 
 
             }
@@ -706,44 +710,52 @@ namespace ScrapeWhatsNew
                 var body = doc.DocumentNode.SelectNodes(
                     @"/html/body").First();
 
-                var tdList = body.SelectNodes("//h5");
-
-
-                if (tdList == null)
-                {
-                    var table = body.SelectNodes("//table");
-                    var array = table.ToArray();
-                    if (showDebugMessages)
+                var tdList = body.SelectNodes("//p");
+                var h2Nodes = body.SelectNodes("//h2");
+                var count = 0;
+                
+                    for (int j = 0; j < tdList.Count; j++)
                     {
-                        Console.WriteLine("        " + _productName + " Feature");
-                    }
-                    //There is not a group text on this page, so we need to create our own.
-                   
-                    Group group = new Group(_productName + " Feature", plannedFeaturesURL, AltGetFeatureList(array[0], _productLineURL));
-                    groupList.Add(group);
-                   
-                }
-                else
-                {
-                    //TODO
-                    var tdArray = tdList.ToArray();
-                    for (int i = 0; i < tdArray.Count(); i++)
-                    {
-                        var groupNode = tdArray[i];
-                        if (groupNode != null
-                            && groupNode.ChildNodes != null
-                            && groupNode.ChildNodes.Count > 0
-                            && groupNode.InnerHtml != "In this article")
+                        if (tdList[j].ChildNodes.Count > 1)
                         {
-                            if (showDebugMessages)
+                            if (tdList[j].ParentNode.Name == "li" && tdList[j].ChildNodes[1].Name == "a")
                             {
-                                Console.WriteLine("        Group: " + groupNode.InnerText);
+                                count++;
+                                var url = docsMicrosoftBaseURL + tdList[j].ChildNodes[1].Attributes[0].Value;
+                                Group group = new Group(_productName + " Feature", url, AltGetFeatureList(tdList[j], url));
+                                groupList.Add(group);
+
                             }
-                            Group group = new Group(groupNode.InnerText, plannedFeaturesURL, GetFeatureList(groupNode, _productLineURL));
-                            groupList.Add(group);
+                            else if (tdList[j].ChildNodes[1].Name == "a")
+                            {
+                                if (tdList[j].ParentNode.Name == "li")
+                                {
+                                    count++;
+                                    Group group = new Group(_productName + "Feature", plannedFeaturesURL, AltGetFeatureList(tdList[j], plannedFeaturesURL));
+                                    groupList.Add(group);
+                                }
+                                else if (tdList[j].ParentNode.ParentNode.Name == "tr")
+                                {
+                                    count++;
+                                    Group group = new Group(_productName + "Feature", plannedFeaturesURL, AltGetFeatureList(tdList[j], plannedFeaturesURL));
+                                    groupList.Add(group);
+                                }
+
+                            }
                         }
                     }
-                }
+                
+                if(count == 0)
+                {
+                    for (int z = 0; z < h2Nodes.Count; z++)
+                    {
+                        var name = h2Nodes[z].InnerText;
+                        Group group = new Group(name + "Feature", plannedFeaturesURL, AltGetFeatureList(h2Nodes[z], plannedFeaturesURL));
+                        groupList.Add(group);
+                    }
+                }    
+                
+                
             }
             catch (Exception ex)
             {
@@ -757,19 +769,24 @@ namespace ScrapeWhatsNew
         public List<Feature> AltGetFeatureList(HtmlNode _tableNode, string _productLineURL)
         {
             var featureList = new List<Feature>();
-            //use the _areaNode to find all of the product nodes, and add them to an list object.
-            //var web = new HtmlWeb();
-            //var doc = web.Load(_productLineURL);
-            //var body = doc.DocumentNode.SelectNodes(
-            //        @"/html/body").First();
-
-            //var tdList = body.SelectNodes("//h1");
-            //var tdArray = tdList.ToArray();
 
             try
             {
-                var body = _tableNode.ChildNodes[1];
-                var name = body.InnerHtml;
+                if (_tableNode.ChildNodes.Count > 1)
+                {
+                    var body = _tableNode.ChildNodes[1];
+                    var name = body.InnerHtml;
+                    var feature = GetFeatureDetails(_productLineURL, name);
+                    featureList.Add(feature);
+                }
+                else
+                {
+                    var body = _tableNode.ChildNodes[0];
+                    var name = body.InnerHtml;
+                    var feature = GetFeatureDetails(_productLineURL, name);
+                    featureList.Add(feature);
+                }
+
                 //var tdArray = bodyChildren.ToArray();
                 //List<HtmlNode> trList = new List<HtmlNode>();
                 //Get tr's
@@ -798,8 +815,7 @@ namespace ScrapeWhatsNew
                 //    var feature = GetFeatureDetails(url, featureName);
                 //    featureList.Add(feature);
                 //}
-                var feature = GetFeatureDetails(_productLineURL, name);
-                featureList.Add(feature);
+
             }
             catch (Exception ex)
             {
@@ -807,98 +823,101 @@ namespace ScrapeWhatsNew
             }
             return featureList;
         }
-        public List<Feature> GetFeatureList(HtmlNode _groupNode, string _productLineURL)
-        {
-            var featureList = new List<Feature>();
-            //use the _areaNode to find all of the product nodes, and add them to an list object.
-            //var web = new HtmlWeb();
-            //var doc = web.Load(_releaseWaveUrl);
+        //public List<Feature> GetFeatureList(HtmlNode _groupNode, string _productLineURL)
+        //{
+        //    var featureList = new List<Feature>();
+        //    //use the _areaNode to find all of the product nodes, and add them to an list object.
+        //    //var web = new HtmlWeb();
+        //    //var doc = web.Load(_releaseWaveUrl);
 
-            try
-            {
-                int counter = 0;
+        //    try
+        //    {
+        //        int counter = 0;
 
-                var table = _groupNode.NextSibling;
-                while (true)
-                {
-                    if (table.Name == "table" || counter == 20)
-                    {
-                        break;
-                    }
-                    counter++;
-                    table = table.NextSibling;
-                }
+        //        var table = _groupNode.NextSibling;
+        //        while (true)
+        //        {
+        //            if (table.Name == "table" || counter == 20)
+        //            {
+        //                break;
+        //            }
+        //            counter++;
+        //            table = table.NextSibling;
+        //        }
 
-                var body = table.ChildNodes[3];
-                var bodyChildren = body.ChildNodes;
-                var tdArray = bodyChildren.ToArray();
-                List<HtmlNode> trList = new List<HtmlNode>();
-                //Get tr's
+        //        var body = table.ChildNodes[3];
+        //        var bodyChildren = body.ChildNodes;
+        //        var tdArray = bodyChildren.ToArray();
+        //        List<HtmlNode> trList = new List<HtmlNode>();
+        //        //Get tr's
 
-                for (int j = 0; j < tdArray.Count(); j++)
-                {
-                    var node = tdArray[j];
-                    if (node.Name == "tr")
-                    {
-                        trList.Add(node);
-                    }
+        //        for (int j = 0; j < tdArray.Count(); j++)
+        //        {
+        //            var node = tdArray[j];
+        //            if (node.Name == "tr")
+        //            {
+        //                trList.Add(node);
+        //            }
 
-                }
-                //loop through each tr and get the feature information
+        //        }
+        //        //loop through each tr and get the feature information
 
-                var trArray = trList.ToArray();
+        //        var trArray = trList.ToArray();
 
-                for (int j = 0; j < trArray.Count(); j++)
-                {
-                    var node = trArray[j];
-                    var td = node.ChildNodes[1];
-                    var aNode = td.ChildNodes[0];
-                    string featureName = aNode.InnerText;
-                    string url = _productLineURL + aNode.Attributes[0].Value;
+        //        for (int j = 0; j < trArray.Count(); j++)
+        //        {
+        //            var node = trArray[j];
+        //            var td = node.ChildNodes[1];
+        //            var aNode = td.ChildNodes[0];
+        //            string featureName = aNode.InnerText;
+        //            string url = _productLineURL + aNode.Attributes[0].Value;
 
-                    if (showDebugMessages)
-                    {
-                        Console.WriteLine("            Feature: " + featureName);
-                    }
+        //            if (showDebugMessages)
+        //            {
+        //                Console.WriteLine("            Feature: " + featureName);
+        //            }
 
-                    var feature = GetFeatureDetails(url, featureName);
-                    featureList.Add(feature);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("error: node not found in GetFeatureList: " + ex.Message);
-            }
-            return featureList;
-        }
+        //            var feature = GetFeatureDetails(url, featureName);
+        //            featureList.Add(feature);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.WriteLine("error: node not found in GetFeatureList: " + ex.Message);
+        //    }
+        //    return featureList;
+        //}
 
         public Feature GetFeatureDetails(string _url, string _featureName)
         {
             var web = new HtmlWeb();
             var doc = web.Load(_url);
 
-            //var generalAvailability = doc.DocumentNode.SelectNodes(
-            //   @"/html/body/div[2]/div/section/div/div[1]/main/div/table/tbody/tr/td[3]/text()" //@" / html/body/div[2]/div/section/div/div[1]/main/div[1]/table/tbody/tr[1]/td[4]/a"   //@" / html/body/div[2]/div"
-            //    ///following::tr[1]/td"
-            //    ).First();
+            var body = doc.DocumentNode.SelectNodes(
+                    @"/html/body/article").First();
+            //var body = doc.DocumentNode.SelectNodes(
+            //        @"/html/body").First();
 
+            //var tdList = body.SelectNodes("//h5");
+            //var tdArray = tdList.ToArray();
+            var div = body.SelectNodes("//div");
+            var tdArray = div.ToArray();
+            var actualDiv = tdArray[1];
             Feature feature = null;
-            HtmlNode busvalueNode = null;
-            HtmlNode featdetailNode = null;
 
             try
             {
-                var h2nodes = doc.DocumentNode.SelectNodes("//p");
-                var tdArray = h2nodes.ToArray();
-                var result = "";
-                for (int j = 0; j < tdArray.Count(); j++)
-                {
-                    if (tdArray[j].ParentNode.Name == "li")
-                    {
-                        result = GetListValuesString(tdArray[j],result);
-                        Console.WriteLine(result);
-                    }
-                }        
+
+                //var tdArray = h2nodes.ToArray();
+                //var result = "";
+                //for (int j = 0; j < tdArray.Count(); j++)
+                //{
+                //    if (tdArray[j].ParentNode.Name == "li")
+                //    {
+                //        result = GetListValuesString(tdArray[j],result);
+                //        Console.WriteLine(result);
+                //    }
+                //}        
 
                 //TODO
                 //var Avail = doc.DocumentNode.SelectNodes("/html/body/div[2]/div/section/div/div[1]/main/div[3]/table/tbody/tr").First(); //added div[3] after the 'main'
@@ -938,30 +957,32 @@ namespace ScrapeWhatsNew
                 //    Console.WriteLine("             General Availablity: " + GenAv);
                 //}
 
-                for (int i = 0; i < h2nodes.Count(); i++)
-                {
-                    var h2node = h2nodes[i];
-                    if (h2node.InnerText == "Business value")
-                    {
-                        busvalueNode = h2node;
-                        //scrape until nex
-                    }
-                    if (h2node.InnerText == "Feature details")
-                    {
-                        featdetailNode = h2node;
-                    }
-                    if (busvalueNode != null && featdetailNode != null)
-                    {
-                        break;
-                    }
-                }
+                //for (int i = 0; i < h2nodes.Count(); i++)
+                //{
+                //    var h2node = h2nodes[i];
+                //    if (h2node.InnerText == "Business value")
+                //    {
+                //        busvalueNode = h2node;
+                //        //scrape until nex
+                //    }
+                //    if (h2node.InnerText == "Feature details")
+                //    {
+                //        featdetailNode = h2node;
+                //    }
+                //    if (busvalueNode != null && featdetailNode != null)
+                //    {
+                //        break;
+                //    }
+                //}
 
                 //TODO
-                string BusinessValueString = GetListValuesString(busvalueNode, result);
-                string FeatureDetailString = GetFeatureDetailsString(featdetailNode);
+                //string BusinessValueString = GetListValuesString(busvalueNode, result);
+                //string FeatureDetailString = GetFeatureDetailsString(featdetailNode);
 
                 //TODO
-                feature = new Feature(FeatureDetailString, BusinessValueString, _url, _featureName);
+                feature = new Feature(actualDiv.InnerHtml, "", _url, _featureName);
+                Console.WriteLine("                     Individual Feature: " + _featureName);
+                //Console.WriteLine("                         Paragraphs: " + actualDiv.InnerHtml);
             }
             catch (Exception ex)
             {
@@ -971,36 +992,36 @@ namespace ScrapeWhatsNew
             return feature;
         }
 
-        public string GetListValuesString(HtmlNode node,String result)
-        {
-            while (node != null)
-            {
-                if (node!=null && node.ChildNodes[1].Name == "a")
-                {
-                    //CONTINUE FROM HERE
-                    //NEXT STEPS: Add for other options besides list and other options beside href value
-                    result += "\t\u2022" + "<a href =\""+CleanInput(node.ChildNodes[1].Attributes[0].Value)+"\">" + CleanInput(node.InnerText)+"</a>" + "\n\n";
-                }
-                node = node.NextSibling.NextSibling;
-            }
+        //public string GetListValuesString(HtmlNode node,String result)
+        //{
+        //    while (node != null)
+        //    {
+        //        if (node!=null && node.ChildNodes[1].Name == "a")
+        //        {
+        //            //CONTINUE FROM HERE
+        //            //NEXT STEPS: Add for other options besides list and other options beside href value
+        //            result += "\t\u2022" + "<a href =\""+CleanInput(node.ChildNodes[1].Attributes[0].Value)+"\">" + CleanInput(node.InnerText)+"</a>" + "\n\n";
+        //        }
+        //        node = node.NextSibling.NextSibling;
+        //    }
 
-            return ProcessReleaseWave.CleanInput(result);
-        }
+        //    return ProcessReleaseWave.CleanInput(result);
+        //}
 
-        public string GetFeatureDetailsString(HtmlNode _featureDetailsNode)
-        {
-            string result = "";
-            while (_featureDetailsNode != null && (_featureDetailsNode.Name != "h2" || _featureDetailsNode.Name != "div" || _featureDetailsNode.Name != "img"))
-            {
-                _featureDetailsNode = _featureDetailsNode.NextSibling;
-                if (_featureDetailsNode != null)
-                {
-                    result += CleanInput(_featureDetailsNode.InnerText) + " ";
-                }
+        //public string GetFeatureDetailsString(HtmlNode _featureDetailsNode)
+        //{
+        //    string result = "";
+        //    while (_featureDetailsNode != null && (_featureDetailsNode.Name != "h2" || _featureDetailsNode.Name != "div" || _featureDetailsNode.Name != "img"))
+        //    {
+        //        _featureDetailsNode = _featureDetailsNode.NextSibling;
+        //        if (_featureDetailsNode != null)
+        //        {
+        //            result += CleanInput(_featureDetailsNode.InnerText) + " ";
+        //        }
 
-            }
-            return ProcessReleaseWave.CleanInput(result);
-        }
+        //    }
+        //    return ProcessReleaseWave.CleanInput(result);
+        //}
 
 
 

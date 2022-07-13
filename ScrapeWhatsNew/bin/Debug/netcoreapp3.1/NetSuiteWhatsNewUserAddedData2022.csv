@@ -1,117 +1,27 @@
 NodeName,Recommendation,UpgradeType,FoodAndBeverage,Retail,Industrials,LifeSciences,PublicSector,HealthCare,NonProfit,BusinessAndProfessionalServices,GroupNode
 0,G,x,x,x,x,x,x,x,x,x,Yes
 Other,G,x,x,x,x,x,x,x,x,x,Yes
-NetSuite  Accounting,G,x,x,x,x,x,x,x,x,x,Yes
-Accounting,G,x,x,x,x,x,x,x,x,x,Yes
-Accounting,G,x,x,x,x,x,x,x,x,x,Yes
-Accounting,G,x,x,x,x,x,x,x,x,x,Yes
-Accounting,G,x,x,x,x,x,x,x,x,x,Yes
-Accounting,G,x,x,x,x,x,x,x,x,x,Yes
-Accounting,G,x,x,x,x,x,x,x,x,x,Yes
-Accounting,G,x,x,x,x,x,x,x,x,x,Yes
-Accounting,G,x,x,x,x,x,x,x,x,x,Yes
-Accounting,G,x,x,x,x,x,x,x,x,x,Yes
-Accounting,G,x,x,x,x,x,x,x,x,x,Yes
-Accounting,G,x,x,x,x,x,x,x,x,x,Yes
-Accounting,G,x,x,x,x,x,x,x,x,x,Yes
-Accounting,G,x,x,x,x,x,x,x,x,x,Yes
-Accounting,G,x,x,x,x,x,x,x,x,x,Yes
-Accounting,G,x,x,x,x,x,x,x,x,x,Yes
-Accounting,G,x,x,x,x,x,x,x,x,x,Yes
-NetSuite  Account Setup and Maintenance,G,x,x,x,x,x,x,x,x,x,Yes
-Account Setup and Maintenance,G,x,x,x,x,x,x,x,x,x,Yes
-Account Setup and Maintenance,G,x,x,x,x,x,x,x,x,x,Yes
-NetSuite  Authentication,G,x,x,x,x,x,x,x,x,x,Yes
-Authentication,G,x,x,x,x,x,x,x,x,x,Yes
-NetSuite  Banking,G,x,x,x,x,x,x,x,x,x,Yes
-Banking,G,x,x,x,x,x,x,x,x,x,Yes
-Banking,G,x,x,x,x,x,x,x,x,x,Yes
-Banking,G,x,x,x,x,x,x,x,x,x,Yes
-NetSuite  CSV Import,G,x,x,x,x,x,x,x,x,x,Yes
-CSV Import,G,x,x,x,x,x,x,x,x,x,Yes
-NetSuite  Employee Management,G,x,x,x,x,x,x,x,x,x,Yes
-Employee Management,G,x,x,x,x,x,x,x,x,x,Yes
-Employee Management,G,x,x,x,x,x,x,x,x,x,Yes
-Employee Management,G,x,x,x,x,x,x,x,x,x,Yes
-NetSuite  Globalization,G,x,x,x,x,x,x,x,x,x,Yes
-Globalization,G,x,x,x,x,x,x,x,x,x,Yes
-NetSuite  Inventory Management,G,x,x,x,x,x,x,x,x,x,Yes
-Inventory Management,G,x,x,x,x,x,x,x,x,x,Yes
-Inventory Management,G,x,x,x,x,x,x,x,x,x,Yes
-Inventory Management,G,x,x,x,x,x,x,x,x,x,Yes
-Inventory Management,G,x,x,x,x,x,x,x,x,x,Yes
-Inventory Management,G,x,x,x,x,x,x,x,x,x,Yes
-Inventory Management,G,x,x,x,x,x,x,x,x,x,Yes
-Inventory Management,G,x,x,x,x,x,x,x,x,x,Yes
-NetSuite  Manufacturing,G,x,x,x,x,x,x,x,x,x,Yes
-Manufacturing,G,x,x,x,x,x,x,x,x,x,Yes
-Manufacturing,G,x,x,x,x,x,x,x,x,x,Yes
-Manufacturing,G,x,x,x,x,x,x,x,x,x,Yes
-Manufacturing,G,x,x,x,x,x,x,x,x,x,Yes
-NetSuite  Mobile,G,x,x,x,x,x,x,x,x,x,Yes
-Mobile,G,x,x,x,x,x,x,x,x,x,Yes
-NetSuite NetSuite Connector,G,x,x,x,x,x,x,x,x,x,Yes
-NetSuite Connector,G,x,x,x,x,x,x,x,x,x,Yes
-NetSuite  Order Management,G,x,x,x,x,x,x,x,x,x,Yes
-Order Management,G,x,x,x,x,x,x,x,x,x,Yes
-Order Management,G,x,x,x,x,x,x,x,x,x,Yes
-Order Management,G,x,x,x,x,x,x,x,x,x,Yes
-Order Management,G,x,x,x,x,x,x,x,x,x,Yes
-Order Management,G,x,x,x,x,x,x,x,x,x,Yes
-Order Management,G,x,x,x,x,x,x,x,x,x,Yes
-Order Management,G,x,x,x,x,x,x,x,x,x,Yes
-Order Management,G,x,x,x,x,x,x,x,x,x,Yes
-Order Management,G,x,x,x,x,x,x,x,x,x,Yes
-Order Management,G,x,x,x,x,x,x,x,x,x,Yes
-NetSuite  Projects,G,x,x,x,x,x,x,x,x,x,Yes
-Projects,G,x,x,x,x,x,x,x,x,x,Yes
-Projects,G,x,x,x,x,x,x,x,x,x,Yes
-Projects,G,x,x,x,x,x,x,x,x,x,Yes
-Projects,G,x,x,x,x,x,x,x,x,x,Yes
-Projects,G,x,x,x,x,x,x,x,x,x,Yes
-NetSuite  SuiteAnalytics,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteAnalytics,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteAnalytics,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteAnalytics,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteAnalytics,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteAnalytics,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteAnalytics,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteAnalytics,G,x,x,x,x,x,x,x,x,x,Yes
-NetSuite  SuiteApp Distribution,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteApp Distribution,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteApp Distribution,G,x,x,x,x,x,x,x,x,x,Yes
-NetSuite  SuiteCloud SDK,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteCloud SDK,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteCloud SDK,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteCloud SDK,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteCloud SDK,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteCloud SDK,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteCloud SDK,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteCloud SDK,G,x,x,x,x,x,x,x,x,x,Yes
-NetSuite  SuiteScript,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteScript,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteScript,G,x,x,x,x,x,x,x,x,x,Yes
-NetSuite  SuiteTalk Web Services Integration,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteTalk Web Services Integration,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteTalk Web Services Integration,G,x,x,x,x,x,x,x,x,x,Yes
-NetSuite  Taxation,G,x,x,x,x,x,x,x,x,x,Yes
-Taxation,G,x,x,x,x,x,x,x,x,x,Yes
-Taxation,G,x,x,x,x,x,x,x,x,x,Yes
-NetSuite  User Interface,G,x,x,x,x,x,x,x,x,x,Yes
-User Interface,G,x,x,x,x,x,x,x,x,x,Yes
-Commerce  Commerce Sales and Marketing,G,x,x,x,x,x,x,x,x,x,Yes
-Commerce Sales and Marketing,G,x,x,x,x,x,x,x,x,x,Yes
-Commerce  SC/SCMA/SCA  SuiteCommerce Solutions,G,x,x,x,x,x,x,x,x,x,Yes
-Commerce  SuiteCommerce InStore,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteCommerce InStore,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteApps  SuiteApps (Bundles) Released by NetSuite,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteApps (Bundles) Released by NetSuite,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteApps (Bundles) Released by NetSuite,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteApps (Bundles) Released by NetSuite,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteApps (Bundles) Released by NetSuite,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteApps (Bundles) Released by NetSuite,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteApps (Bundles) Released by NetSuite,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteApps (Bundles) Released by NetSuite,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteApps (Bundles) Released by NetSuite,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteApps (Bundles) Released by NetSuite,G,x,x,x,x,x,x,x,x,x,Yes
-SuiteApps (Bundles) Released by NetSuite,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· Accounting,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· Account Setup and Maintenance,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· Authentication,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· Banking,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· CSV Import,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· Employee Management,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· Globalization,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· Inventory Management,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· Manufacturing,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· Mobile,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â·NetSuite Connector,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· Order Management,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· Projects,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· SuiteAnalytics,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· SuiteApp Distribution,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· SuiteCloud SDK,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· SuiteScript,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· SuiteTalk Web Services Integration,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· Taxation,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· User Interface,G,x,x,x,x,x,x,x,x,x,Yes
+Commerce Â· Commerce Sales and Marketing,G,x,x,x,x,x,x,x,x,x,Yes
+Commerce Â· SC/SCMA/SCA â SuiteCommerce Solutions,G,x,x,x,x,x,x,x,x,x,Yes
+Commerce Â· SuiteCommerce InStore,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteApps Â· SuiteApps (Bundles) Released by NetSuite,G,x,x,x,x,x,x,x,x,x,Yes

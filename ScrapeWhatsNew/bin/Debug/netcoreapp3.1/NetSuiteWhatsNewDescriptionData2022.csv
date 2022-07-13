@@ -1,117 +1,27 @@
 NodeName,Title,Description,ContactName,EmailAddress,ImageFileName,ExternalURL,InternalURL,ExternalOnePage,EmailSubject,HTMLResult,PublicPreview,GeneralAvailability,BusinessValue,FeatureDetails,ParentNodeName
 0,1,2,3,4,5,6,7,8,9,10,,,,,null
 Other,Other,Other,,,,,,,,,,,,,Other
-NetSuite  Accounting,NetSuite  Accounting,NetSuite  Accounting,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
-Accounting,Accounting,Accounting,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104403.html,,,,,,,Other
-Accounting,Accounting,Accounting,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104403.html,,,,,,,Other
-Accounting,Accounting,Accounting,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104403.html,,,,,,,Other
-Accounting,Accounting,Accounting,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104403.html,,,,,,,Other
-Accounting,Accounting,Accounting,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104403.html,,,,,,,Other
-Accounting,Accounting,Accounting,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104403.html,,,,,,,Other
-Accounting,Accounting,Accounting,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104403.html,,,,,,,Other
-Accounting,Accounting,Accounting,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104403.html,,,,,,,Other
-Accounting,Accounting,Accounting,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104403.html,,,,,,,Other
-Accounting,Accounting,Accounting,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104403.html,,,,,,,Other
-Accounting,Accounting,Accounting,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104403.html,,,,,,,Other
-Accounting,Accounting,Accounting,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104403.html,,,,,,,Other
-Accounting,Accounting,Accounting,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104403.html,,,,,,,Other
-Accounting,Accounting,Accounting,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104403.html,,,,,,,Other
-Accounting,Accounting,Accounting,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104403.html,,,,,,,Other
-Accounting,Accounting,Accounting,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104403.html,,,,,,,Other
-NetSuite  Account Setup and Maintenance,NetSuite  Account Setup and Maintenance,NetSuite  Account Setup and Maintenance,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
-Account Setup and Maintenance,Account Setup and Maintenance,Account Setup and Maintenance,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158921855128.html,,,,,,,Other
-Account Setup and Maintenance,Account Setup and Maintenance,Account Setup and Maintenance,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158921855128.html,,,,,,,Other
-NetSuite  Authentication,NetSuite  Authentication,NetSuite  Authentication,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
-Authentication,Authentication,Authentication,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158921905537.html,,,,,,,Other
-NetSuite  Banking,NetSuite  Banking,NetSuite  Banking,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
-Banking,Banking,Banking,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316105394.html,,,,,,,Other
-Banking,Banking,Banking,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316105394.html,,,,,,,Other
-Banking,Banking,Banking,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316105394.html,,,,,,,Other
-NetSuite  CSV Import,NetSuite  CSV Import,NetSuite  CSV Import,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
-CSV Import,CSV Import,CSV Import,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3949069.html,,,,,,,Other
-NetSuite  Employee Management,NetSuite  Employee Management,NetSuite  Employee Management,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
-Employee Management,Employee Management,Employee Management,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104783.html,,,,,,,Other
-Employee Management,Employee Management,Employee Management,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104783.html,,,,,,,Other
-Employee Management,Employee Management,Employee Management,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104783.html,,,,,,,Other
-NetSuite  Globalization,NetSuite  Globalization,NetSuite  Globalization,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
-Globalization,Globalization,Globalization,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158921892460.html,,,,,,,Other
-NetSuite  Inventory Management,NetSuite  Inventory Management,NetSuite  Inventory Management,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
-Inventory Management,Inventory Management,Inventory Management,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1508852924.html,,,,,,,Other
-Inventory Management,Inventory Management,Inventory Management,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1508852924.html,,,,,,,Other
-Inventory Management,Inventory Management,Inventory Management,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1508852924.html,,,,,,,Other
-Inventory Management,Inventory Management,Inventory Management,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1508852924.html,,,,,,,Other
-Inventory Management,Inventory Management,Inventory Management,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1508852924.html,,,,,,,Other
-Inventory Management,Inventory Management,Inventory Management,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1508852924.html,,,,,,,Other
-Inventory Management,Inventory Management,Inventory Management,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1508852924.html,,,,,,,Other
-NetSuite  Manufacturing,NetSuite  Manufacturing,NetSuite  Manufacturing,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
-Manufacturing,Manufacturing,Manufacturing,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1529087731.html,,,,,,,Other
-Manufacturing,Manufacturing,Manufacturing,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1529087731.html,,,,,,,Other
-Manufacturing,Manufacturing,Manufacturing,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1529087731.html,,,,,,,Other
-Manufacturing,Manufacturing,Manufacturing,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1529087731.html,,,,,,,Other
-NetSuite  Mobile,NetSuite  Mobile,NetSuite  Mobile,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
-Mobile,Mobile,Mobile,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_156413618375.html,,,,,,,Other
-NetSuite NetSuite Connector,NetSuite NetSuite Connector,NetSuite NetSuite Connector,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
-NetSuite Connector,NetSuite Connector,NetSuite Connector,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_163530209971.html,,,,,,,Other
-NetSuite  Order Management,NetSuite  Order Management,NetSuite  Order Management,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
-Order Management,Order Management,Order Management,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104540.html,,,,,,,Other
-Order Management,Order Management,Order Management,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104540.html,,,,,,,Other
-Order Management,Order Management,Order Management,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104540.html,,,,,,,Other
-Order Management,Order Management,Order Management,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104540.html,,,,,,,Other
-Order Management,Order Management,Order Management,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104540.html,,,,,,,Other
-Order Management,Order Management,Order Management,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104540.html,,,,,,,Other
-Order Management,Order Management,Order Management,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104540.html,,,,,,,Other
-Order Management,Order Management,Order Management,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104540.html,,,,,,,Other
-Order Management,Order Management,Order Management,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104540.html,,,,,,,Other
-Order Management,Order Management,Order Management,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316104540.html,,,,,,,Other
-NetSuite  Projects,NetSuite  Projects,NetSuite  Projects,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
-Projects,Projects,Projects,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_3715561461.html,,,,,,,Other
-Projects,Projects,Projects,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_3715561461.html,,,,,,,Other
-Projects,Projects,Projects,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_3715561461.html,,,,,,,Other
-Projects,Projects,Projects,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_3715561461.html,,,,,,,Other
-Projects,Projects,Projects,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_3715561461.html,,,,,,,Other
-NetSuite  SuiteAnalytics,NetSuite  SuiteAnalytics,NetSuite  SuiteAnalytics,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
-SuiteAnalytics,SuiteAnalytics,SuiteAnalytics,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3949039.html,,,,,,,Other
-SuiteAnalytics,SuiteAnalytics,SuiteAnalytics,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3949039.html,,,,,,,Other
-SuiteAnalytics,SuiteAnalytics,SuiteAnalytics,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3949039.html,,,,,,,Other
-SuiteAnalytics,SuiteAnalytics,SuiteAnalytics,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3949039.html,,,,,,,Other
-SuiteAnalytics,SuiteAnalytics,SuiteAnalytics,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3949039.html,,,,,,,Other
-SuiteAnalytics,SuiteAnalytics,SuiteAnalytics,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3949039.html,,,,,,,Other
-SuiteAnalytics,SuiteAnalytics,SuiteAnalytics,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3949039.html,,,,,,,Other
-NetSuite  SuiteApp Distribution,NetSuite  SuiteApp Distribution,NetSuite  SuiteApp Distribution,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
-SuiteApp Distribution,SuiteApp Distribution,SuiteApp Distribution,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3946132.html,,,,,,,Other
-SuiteApp Distribution,SuiteApp Distribution,SuiteApp Distribution,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3946132.html,,,,,,,Other
-NetSuite  SuiteCloud SDK,NetSuite  SuiteCloud SDK,NetSuite  SuiteCloud SDK,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
-SuiteCloud SDK,SuiteCloud SDK,SuiteCloud SDK,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1558730192.html,,,,,,,Other
-SuiteCloud SDK,SuiteCloud SDK,SuiteCloud SDK,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1558730192.html,,,,,,,Other
-SuiteCloud SDK,SuiteCloud SDK,SuiteCloud SDK,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1558730192.html,,,,,,,Other
-SuiteCloud SDK,SuiteCloud SDK,SuiteCloud SDK,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1558730192.html,,,,,,,Other
-SuiteCloud SDK,SuiteCloud SDK,SuiteCloud SDK,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1558730192.html,,,,,,,Other
-SuiteCloud SDK,SuiteCloud SDK,SuiteCloud SDK,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1558730192.html,,,,,,,Other
-SuiteCloud SDK,SuiteCloud SDK,SuiteCloud SDK,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1558730192.html,,,,,,,Other
-NetSuite  SuiteScript,NetSuite  SuiteScript,NetSuite  SuiteScript,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
-SuiteScript,SuiteScript,SuiteScript,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3949604.html,,,,,,,Other
-SuiteScript,SuiteScript,SuiteScript,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3949604.html,,,,,,,Other
-NetSuite  SuiteTalk Web Services Integration,NetSuite  SuiteTalk Web Services Integration,NetSuite  SuiteTalk Web Services Integration,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
-SuiteTalk Web Services Integration,SuiteTalk Web Services Integration,SuiteTalk Web Services Integration,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3950559.html,,,,,,,Other
-SuiteTalk Web Services Integration,SuiteTalk Web Services Integration,SuiteTalk Web Services Integration,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3950559.html,,,,,,,Other
-NetSuite  Taxation,NetSuite  Taxation,NetSuite  Taxation,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
-Taxation,Taxation,Taxation,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316106593.html,,,,,,,Other
-Taxation,Taxation,Taxation,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4316106593.html,,,,,,,Other
-NetSuite  User Interface,NetSuite  User Interface,NetSuite  User Interface,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
-User Interface,User Interface,User Interface,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3945807.html,,,,,,,Other
-Commerce  Commerce Sales and Marketing,Commerce  Commerce Sales and Marketing,Commerce  Commerce Sales and Marketing,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
-Commerce Sales and Marketing,Commerce Sales and Marketing,Commerce Sales and Marketing,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_160417952641.html,,,,,,,Other
-Commerce  SC/SCMA/SCA  SuiteCommerce Solutions,Commerce  SC/SCMA/SCA  SuiteCommerce Solutions,Commerce  SC/SCMA/SCA  SuiteCommerce Solutions,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
-Commerce  SuiteCommerce InStore,Commerce  SuiteCommerce InStore,Commerce  SuiteCommerce InStore,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
-SuiteCommerce InStore,SuiteCommerce InStore,SuiteCommerce InStore,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_161833073156.html,,,,,,,Other
-SuiteApps  SuiteApps (Bundles) Released by NetSuite,SuiteApps  SuiteApps (Bundles) Released by NetSuite,SuiteApps  SuiteApps (Bundles) Released by NetSuite,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
-SuiteApps (Bundles) Released by NetSuite,SuiteApps (Bundles) Released by NetSuite,SuiteApps (Bundles) Released by NetSuite,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3945762.html,,,,,,,Other
-SuiteApps (Bundles) Released by NetSuite,SuiteApps (Bundles) Released by NetSuite,SuiteApps (Bundles) Released by NetSuite,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3945762.html,,,,,,,Other
-SuiteApps (Bundles) Released by NetSuite,SuiteApps (Bundles) Released by NetSuite,SuiteApps (Bundles) Released by NetSuite,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3945762.html,,,,,,,Other
-SuiteApps (Bundles) Released by NetSuite,SuiteApps (Bundles) Released by NetSuite,SuiteApps (Bundles) Released by NetSuite,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3945762.html,,,,,,,Other
-SuiteApps (Bundles) Released by NetSuite,SuiteApps (Bundles) Released by NetSuite,SuiteApps (Bundles) Released by NetSuite,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3945762.html,,,,,,,Other
-SuiteApps (Bundles) Released by NetSuite,SuiteApps (Bundles) Released by NetSuite,SuiteApps (Bundles) Released by NetSuite,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3945762.html,,,,,,,Other
-SuiteApps (Bundles) Released by NetSuite,SuiteApps (Bundles) Released by NetSuite,SuiteApps (Bundles) Released by NetSuite,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3945762.html,,,,,,,Other
-SuiteApps (Bundles) Released by NetSuite,SuiteApps (Bundles) Released by NetSuite,SuiteApps (Bundles) Released by NetSuite,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3945762.html,,,,,,,Other
-SuiteApps (Bundles) Released by NetSuite,SuiteApps (Bundles) Released by NetSuite,SuiteApps (Bundles) Released by NetSuite,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3945762.html,,,,,,,Other
-SuiteApps (Bundles) Released by NetSuite,SuiteApps (Bundles) Released by NetSuite,SuiteApps (Bundles) Released by NetSuite,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3945762.html,,,,,,,Other
+NetSuite Â· Accounting,NetSuite Â· Accounting,NetSuite Â· Accounting,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
+NetSuite Â· Account Setup and Maintenance,NetSuite Â· Account Setup and Maintenance,NetSuite Â· Account Setup and Maintenance,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
+NetSuite Â· Authentication,NetSuite Â· Authentication,NetSuite Â· Authentication,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
+NetSuite Â· Banking,NetSuite Â· Banking,NetSuite Â· Banking,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
+NetSuite Â· CSV Import,NetSuite Â· CSV Import,NetSuite Â· CSV Import,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
+NetSuite Â· Employee Management,NetSuite Â· Employee Management,NetSuite Â· Employee Management,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
+NetSuite Â· Globalization,NetSuite Â· Globalization,NetSuite Â· Globalization,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
+NetSuite Â· Inventory Management,NetSuite Â· Inventory Management,NetSuite Â· Inventory Management,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
+NetSuite Â· Manufacturing,NetSuite Â· Manufacturing,NetSuite Â· Manufacturing,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
+NetSuite Â· Mobile,NetSuite Â· Mobile,NetSuite Â· Mobile,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
+NetSuite Â·NetSuite Connector,NetSuite Â·NetSuite Connector,NetSuite Â·NetSuite Connector,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
+NetSuite Â· Order Management,NetSuite Â· Order Management,NetSuite Â· Order Management,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
+NetSuite Â· Projects,NetSuite Â· Projects,NetSuite Â· Projects,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
+NetSuite Â· SuiteAnalytics,NetSuite Â· SuiteAnalytics,NetSuite Â· SuiteAnalytics,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
+NetSuite Â· SuiteApp Distribution,NetSuite Â· SuiteApp Distribution,NetSuite Â· SuiteApp Distribution,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
+NetSuite Â· SuiteCloud SDK,NetSuite Â· SuiteCloud SDK,NetSuite Â· SuiteCloud SDK,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
+NetSuite Â· SuiteScript,NetSuite Â· SuiteScript,NetSuite Â· SuiteScript,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
+NetSuite Â· SuiteTalk Web Services Integration,NetSuite Â· SuiteTalk Web Services Integration,NetSuite Â· SuiteTalk Web Services Integration,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
+NetSuite Â· Taxation,NetSuite Â· Taxation,NetSuite Â· Taxation,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
+NetSuite Â· User Interface,NetSuite Â· User Interface,NetSuite Â· User Interface,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
+Commerce Â· Commerce Sales and Marketing,Commerce Â· Commerce Sales and Marketing,Commerce Â· Commerce Sales and Marketing,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
+Commerce Â· SC/SCMA/SCA â SuiteCommerce Solutions,Commerce Â· SC/SCMA/SCA â SuiteCommerce Solutions,Commerce Â· SC/SCMA/SCA â SuiteCommerce Solutions,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
+Commerce Â· SuiteCommerce InStore,Commerce Â· SuiteCommerce InStore,Commerce Â· SuiteCommerce InStore,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other
+SuiteApps Â· SuiteApps (Bundles) Released by NetSuite,SuiteApps Â· SuiteApps (Bundles) Released by NetSuite,SuiteApps Â· SuiteApps (Bundles) Released by NetSuite,,,,,,https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html,,,,,,,Other

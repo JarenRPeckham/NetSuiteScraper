@@ -1,116 +1,26 @@
 Product,Category,SubCategory,FeatureType,FeatureTitle,BusinessValue,FeatureDetails,ReleaseWave,PublicPreview,DateAvailable,ImpactLevel,FoodAndBeverage,Retail,Industrials,LifeSciences,PublicSector,HealthCare,NonProfit,BusinessAndProfessionalServices,GroupNode
 Other,,,,,,,,,,,,,,,,,,,Yes
 Other,,,,,,,,,,,,,,,,,,,Yes
-Other,Accounting,,,,,,,,,,,,,,,,,,Yes
-Other,Accounting,,,,,,,,,,,,,,,,,,Yes
-Other,Accounting,,,,,,,,,,,,,,,,,,Yes
-Other,Accounting,,,,,,,,,,,,,,,,,,Yes
-Other,Accounting,,,,,,,,,,,,,,,,,,Yes
-Other,Accounting,,,,,,,,,,,,,,,,,,Yes
-Other,Accounting,,,,,,,,,,,,,,,,,,Yes
-Other,Accounting,,,,,,,,,,,,,,,,,,Yes
-Other,Accounting,,,,,,,,,,,,,,,,,,Yes
-Other,Accounting,,,,,,,,,,,,,,,,,,Yes
-Other,Accounting,,,,,,,,,,,,,,,,,,Yes
-Other,Accounting,,,,,,,,,,,,,,,,,,Yes
-Other,Accounting,,,,,,,,,,,,,,,,,,Yes
-Other,Accounting,,,,,,,,,,,,,,,,,,Yes
-Other,Accounting,,,,,,,,,,,,,,,,,,Yes
-Other,Accounting,,,,,,,,,,,,,,,,,,Yes
-Other,,,,,,,,,,,,,,,,,,,Yes
-Other,Account Setup and Maintenance,,,,,,,,,,,,,,,,,,Yes
-Other,Account Setup and Maintenance,,,,,,,,,,,,,,,,,,Yes
-Other,,,,,,,,,,,,,,,,,,,Yes
-Other,Authentication,,,,,,,,,,,,,,,,,,Yes
-Other,,,,,,,,,,,,,,,,,,,Yes
-Other,Banking,,,,,,,,,,,,,,,,,,Yes
-Other,Banking,,,,,,,,,,,,,,,,,,Yes
-Other,Banking,,,,,,,,,,,,,,,,,,Yes
-Other,,,,,,,,,,,,,,,,,,,Yes
-Other,CSV Import,,,,,,,,,,,,,,,,,,Yes
-Other,,,,,,,,,,,,,,,,,,,Yes
-Other,Employee Management,,,,,,,,,,,,,,,,,,Yes
-Other,Employee Management,,,,,,,,,,,,,,,,,,Yes
-Other,Employee Management,,,,,,,,,,,,,,,,,,Yes
-Other,,,,,,,,,,,,,,,,,,,Yes
-Other,Globalization,,,,,,,,,,,,,,,,,,Yes
-Other,,,,,,,,,,,,,,,,,,,Yes
-Other,Inventory Management,,,,,,,,,,,,,,,,,,Yes
-Other,Inventory Management,,,,,,,,,,,,,,,,,,Yes
-Other,Inventory Management,,,,,,,,,,,,,,,,,,Yes
-Other,Inventory Management,,,,,,,,,,,,,,,,,,Yes
-Other,Inventory Management,,,,,,,,,,,,,,,,,,Yes
-Other,Inventory Management,,,,,,,,,,,,,,,,,,Yes
-Other,Inventory Management,,,,,,,,,,,,,,,,,,Yes
-Other,,,,,,,,,,,,,,,,,,,Yes
-Other,Manufacturing,,,,,,,,,,,,,,,,,,Yes
-Other,Manufacturing,,,,,,,,,,,,,,,,,,Yes
-Other,Manufacturing,,,,,,,,,,,,,,,,,,Yes
-Other,Manufacturing,,,,,,,,,,,,,,,,,,Yes
-Other,,,,,,,,,,,,,,,,,,,Yes
-Other,Mobile,,,,,,,,,,,,,,,,,,Yes
-Other,,,,,,,,,,,,,,,,,,,Yes
-Other,NetSuite Connector,,,,,,,,,,,,,,,,,,Yes
-Other,,,,,,,,,,,,,,,,,,,Yes
-Other,Order Management,,,,,,,,,,,,,,,,,,Yes
-Other,Order Management,,,,,,,,,,,,,,,,,,Yes
-Other,Order Management,,,,,,,,,,,,,,,,,,Yes
-Other,Order Management,,,,,,,,,,,,,,,,,,Yes
-Other,Order Management,,,,,,,,,,,,,,,,,,Yes
-Other,Order Management,,,,,,,,,,,,,,,,,,Yes
-Other,Order Management,,,,,,,,,,,,,,,,,,Yes
-Other,Order Management,,,,,,,,,,,,,,,,,,Yes
-Other,Order Management,,,,,,,,,,,,,,,,,,Yes
-Other,Order Management,,,,,,,,,,,,,,,,,,Yes
-Other,,,,,,,,,,,,,,,,,,,Yes
-Other,Projects,,,,,,,,,,,,,,,,,,Yes
-Other,Projects,,,,,,,,,,,,,,,,,,Yes
-Other,Projects,,,,,,,,,,,,,,,,,,Yes
-Other,Projects,,,,,,,,,,,,,,,,,,Yes
-Other,Projects,,,,,,,,,,,,,,,,,,Yes
-Other,,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteAnalytics,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteAnalytics,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteAnalytics,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteAnalytics,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteAnalytics,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteAnalytics,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteAnalytics,,,,,,,,,,,,,,,,,,Yes
-Other,,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteApp Distribution,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteApp Distribution,,,,,,,,,,,,,,,,,,Yes
-Other,,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteCloud SDK,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteCloud SDK,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteCloud SDK,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteCloud SDK,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteCloud SDK,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteCloud SDK,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteCloud SDK,,,,,,,,,,,,,,,,,,Yes
-Other,,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteScript,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteScript,,,,,,,,,,,,,,,,,,Yes
-Other,,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteTalk Web Services Integration,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteTalk Web Services Integration,,,,,,,,,,,,,,,,,,Yes
-Other,,,,,,,,,,,,,,,,,,,Yes
-Other,Taxation,,,,,,,,,,,,,,,,,,Yes
-Other,Taxation,,,,,,,,,,,,,,,,,,Yes
-Other,,,,,,,,,,,,,,,,,,,Yes
-Other,User Interface,,,,,,,,,,,,,,,,,,Yes
-Other,,,,,,,,,,,,,,,,,,,Yes
-Other,Commerce Sales and Marketing,,,,,,,,,,,,,,,,,,Yes
 Other,,,,,,,,,,,,,,,,,,,Yes
 Other,,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteCommerce InStore,,,,,,,,,,,,,,,,,,Yes
 Other,,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteApps (Bundles) Released by NetSuite,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteApps (Bundles) Released by NetSuite,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteApps (Bundles) Released by NetSuite,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteApps (Bundles) Released by NetSuite,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteApps (Bundles) Released by NetSuite,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteApps (Bundles) Released by NetSuite,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteApps (Bundles) Released by NetSuite,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteApps (Bundles) Released by NetSuite,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteApps (Bundles) Released by NetSuite,,,,,,,,,,,,,,,,,,Yes
-Other,SuiteApps (Bundles) Released by NetSuite,,,,,,,,,,,,,,,,,,Yes
+Other,,,,,,,,,,,,,,,,,,,Yes
+Other,,,,,,,,,,,,,,,,,,,Yes
+Other,,,,,,,,,,,,,,,,,,,Yes
+Other,,,,,,,,,,,,,,,,,,,Yes
+Other,,,,,,,,,,,,,,,,,,,Yes
+Other,,,,,,,,,,,,,,,,,,,Yes
+Other,,,,,,,,,,,,,,,,,,,Yes
+Other,,,,,,,,,,,,,,,,,,,Yes
+Other,,,,,,,,,,,,,,,,,,,Yes
+Other,,,,,,,,,,,,,,,,,,,Yes
+Other,,,,,,,,,,,,,,,,,,,Yes
+Other,,,,,,,,,,,,,,,,,,,Yes
+Other,,,,,,,,,,,,,,,,,,,Yes
+Other,,,,,,,,,,,,,,,,,,,Yes
+Other,,,,,,,,,,,,,,,,,,,Yes
+Other,,,,,,,,,,,,,,,,,,,Yes
+Other,,,,,,,,,,,,,,,,,,,Yes
+Other,,,,,,,,,,,,,,,,,,,Yes
+Other,,,,,,,,,,,,,,,,,,,Yes
+Other,,,,,,,,,,,,,,,,,,,Yes
