@@ -23,6 +23,7 @@ namespace ScrapeWhatsNew
         public string BusinessValue {  get; set; }
 
         public string FeatureDetails { get; set; }
+        public string HeaderDetails { get; set; }
 
         public string ParentNodeName { get; set; }
 
@@ -33,6 +34,7 @@ namespace ScrapeWhatsNew
             BusinessValue = "";
             FeatureDetails = "";
             Description = "";
+            HeaderDetails = "";
         }
 
         public static string GetCSVString(List<DescriptionRow> _descriptionRows)

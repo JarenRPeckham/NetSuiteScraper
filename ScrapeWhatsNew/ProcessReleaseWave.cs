@@ -5,6 +5,7 @@ using System.Xml;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
+//using ScrapeWhatsNew.Entities;
 
 namespace ScrapeWhatsNew
 {
@@ -33,13 +34,13 @@ namespace ScrapeWhatsNew
             releaseWave.AreaList = GetAreaList(releaseWave.Url);
 
             ////TODO?
-            string fileName = @"NetSuiteWhatsNew2024.csv";
+            string fileName = @"NetSuiteWhatsNew2022.csv";
             string descriptionFileName = @"NetSuiteWhatsNewDescriptionData2022.csv";
             string userAddedFileName = @"NetSuiteWhatsNewUserAddedData2022.csv";
             string excelFileName = @"ReleaseWaveData2022.csv";
 
             SetColorSetList();
-            AddDummyDescriptionRow();
+            //AddDummyDescriptionRow();
 
             var powerWheelRowsUnordered = ConvertToPowerWheelRows(releaseWave);
 
@@ -108,14 +109,19 @@ namespace ScrapeWhatsNew
                 case "Authentication":
                 case "CSV Import":
                 case "NetSuite Connector":
+                case "User Interface":
+                case "SuiteScript":
+                case "Taxation":
                     parentAreaName = "CE";
                     break;
 
-                case "Accounting":
+                //case "Accounting":
+                //    parentAreaName = "Acc";
+                //    break;
+
                 case "Banking":
                 case "Commerce":
                 case "Commerce Sales and Marketing":
-                case "SC/SCMA/SCA-SuiteCommerce Solutions":
                 case "SuiteCommerce InStore":
                 case "Manufacturing":
                     parentAreaName = "FS";
@@ -126,19 +132,33 @@ namespace ScrapeWhatsNew
                 case "Order Management":
                 case "Projects":
                 case "SuiteAnalytics":
+                case "SuiteTalk Web Services Integration":
                     parentAreaName = "BC";
                     break;
 
                 case "Globalization":
                 case "Mobile":
+                case "SuiteApp Distribution":
+                case "SuiteApps (Bundles) Released by NetSuite":
+                case "SuiteCloud SDK":
+                case "Accounting":
                     parentAreaName = "Other";
+                    break;
+
+                //case "Taxation":
+                //    parentAreaName = "Tax";
+                //    break;
+
+                default:
+                    parentAreaName = "FS";
                     break;
 
                 //default:
                 //    parentAreaName = _areaName;
+                //    break;
 
             }
-            return "Other"; //parentAreaName;
+            return parentAreaName; 
         }
 
         public string GetParentAreaFriendlyName(string _parentAreaName)
@@ -146,14 +166,21 @@ namespace ScrapeWhatsNew
             string parentFriendlyName = "";
             switch (_parentAreaName)
             {
-                //TODO
                 case "FS":
                     parentFriendlyName = "Finance and Operations";
                     break;
 
+                //case "Acc":
+                //    parentFriendlyName = "Accounting";
+                //    break;
+
                 case "CE":
                     parentFriendlyName = "Customer Engagement";
                     break;
+
+                //case "Tax":
+                //    parentFriendlyName = "Taxation";
+                //    break;
 
                 case "BC":
                     parentFriendlyName = "Business Central";
@@ -216,9 +243,7 @@ namespace ScrapeWhatsNew
             foreach (var area in _releaseWave.AreaList)
             {
                 SetDescriptionDataForAreaParent(GetParentAreaName(area.Name), _releaseWave, area);
-                //excelRows.Add(populateExcelRow(_releaseWave, area, null, null, null, "Yes")); //TODO, the area is using the parentName every time.  Does this need to change?
                 SetDescriptionDataForArea(_releaseWave, area);
-                //excelRows.Add(populateExcelRow(_releaseWave, area, null, null, null, "Yes"));
 
                 foreach (var product in area.ProductList)
                 {
@@ -226,30 +251,30 @@ namespace ScrapeWhatsNew
                     foreach (var group in product.GroupList)
                     {
                         SetDescriptionDataForGroup(_releaseWave, area, product, group);
-                        //excelRows.Add(populateExcelRow(_releaseWave, area, product, group, null, "Yes"));
-
                         foreach (var feature in group.FeatureList)
                         {
-                            powerWheelRows.Add(populatePowerWheelRow(_releaseWave, area, product, group, feature));
-
-                            //excelRows.Add(populateExcelRow(_releaseWave, area, product, group, feature, "No"));
-
                             SetDescriptionDataForFeature(_releaseWave, area, product, group, feature);
+                            foreach (var header in feature.HeaderList)
+                            {
+                                SetDescriptionDataForHeader(_releaseWave, area, product, group, feature, header);
+                                powerWheelRows.Add(populatePowerWheelRow(_releaseWave, area, product, group, feature, header));
+
+                            }
                         }
                     }
 
                 }
 
-                if (colorIndex < colorSetList.Count - 1)
-                {
-                    colorIndex++; //Change color for each Area
-                }
+                //if (colorIndex < colorSetList.Count - 1)
+                //{
+                //    //colorIndex++; //Change color for each Area
+                //}
             }
 
             return powerWheelRows;
         }
 
-        public ExcelRow populateExcelRow(string _parentProduct, ReleaseWave _releaseWave, Area _area, Product _product, Group _group, Feature _feature, string _groupNode = "")
+        public ExcelRow populateExcelRow(string _parentProduct, ReleaseWave _releaseWave, Area _area, Product _product, Group _group, Feature _feature, Header _header, string _groupNode = "")
         {
             ExcelRow row = new ExcelRow();
 
@@ -287,9 +312,30 @@ namespace ScrapeWhatsNew
                 row.BusinessValue = "";
                 row.FeatureDetails = "";
                 row.ReleaseWave = "";
-                row.PublicPreview = "";
-                row.DateAvailable = "";
+                //row.PublicPreview = "";
+                //row.DateAvailable = "";
             }
+
+            if (_header != null)
+            {
+                //TODO
+                row.HeaderTitle = _header.Name;
+                row.HeaderDetails = _header.HeaderDetails;
+                row.FeatureDetails = _feature.FeatureDetails;
+                row.ReleaseWave = _releaseWave.Name;
+                //row.PublicPreview = _feature.PublicPreview;
+                //row.DateAvailable = _feature.GeneralAvailability;
+            }
+            else
+            {
+                row.FeatureTitle = "";
+                row.BusinessValue = "";
+                row.FeatureDetails = "";
+                row.ReleaseWave = "";
+                //row.PublicPreview = "";
+                //row.DateAvailable = "";
+            }
+
             //TODO?
             row.ImpactLevel = "";
             row.BusinessAndProfessionalServices = "";
@@ -306,50 +352,29 @@ namespace ScrapeWhatsNew
             return row;
         }
 
-        public PowerWheelRow populatePowerWheelRow(ReleaseWave __releaseWave, Area _area, Product _product, Group _group, Feature _feature)
+        public PowerWheelRow populatePowerWheelRow(ReleaseWave __releaseWave, Area _area, Product _product, Group _group, Feature _feature, Header _header)
         {
             PowerWheelRow row = new PowerWheelRow();
 
-            //row.Ring0 = GetParentAreaName(_area.Name);
-            //row.Ring1 = _area.Name;
-            //row.Ring2 = _product.Name;
-            //row.Ring3 = _group.Name;
-            //row.Ring4 = _feature.Name;
-            //row.Ring5 = "";
-
-            //row.friendlyname = GetParentAreaFriendlyName(row.Ring0);
-            //row.friendlyname1 = _area.Name;
-            //row.friendlyname2 = _product.Name;
-            //row.friendlyname3 = _group.Name;
-            //row.friendlyname4 = _feature.Name;
-            //row.friendlyname5 = "";
-
-            //row.hyperlink = "";
-            //row.hyperlink1 = _area.Url;
-            //row.hyperlink2 = _product.Url;
-            //row.hyperlink3 = _group.Url;
-            //row.hyperlink4 = _feature.URL;
-            //row.hyperlink5 = "";
-
-            //We decided to get rid of the 'Area', and just move everything up a ring.
-            row.Ring0 = GetParentAreaName(_area.Name);
+            //We decided to get rid of the 'Area','group' and just move everything up a ring and add 'Header'.
+            row.Ring0 = GetParentAreaName(_product.Name);
             row.Ring1 = _product.Name;
-            row.Ring2 = _group.Name;
-            row.Ring3 = _feature.Name;
+            row.Ring2 = _feature.Name;
+            row.Ring3 = _header.Name;
             row.Ring4 = "";
             row.Ring5 = "";
 
             row.friendlyname = GetParentAreaFriendlyName(row.Ring0);
             row.friendlyname1 = _product.Name;
-            row.friendlyname2 = _group.Name;
-            row.friendlyname3 = _feature.Name;
+            row.friendlyname2 = _feature.Name;
+            row.friendlyname3 = _header.Name;
             row.friendlyname4 = "";
             row.friendlyname5 = "";
 
             row.hyperlink = "";
             row.hyperlink1 = _product.Url;
-            row.hyperlink2 = _group.Url;
-            row.hyperlink3 = _feature.URL;
+            row.hyperlink2 = _feature.URL;
+            row.hyperlink3 = _header.URL;
             row.hyperlink4 = "";
             row.hyperlink5 = "";
 
@@ -409,7 +434,7 @@ namespace ScrapeWhatsNew
 
                 descriptionRows.Add(descriptionRow);
 
-                excelRows.Add(populateExcelRow(descriptionRow.ParentNodeName, null, _area, null, null, null, "Yes"));
+                excelRows.Add(populateExcelRow(descriptionRow.ParentNodeName, null, _area, null, null, null,null, "Yes"));
             }
         }
 
@@ -433,7 +458,7 @@ namespace ScrapeWhatsNew
 
             descriptionRows.Add(descriptionRow);
 
-            excelRows.Add(populateExcelRow(descriptionRow.ParentNodeName, _releaseWave, _area, null, null, null, "Yes"));
+            excelRows.Add(populateExcelRow(descriptionRow.ParentNodeName, _releaseWave, _area, null, null, null, null, "Yes"));
         }
 
 
@@ -457,7 +482,7 @@ namespace ScrapeWhatsNew
 
             descriptionRows.Add(descriptionRow);
 
-            excelRows.Add(populateExcelRow(descriptionRow.ParentNodeName, _releaseWave, _area, _product, null, null, "Yes"));
+            excelRows.Add(populateExcelRow(descriptionRow.ParentNodeName, _releaseWave, _area, _product, null, null,null, "Yes"));
         }
 
         public void SetDescriptionDataForGroup(ReleaseWave _releaseWave, Area _area, Product _product, Group _group)
@@ -480,7 +505,7 @@ namespace ScrapeWhatsNew
 
             descriptionRows.Add(descriptionRow);
 
-            excelRows.Add(populateExcelRow(descriptionRow.ParentNodeName, _releaseWave, _area, _product, _group, null, "Yes"));
+            excelRows.Add(populateExcelRow(descriptionRow.ParentNodeName, _releaseWave, _area, _product, _group, null,null, "Yes"));
         }
 
         public void SetDescriptionDataForFeature(ReleaseWave _releaseWave, Area _area, Product _product, Group _group, Feature _feature)
@@ -505,7 +530,7 @@ namespace ScrapeWhatsNew
             //}
 
             //TODO?
-            //descriptionRow.Description =  businessValue + featureDetails;
+            descriptionRow.Description = _feature.Name;
             descriptionRow.ContactName = "";
             descriptionRow.EmailAddress = "";
             descriptionRow.ImageFileName = "";
@@ -521,7 +546,34 @@ namespace ScrapeWhatsNew
 
             descriptionRows.Add(descriptionRow);
 
-            excelRows.Add(populateExcelRow(descriptionRow.ParentNodeName, _releaseWave, _area, _product, _group, _feature, "No"));
+            excelRows.Add(populateExcelRow(descriptionRow.ParentNodeName, _releaseWave, _area, _product, _group, _feature,null, "No"));
+        }
+
+        public void SetDescriptionDataForHeader(ReleaseWave _releaseWave, Area _area, Product _product, Group _group, Feature _feature, Header _header)
+        {
+            DescriptionRow descriptionRow = new DescriptionRow();
+
+            descriptionRow.ParentNodeName = GetParentAreaName(_area.Name);
+            descriptionRow.NodeName = _header.Name;
+            descriptionRow.Title = _header.Name;
+            descriptionRow.Description =  _header.HeaderDetails;
+            descriptionRow.ContactName = "";
+            descriptionRow.EmailAddress = "";
+            descriptionRow.ImageFileName = "";
+            descriptionRow.ExternalURL = ""; //_feature.URL;
+            descriptionRow.InternalURL = "";
+            descriptionRow.ExternalOnePage = _header.URL;
+            descriptionRow.EmailSubject = "";
+            descriptionRow.HTMLResult = "";
+            //descriptionRow.PublicPreview = _feature.PublicPreview;
+            //descriptionRow.GeneralAvailability = _feature.GeneralAvailability;
+            descriptionRow.HeaderDetails = _header.HeaderDetails;
+            descriptionRow.BusinessValue = _feature.BusinessValue;
+            descriptionRow.FeatureDetails = _feature.FeatureDetails;
+
+            descriptionRows.Add(descriptionRow);
+
+            excelRows.Add(populateExcelRow(descriptionRow.ParentNodeName, _releaseWave, _area, _product, _group, _feature, _header, "No"));
         }
 
         public List<Area> GetAreaList(string _releaseWaveUrl)
@@ -684,7 +736,7 @@ namespace ScrapeWhatsNew
                 var url = docsMicrosoftBaseURL + Thref;
                 Console.WriteLine("        Product:  " + productName);
                 Product product = new Product(productName, url, GetGroupList(url, productName));
-
+                productList.Add(product);
 
             }
             catch (Exception ex)
@@ -722,7 +774,7 @@ namespace ScrapeWhatsNew
                             {
                                 count++;
                                 var url = docsMicrosoftBaseURL + tdList[j].ChildNodes[1].Attributes[0].Value;
-                                Group group = new Group(_productName + " Feature", url, AltGetFeatureList(tdList[j], url));
+                                Group group = new Group(_productName + " Testing", url, AltGetFeatureList(tdList[j], url));
                                 groupList.Add(group);
 
                             }
@@ -731,16 +783,17 @@ namespace ScrapeWhatsNew
                                 if (tdList[j].ParentNode.Name == "li")
                                 {
                                     count++;
-                                    Group group = new Group(_productName + "Feature", plannedFeaturesURL, AltGetFeatureList(tdList[j], plannedFeaturesURL));
+                                    Group group = new Group(_productName + " Testing", plannedFeaturesURL, AltGetFeatureList(tdList[j], plannedFeaturesURL));
                                     groupList.Add(group);
                                 }
                                 else if (tdList[j].ParentNode.ParentNode.Name == "tr")
                                 {
                                     count++;
-                                    Group group = new Group(_productName + "Feature", plannedFeaturesURL, AltGetFeatureList(tdList[j], plannedFeaturesURL));
+                                
+                                    Group group = new Group(_productName + " Testing", plannedFeaturesURL, AltGetFeatureList(tdList[j], plannedFeaturesURL));
                                     groupList.Add(group);
                                 }
-
+                                Console.WriteLine("      Group: "+_productName);
                             }
                         }
                     }
@@ -750,18 +803,15 @@ namespace ScrapeWhatsNew
                     for (int z = 0; z < h2Nodes.Count; z++)
                     {
                         var name = h2Nodes[z].InnerText;
-                        Group group = new Group(name + "Feature", plannedFeaturesURL, AltGetFeatureList(h2Nodes[z], plannedFeaturesURL));
+                        Group group = new Group(name, plannedFeaturesURL, AltGetFeatureList(h2Nodes[z], plannedFeaturesURL));
                         groupList.Add(group);
                     }
                 }    
-                
-                
             }
             catch (Exception ex)
             {
                 Console.WriteLine("error: node not found in GetGroupList: " + ex.Message);
             }
-
             return groupList;
         }
 
@@ -907,82 +957,8 @@ namespace ScrapeWhatsNew
 
             try
             {
-
-                //var tdArray = h2nodes.ToArray();
-                //var result = "";
-                //for (int j = 0; j < tdArray.Count(); j++)
-                //{
-                //    if (tdArray[j].ParentNode.Name == "li")
-                //    {
-                //        result = GetListValuesString(tdArray[j],result);
-                //        Console.WriteLine(result);
-                //    }
-                //}        
-
-                //TODO
-                //var Avail = doc.DocumentNode.SelectNodes("/html/body/div[2]/div/section/div/div[1]/main/div[3]/table/tbody/tr").First(); //added div[3] after the 'main'
-                //var bodyChildren = Avail.ChildNodes;
-                //var tdArray = bodyChildren.ToArray();
-
-                //List<HtmlNode> trList = new List<HtmlNode>();
-
-                ////Get tr's
-
-                //for (int j = 0; j < tdArray.Count(); j++)
-                //{
-                //    var node = tdArray[j];
-                //    if (node.Name == "td")
-                //    {
-                //        trList.Add(node);
-                //    }
-                //}
-                //var GenAv = "";
-                //var Pubprev = "";
-
-                //if (trList.Count() == 4)
-                //{
-                //    //TODO?
-                //    Pubprev = CleanInput(trList[1].InnerText);
-                //    GenAv = CleanInput(trList[3].InnerText);
-                //}
-                //else if (trList.Count() == 3)
-                //{
-                //    Pubprev = CleanInput(trList[1].InnerText);
-                //    GenAv = CleanInput(trList[2].InnerText);
-                //}
-
-                //if (showDebugMessages)
-                //{
-                //    Console.WriteLine("             Public Preview: " + Pubprev);
-                //    Console.WriteLine("             General Availablity: " + GenAv);
-                //}
-
-                //for (int i = 0; i < h2nodes.Count(); i++)
-                //{
-                //    var h2node = h2nodes[i];
-                //    if (h2node.InnerText == "Business value")
-                //    {
-                //        busvalueNode = h2node;
-                //        //scrape until nex
-                //    }
-                //    if (h2node.InnerText == "Feature details")
-                //    {
-                //        featdetailNode = h2node;
-                //    }
-                //    if (busvalueNode != null && featdetailNode != null)
-                //    {
-                //        break;
-                //    }
-                //}
-
-                //TODO
-                //string BusinessValueString = GetListValuesString(busvalueNode, result);
-                //string FeatureDetailString = GetFeatureDetailsString(featdetailNode);
-
-                //TODO
-                feature = new Feature(actualDiv.InnerHtml, "", _url, _featureName);
+                feature = new Feature("", "", _url, _featureName,GetHeaderList(actualDiv,_url));
                 Console.WriteLine("                     Individual Feature: " + _featureName);
-                //Console.WriteLine("                         Paragraphs: " + actualDiv.InnerHtml);
             }
             catch (Exception ex)
             {
@@ -990,6 +966,35 @@ namespace ScrapeWhatsNew
             }
 
             return feature;
+        }
+
+        public List<Header> GetHeaderList(HtmlNode _tableNode, string _featureLineURL)
+        {
+            var web = new HtmlWeb();
+            var doc = web.Load(_featureLineURL);
+
+            var body = doc.DocumentNode.SelectNodes(
+                    @"/html/body/article").First();
+
+            var headerList = new List<Header>();
+            var h2nodes = body.SelectNodes("//div");
+            if(h2nodes.Count > 0)
+            {
+                var startNode = h2nodes[2];
+                while (startNode != null)
+                {
+                    if (startNode.ChildNodes.Count > 1 && startNode.ChildNodes[1].Name == "h2")
+                    {
+                        var name = startNode.ChildNodes[1].InnerText;
+                        Header header = new Header(startNode.InnerHtml, _featureLineURL, name);
+                        headerList.Add(header);
+                        Console.WriteLine("             Header: " + name);
+                    }
+                    startNode = startNode.NextSibling.NextSibling;
+                }
+            }
+            //var bar = headerList.GroupBy(x => x.ParentNode).Select(x => x.First()).ToList();
+            return headerList;
         }
 
         //public string GetListValuesString(HtmlNode node,String result)
@@ -1027,7 +1032,6 @@ namespace ScrapeWhatsNew
 
         public List<ColorSet> SetColorSetList()
         {
-            //TODO?
             var colorSet = new ColorSet("#F1B434", "#F4C35D", "#F7D285", "#F9E1AE", "#F9E1AE", "#F9E1AE", "Yello");
             colorSetList.Add(colorSet);
 
@@ -1040,12 +1044,11 @@ namespace ScrapeWhatsNew
             colorSet = new ColorSet("#E87722", "#ED924E", "#F1AD7A", "#F6C9A7", "#F6C9A7", "#F6C9A7", "RedOrange");
             colorSetList.Add(colorSet);
 
+            colorSet = new ColorSet("#E40046", "#E9336B", "#EF6690", "#F499B5", "#F499B5", "#F499B5", "Red");
+            colorSetList.Add(colorSet);
 
-            //colorSet = new ColorSet("#E40046", "#E9336B", "#EF6690", "#F499B5", "#F499B5", "#F499B5", "Red");
-            //colorSetList.Add(colorSet);
-
-            //colorSet = new ColorSet("#A2A569", "#B5B787", "#C7C9A5", "#DADBC3", "#DADBC3", "#DADBC3", "Tan");
-            //colorSetList.Add(colorSet);
+            colorSet = new ColorSet("#A2A569", "#B5B787", "#C7C9A5", "#DADBC3", "#DADBC3", "#DADBC3", "Tan");
+            colorSetList.Add(colorSet);
 
             //colorSet = new ColorSet("#009CDE", "#33B0E5", "#66C4EB", "#99D7F2", "#99D7F2", "#99D7F2", "Blue");
             //colorSetList.Add(colorSet);

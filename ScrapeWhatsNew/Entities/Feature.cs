@@ -14,10 +14,13 @@ namespace ScrapeWhatsNew
 
         public string Name { get; set; }
 
-        public Feature(string _featureDetails, string _businessValue, string _url, string _name)
+        public List<Header> HeaderList { get; set; }
+
+        public Feature(string _featureDetails, string _businessValue, string _url, string _name, List<Header> _headerList)
         {
             FeatureDetails = ProcessReleaseWave.CleanInput(_featureDetails);
             BusinessValue = ProcessReleaseWave.CleanInput(_businessValue);
+            HeaderList = _headerList;
             URL = _url;
             Name = ProcessReleaseWave.CleanInput(_name.Replace(",", ""));
         }

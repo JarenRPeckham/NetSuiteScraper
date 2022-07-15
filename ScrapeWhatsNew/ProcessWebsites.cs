@@ -466,7 +466,7 @@ namespace ScrapeWhatsNew
                    @"/html/body/div[2]/div/section/div/div[1]/main/p[2]"
                     ).First();
                 //TODODOODODOODO
-                feature = new Feature(ProcessWebsites.CleanInput(featureDetails.InnerText), ProcessWebsites.CleanInput(businessValue.InnerText), _url, _featureName);
+                //feature = new Feature(ProcessWebsites.CleanInput(featureDetails.InnerText), ProcessWebsites.CleanInput(businessValue.InnerText), _url, _featureName,);
             }
             catch (Exception ex)
             {
