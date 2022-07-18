@@ -12,11 +12,6 @@ namespace ScrapeWhatsNew
 
         public List<Feature> FeatureList { get; set; }
 
-        public Group()
-        {
-
-        }
-
         public Group(string _name, string _url, List<Feature> _featureList)
         {
             Name = ProcessReleaseWave.CleanInput(_name.Replace(",", ""));
