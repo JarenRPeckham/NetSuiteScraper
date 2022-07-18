@@ -1,0 +1,466 @@
+NodeName,Recommendation,UpgradeType,FoodAndBeverage,Retail,Industrials,LifeSciences,PublicSector,HealthCare,NonProfit,BusinessAndProfessionalServices,GroupNode
+FS,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· Accounting,G,x,x,x,x,x,x,x,x,x,Yes
+Accounting,G,x,x,x,x,x,x,x,x,x,Yes
+Accounting Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteApprovals Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteApprovals Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Enhancements to Fixed Assets Management (FAM) Diagnostics Portlet,G,x,x,x,x,x,x,x,x,x,Yes
+Budget Transaction Consumed Amount Saved Search Update,G,x,x,x,x,x,x,x,x,x,Yes
+Labor Expense Allocation Now Available in SuiteApp Marketplace,G,x,x,x,x,x,x,x,x,x,Yes
+Support for SuitePeople U.S. Payroll in Labor Expense Allocation,G,x,x,x,x,x,x,x,x,x,Yes
+Accounting Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Accounting Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Online Donations Now Available in SuiteApp Marketplace,G,x,x,x,x,x,x,x,x,x,Yes
+Online Donations Now Available in SuiteApp Marketplace,G,x,x,x,x,x,x,x,x,x,Yes
+Custom Segments Update in Labor Expense Allocation Preferences,G,x,x,x,x,x,x,x,x,x,Yes
+Accounting Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Accounting Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Accounting Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Accounting Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Accounting Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Advanced Localization Features Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Advanced Localization Features Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Australia Payment Times Report,G,x,x,x,x,x,x,x,x,x,Yes
+ANZ Localization Preferences and Supplier List Updates,G,x,x,x,x,x,x,x,x,x,Yes
+Belgium Localization Tax Reports Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Belgium Localization Now Available in SuiteApp Marketplace,G,x,x,x,x,x,x,x,x,x,Yes
+China Localization Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Contra Account Sheet,G,x,x,x,x,x,x,x,x,x,Yes
+Country-Specific Reports Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Germany Localization Now Available,G,x,x,x,x,x,x,x,x,x,Yes
+India Localization SuiteTax Engine Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Ireland Localization Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Japan Localization Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Mexico Foreign Trade,G,x,x,x,x,x,x,x,x,x,Yes
+Netherlands Localization Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Netherlands VAT and WKR Reports Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Norway Tax Reports Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Philippines Invoicing Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Portugal Invoice Certification Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Sweden Tax Reports Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+United Kingdom Localization Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Accounting Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Accounting Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Accounting Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Accounting Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Accounting Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Accounting Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Accounting Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Accounting Testing,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· Account Setup and Maintenance,G,x,x,x,x,x,x,x,x,x,Yes
+Account Setup and Maintenance,G,x,x,x,x,x,x,x,x,x,Yes
+Account Setup and Maintenance Testing,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Upgrade Using Customer-Scheduled Maintenance,G,x,x,x,x,x,x,x,x,x,Yes
+Account Setup and Maintenance Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Record Pages Monitor Updates,G,x,x,x,x,x,x,x,x,x,Yes
+Record Pages Monitor Updates,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· Authentication,G,x,x,x,x,x,x,x,x,x,Yes
+Authentication,G,x,x,x,x,x,x,x,x,x,Yes
+Authentication Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Example OAuth Header,G,x,x,x,x,x,x,x,x,x,Yes
+Authentication Testing,G,x,x,x,x,x,x,x,x,x,Yes
+The Authorization Headers,G,x,x,x,x,x,x,x,x,x,Yes
+Create the Authorization Header,G,x,x,x,x,x,x,x,x,x,Yes
+Authentication Testing,G,x,x,x,x,x,x,x,x,x,Yes
+The Signature for Web Services and RESTlets,G,x,x,x,x,x,x,x,x,x,Yes
+Generate a Signature,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· Banking,G,x,x,x,x,x,x,x,x,x,Yes
+Banking,G,x,x,x,x,x,x,x,x,x,Yes
+Banking Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Cash 360 Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Cash 360 Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Support for SFTP Download Directory Using Absolute Path,G,x,x,x,x,x,x,x,x,x,Yes
+Cash 360 Now Available,G,x,x,x,x,x,x,x,x,x,Yes
+Banking Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Banking Testing,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· CSV Import,G,x,x,x,x,x,x,x,x,x,Yes
+CSV Import,G,x,x,x,x,x,x,x,x,x,Yes
+CSV Import Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Imported Employee Expense Import,G,x,x,x,x,x,x,x,x,x,Yes
+Newly Supported Record Types for CSV Import,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· Employee Management,G,x,x,x,x,x,x,x,x,x,Yes
+Employee Management,G,x,x,x,x,x,x,x,x,x,Yes
+Employee Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Employee Record Gender Field Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Employee Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Employee Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Employee Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Employee Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Employee Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Employee Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Employee Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· Globalization,G,x,x,x,x,x,x,x,x,x,Yes
+Globalization,G,x,x,x,x,x,x,x,x,x,Yes
+Paired Intercompany Transactions Enhancement,G,x,x,x,x,x,x,x,x,x,Yes
+Paired Intercompany Transactions Enhancement,G,x,x,x,x,x,x,x,x,x,Yes
+Paired Intercompany Transactions Enhancement,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· Inventory Management,G,x,x,x,x,x,x,x,x,x,Yes
+Inventory Management,G,x,x,x,x,x,x,x,x,x,Yes
+Inventory Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+New Supply Allocation Pop-up Window,G,x,x,x,x,x,x,x,x,x,Yes
+Inventory Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Inventory Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Inventory Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Inventory Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+New On-demand Inspection Queue Capability in Quality Management,G,x,x,x,x,x,x,x,x,x,Yes
+New On-demand Inspection Queue Capability in Quality Management,G,x,x,x,x,x,x,x,x,x,Yes
+Quality Management Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+SCM Mobile Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Inventory Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Inventory Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Inventory Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Inventory Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Inventory Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Inventory Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Inventory Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Inventory Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Inventory Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Inventory Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Inventory Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Inventory Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· Manufacturing,G,x,x,x,x,x,x,x,x,x,Yes
+Manufacturing,G,x,x,x,x,x,x,x,x,x,Yes
+Manufacturing Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Enhanced Usability for Scanner Flow in Manufacturing Mobile,G,x,x,x,x,x,x,x,x,x,Yes
+Enhanced Usability for Scanner Flow in Manufacturing Mobile,G,x,x,x,x,x,x,x,x,x,Yes
+FEFO Lot Assignments Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Lot Auto Numbering Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Static Route Management Enhancement,G,x,x,x,x,x,x,x,x,x,Yes
+Manufacturing Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Manufacturing Testing,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· Mobile,G,x,x,x,x,x,x,x,x,x,Yes
+Mobile,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite for iOS Record List Changes,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite for iOS Record List Changes,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite for iOS Record List Changes,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â·NetSuite Connector,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Connector,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Connector SuiteApp,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Connector SuiteApp,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Connector SuiteApp,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· Order Management,G,x,x,x,x,x,x,x,x,x,Yes
+Order Management,G,x,x,x,x,x,x,x,x,x,Yes
+Order Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Exclude February 29 When Prorating by Days or Months Preference,G,x,x,x,x,x,x,x,x,x,Yes
+Order Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Order Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Bulk Customer Payments,G,x,x,x,x,x,x,x,x,x,Yes
+Bulk Customer Payments,G,x,x,x,x,x,x,x,x,x,Yes
+Electronic Bank Payment Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Pack Station Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+SFTP Connector Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Order Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Order Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Order Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Order Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Localization Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Advanced Localization Features Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Australia Payment Times Report,G,x,x,x,x,x,x,x,x,x,Yes
+ANZ Localization Preferences and Supplier List Updates,G,x,x,x,x,x,x,x,x,x,Yes
+Belgium Localization Tax Reports Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Belgium Localization Now Available in SuiteApp Marketplace,G,x,x,x,x,x,x,x,x,x,Yes
+China Localization Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Contra Account Sheet,G,x,x,x,x,x,x,x,x,x,Yes
+Country-Specific Reports Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Germany Localization Now Available,G,x,x,x,x,x,x,x,x,x,Yes
+India Localization SuiteTax Engine Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Ireland Localization Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Japan Localization Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Mexico Foreign Trade,G,x,x,x,x,x,x,x,x,x,Yes
+Netherlands Localization Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Netherlands VAT and WKR Reports Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Norway Tax Reports Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Philippines Invoicing Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Portugal Invoice Certification Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Sweden Tax Reports Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+United Kingdom Localization Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Order Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Order Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Order Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Order Management Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Static Route Management Enhancement,G,x,x,x,x,x,x,x,x,x,Yes
+Enhanced Usability for Scanner Flow in Manufacturing Mobile,G,x,x,x,x,x,x,x,x,x,Yes
+FEFO Lot Assignments Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Lot Auto Numbering Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Static Route Management Enhancement,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· Projects,G,x,x,x,x,x,x,x,x,x,Yes
+Projects,G,x,x,x,x,x,x,x,x,x,Yes
+Projects Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Advanced Project Budgets Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Projects Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Projects Testing,G,x,x,x,x,x,x,x,x,x,Yes
+File Drag and Drop Enhancement,G,x,x,x,x,x,x,x,x,x,Yes
+File Drag and Drop Enhancement,G,x,x,x,x,x,x,x,x,x,Yes
+Invoice Presentation Template,G,x,x,x,x,x,x,x,x,x,Yes
+Project 360 Dashboard Now Available,G,x,x,x,x,x,x,x,x,x,Yes
+Projects Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Projects Testing,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· SuiteAnalytics,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteAnalytics,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteAnalytics Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Dataset Linking in the Workbook UI,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteAnalytics Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteAnalytics Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteAnalytics Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteAnalytics Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteAnalytics Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteAnalytics Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteAnalytics Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteScript Analytic API in Records Catalog,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteAnalytics Testing,G,x,x,x,x,x,x,x,x,x,Yes
+The Analytics Data Source and SuiteAnalytics Workbook,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteAnalytics Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteTalk REST Web Services Records Guide,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteAnalytics Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Connecting Using a Connection String,G,x,x,x,x,x,x,x,x,x,Yes
+Dataset Linking in the Workbook UI,G,x,x,x,x,x,x,x,x,x,Yes
+Static Data Model Now Available for NetSuite2.com Data Source,G,x,x,x,x,x,x,x,x,x,Yes
+Record Types for the Analytics Data Source,G,x,x,x,x,x,x,x,x,x,Yes
+Required Update of SuiteAnalytics Connect Drivers,G,x,x,x,x,x,x,x,x,x,Yes
+2022.1 Record Types for Connect,G,x,x,x,x,x,x,x,x,x,Yes
+Connect Browser No Longer Updated,G,x,x,x,x,x,x,x,x,x,Yes
+Custom Report Footer Filters Apply to Scheduled Reports and Reports Executed in the Background,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteAnalytics Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Downloading and Installing the ODBC Driver for Windows,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteAnalytics Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Downloading and Installing the ODBC Driver for Linux,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteAnalytics Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Configuring the ODBC Data Source on Linux,G,x,x,x,x,x,x,x,x,x,Yes
+Editing odbc.ini or odbc64.ini and Configuring the ODBC Data Source,G,x,x,x,x,x,x,x,x,x,Yes
+Adding an ODBC Data Source,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteAnalytics Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Authentication Using Server Certificates for ODBC,G,x,x,x,x,x,x,x,x,x,Yes
+Determining the Required Actions for your Driver and Operating System,G,x,x,x,x,x,x,x,x,x,Yes
+Adding the Required Security Certificates to the Certificates Store,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteAnalytics Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Connecting Using a Connection String,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteAnalytics Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Accessing the Connect Service Using a JDBC Driver,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteAnalytics Testing,G,x,x,x,x,x,x,x,x,x,Yes
+JDBC Connection Properties,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteAnalytics Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Determining Your Connect Driver Version,G,x,x,x,x,x,x,x,x,x,Yes
+ODBC and ADO.NET Drivers on Windows,G,x,x,x,x,x,x,x,x,x,Yes
+JDBC Drivers on Windows,G,x,x,x,x,x,x,x,x,x,Yes
+ODBC Drivers on Linux,G,x,x,x,x,x,x,x,x,x,Yes
+JDBC Drivers on Linux,G,x,x,x,x,x,x,x,x,x,Yes
+OS X,G,x,x,x,x,x,x,x,x,x,Yes
+Verifying the SHA256 checksum on Windows,G,x,x,x,x,x,x,x,x,x,Yes
+Verifying the SHA256 checksum on Linux or OS X,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· SuiteApp Distribution,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteApp Distribution,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteApp Distribution Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Bundle Support During Release Phasing,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteApp Distribution Testing,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· SuiteCloud SDK,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteCloud SDK,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteCloud SDK Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteCloud CLI for Node.js Compatibility with Node.js 16,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteCloud SDK Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteCloud SDK Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteCloud SDK Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteCloud SDK Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteCloud SDK Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteCloud SDK Testing,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· SuiteScript,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteScript,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteScript Testing,G,x,x,x,x,x,x,x,x,x,Yes
+2022.1 SuiteScript Record Exposures,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteScript Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteScript Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Planning View,G,x,x,x,x,x,x,x,x,x,Yes
+2022.1 SuiteScript Record Exposures,G,x,x,x,x,x,x,x,x,x,Yes
+2022.1 SuiteScript Records Browser,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteScript Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Working with the SuiteScript Records Browser,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteScript Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteScript Records Guide,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· SuiteTalk Web Services Integration,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteTalk Web Services Integration,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteTalk Web Services Integration Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Fully Supported Record Types for REST Web Services in 2022.1,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteTalk Web Services Integration Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteTalk Web Services Integration Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteTalk Web Services Integration Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteTalk Web Services Integration Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteTalk Web Services Integration Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Assembly Item,G,x,x,x,x,x,x,x,x,x,Yes
+Fully Supported Record Types for REST Web Services in 2022.1,G,x,x,x,x,x,x,x,x,x,Yes
+Asynchronous Request Execution Is Generally Available,G,x,x,x,x,x,x,x,x,x,Yes
+SOAP Web Services Version 2022.1,G,x,x,x,x,x,x,x,x,x,Yes
+Araxis Merge Diff File for the 2022.1 Endpoint,G,x,x,x,x,x,x,x,x,x,Yes
+2022.1 SOAP Schema Browser,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteTalk Web Services Integration Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteTalk Web Services Integration Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteTalk Web Services Integration Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SOAP Schema Browser,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteTalk Web Services Integration Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteTalk SOAP Web Services Records Guide,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· Taxation,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Tax Reporting Framework Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteTax SuiteApps,G,x,x,x,x,x,x,x,x,x,Yes
+Legacy Tax SuiteApps,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Localization Tax Reports Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Advanced Localization Features Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Australia Payment Times Report,G,x,x,x,x,x,x,x,x,x,Yes
+ANZ Localization Preferences and Supplier List Updates,G,x,x,x,x,x,x,x,x,x,Yes
+Belgium Localization Tax Reports Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Belgium Localization Now Available in SuiteApp Marketplace,G,x,x,x,x,x,x,x,x,x,Yes
+China Localization Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Contra Account Sheet,G,x,x,x,x,x,x,x,x,x,Yes
+Country-Specific Reports Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Germany Localization Now Available,G,x,x,x,x,x,x,x,x,x,Yes
+India Localization SuiteTax Engine Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Ireland Localization Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Japan Localization Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Mexico Foreign Trade,G,x,x,x,x,x,x,x,x,x,Yes
+Netherlands Localization Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Netherlands VAT and WKR Reports Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Norway Tax Reports Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Philippines Invoicing Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Portugal Invoice Certification Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Sweden Tax Reports Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+United Kingdom Localization Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation Testing,G,x,x,x,x,x,x,x,x,x,Yes
+NetSuite Â· User Interface,G,x,x,x,x,x,x,x,x,x,Yes
+User Interface,G,x,x,x,x,x,x,x,x,x,Yes
+Changes to the Custom Rich Text Editor Field,G,x,x,x,x,x,x,x,x,x,Yes
+Changes to the Custom Rich Text Editor Field,G,x,x,x,x,x,x,x,x,x,Yes
+Changes to the Custom Rich Text Editor Field,G,x,x,x,x,x,x,x,x,x,Yes
+Commerce Â· Commerce Sales and Marketing,G,x,x,x,x,x,x,x,x,x,Yes
+Commerce Sales and Marketing,G,x,x,x,x,x,x,x,x,x,Yes
+Commerce Sales and Marketing Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Commerce Marketing,G,x,x,x,x,x,x,x,x,x,Yes
+Commerce Sales and Marketing Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Commerce Â· SC/SCMA/SCA  SuiteCommerce Solutions,G,x,x,x,x,x,x,x,x,x,Yes
+SC/SCMA/SCA  SuiteCommerce Solutions,G,x,x,x,x,x,x,x,x,x,Yes
+SC/SCMA/SCA  SuiteCommerce Solutions Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SMT Areas Added to Base Theme,G,x,x,x,x,x,x,x,x,x,Yes
+SMT Areas Added to Base Theme,G,x,x,x,x,x,x,x,x,x,Yes
+Internet Explorer 11 No Longer Supported,G,x,x,x,x,x,x,x,x,x,Yes
+Configuration Properties Updates,G,x,x,x,x,x,x,x,x,x,Yes
+Node.js Requirement,G,x,x,x,x,x,x,x,x,x,Yes
+Third-Party Library Updates,G,x,x,x,x,x,x,x,x,x,Yes
+Issue Fixes,G,x,x,x,x,x,x,x,x,x,Yes
+SC/SCMA/SCA  SuiteCommerce Solutions Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SC/SCMA/SCA  SuiteCommerce Solutions Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SC/SCMA/SCA  SuiteCommerce Solutions Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SC/SCMA/SCA  SuiteCommerce Solutions Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SC/SCMA/SCA  SuiteCommerce Solutions Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SC/SCMA/SCA  SuiteCommerce Solutions Testing,G,x,x,x,x,x,x,x,x,x,Yes
+2022.1.2 Minor Release of SuiteCommerce SuiteCommerce MyAccount and SuiteCommerce Advanced,G,x,x,x,x,x,x,x,x,x,Yes
+2022.1.2 Minor Release of SuiteCommerce SuiteCommerce MyAccount and SuiteCommerce Advanced,G,x,x,x,x,x,x,x,x,x,Yes
+2022.1.1 Minor Release of SuiteCommerce SuiteCommerce MyAccount and SuiteCommerce Advanced,G,x,x,x,x,x,x,x,x,x,Yes
+SC/SCMA/SCA  SuiteCommerce Solutions Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Commerce Â· SuiteCommerce InStore,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteCommerce InStore,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteCommerce InStore Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Transaction Recovery,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteCommerce InStore Testing,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteApps Â· SuiteApps (Bundles) Released by NetSuite,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteApps (Bundles) Released by NetSuite,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteApps (Bundles) Released by NetSuite Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Accounting SuiteApps,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteApprovals Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Enhancements to Fixed Assets Management (FAM) Diagnostics Portlet,G,x,x,x,x,x,x,x,x,x,Yes
+Budget Transaction Consumed Amount Saved Search Update,G,x,x,x,x,x,x,x,x,x,Yes
+Labor Expense Allocation Now Available in SuiteApp Marketplace,G,x,x,x,x,x,x,x,x,x,Yes
+Support for SuitePeople U.S. Payroll in Labor Expense Allocation,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteApps (Bundles) Released by NetSuite Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Administration SuiteApps,G,x,x,x,x,x,x,x,x,x,Yes
+Record Pages Monitor Updates,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteApps (Bundles) Released by NetSuite Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Banking SuiteApps,G,x,x,x,x,x,x,x,x,x,Yes
+Cash 360 Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Support for SFTP Download Directory Using Absolute Path,G,x,x,x,x,x,x,x,x,x,Yes
+Cash 360 Now Available,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteApps (Bundles) Released by NetSuite Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Inventory Management SuiteApps,G,x,x,x,x,x,x,x,x,x,Yes
+New On-demand Inspection Queue Capability in Quality Management,G,x,x,x,x,x,x,x,x,x,Yes
+Quality Management Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+SCM Mobile Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteApps (Bundles) Released by NetSuite Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Localization SuiteApps,G,x,x,x,x,x,x,x,x,x,Yes
+Advanced Localization Features Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Australia Payment Times Report,G,x,x,x,x,x,x,x,x,x,Yes
+ANZ Localization Preferences and Supplier List Updates,G,x,x,x,x,x,x,x,x,x,Yes
+Belgium Localization Tax Reports Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Belgium Localization Now Available in SuiteApp Marketplace,G,x,x,x,x,x,x,x,x,x,Yes
+China Localization Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Contra Account Sheet,G,x,x,x,x,x,x,x,x,x,Yes
+Country-Specific Reports Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Germany Localization Now Available,G,x,x,x,x,x,x,x,x,x,Yes
+India Localization SuiteTax Engine Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Ireland Localization Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Japan Localization Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Mexico Foreign Trade,G,x,x,x,x,x,x,x,x,x,Yes
+Netherlands Localization Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Netherlands VAT and WKR Reports Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Norway Tax Reports Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Philippines Invoicing Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Portugal Invoice Certification Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Sweden Tax Reports Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+United Kingdom Localization Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteApps (Bundles) Released by NetSuite Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Manufacturing SuiteApps,G,x,x,x,x,x,x,x,x,x,Yes
+Enhanced Usability for Scanner Flow in Manufacturing Mobile,G,x,x,x,x,x,x,x,x,x,Yes
+FEFO Lot Assignments Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Lot Auto Numbering Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Static Route Management Enhancement,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteApps (Bundles) Released by NetSuite Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Non-Profit SuiteApps,G,x,x,x,x,x,x,x,x,x,Yes
+Online Donations Now Available in SuiteApp Marketplace,G,x,x,x,x,x,x,x,x,x,Yes
+Custom Segments Update in Labor Expense Allocation Preferences,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteApps (Bundles) Released by NetSuite Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Order Management SuiteApps,G,x,x,x,x,x,x,x,x,x,Yes
+Bulk Customer Payments,G,x,x,x,x,x,x,x,x,x,Yes
+Electronic Bank Payment Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+Pack Station Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+SFTP Connector Enhancements,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteApps (Bundles) Released by NetSuite Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Projects SuiteApps,G,x,x,x,x,x,x,x,x,x,Yes
+File Drag and Drop Enhancement,G,x,x,x,x,x,x,x,x,x,Yes
+Invoice Presentation Template,G,x,x,x,x,x,x,x,x,x,Yes
+Project 360 Dashboard Now Available,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteApps (Bundles) Released by NetSuite Testing,G,x,x,x,x,x,x,x,x,x,Yes
+Taxation SuiteApps,G,x,x,x,x,x,x,x,x,x,Yes
+SuiteTax SuiteApps,G,x,x,x,x,x,x,x,x,x,Yes
+Legacy Tax SuiteApps,G,x,x,x,x,x,x,x,x,x,Yes

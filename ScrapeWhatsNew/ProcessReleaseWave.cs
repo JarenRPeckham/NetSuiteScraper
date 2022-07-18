@@ -11,11 +11,10 @@ namespace ScrapeWhatsNew
 {
     public class ProcessReleaseWave
     {
-        //TODO
+        //Base url shows the url that will be built on to create the link to each page
         const string baseURL = "https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html"; //"https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html";
         const string releaseWaveName = "2022 Wave 1";//"2021 Wave 2";
         string releaseWaveURL = "";
-        //const string homepage = baseURL + "get-started/whats-new-home-page";
         const string docsMicrosoftBaseURL = "https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/";
         const string topHomePage = "https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_N3944673.html";
         public List<ColorSet> colorSetList = new List<ColorSet>();
@@ -33,7 +32,7 @@ namespace ScrapeWhatsNew
 
             releaseWave.AreaList = GetAreaList(releaseWave.Url);
 
-            ////TODO?
+            //Creates the filename for each needed portion of sunburst
             string fileName = @"NetSuiteWhatsNew2022.csv";
             string descriptionFileName = @"NetSuiteWhatsNewDescriptionData2022.csv";
             string userAddedFileName = @"NetSuiteWhatsNewUserAddedData2022.csv";
@@ -44,9 +43,11 @@ namespace ScrapeWhatsNew
 
             var powerWheelRowsUnordered = ConvertToPowerWheelRows(releaseWave);
 
+            //orders the rows based on their Ring0 value
             var powerWheelRows = powerWheelRowsUnordered.OrderBy(o => o.Ring0).ToList(); //reorder powerwheel rows by ring0.
             powerWheelRows = ApplyColors(powerWheelRows);
 
+            //create a csv out of the rows
             var csvString = PowerWheelRow.GetCSVString(powerWheelRows);
             WriteFile(csvString, fileName);
 
@@ -75,11 +76,6 @@ namespace ScrapeWhatsNew
             return releaseWave;
         }
 
-        /// <summary>
-        /// Use the descriptionRow list, which has one row per node, to create a similar list but with blank values
-        /// for use in the MicrosoftWhatsNewUserAddedData file
-        /// </summary>
-        /// <returns></returns>
         public void CreateUserAddedRows()
         {
             foreach (var descriptionRow in descriptionRows)
@@ -101,29 +97,26 @@ namespace ScrapeWhatsNew
 
         public string GetParentAreaName(string _areaName)
         {
+            //find the parent name for each of the areas for easier grouping
             string parentAreaName = _areaName;
             switch (_areaName)
             {
-                //TODO
                 case "Account Setup and Maintenance":
                 case "Authentication":
                 case "CSV Import":
                 case "NetSuite Connector":
                 case "User Interface":
-                case "SuiteScript":
                 case "Taxation":
-                    parentAreaName = "CE";
+                    parentAreaName = "Tax";
                     break;
 
-                //case "Accounting":
-                //    parentAreaName = "Acc";
-                //    break;
 
                 case "Banking":
                 case "Commerce":
                 case "Commerce Sales and Marketing":
                 case "SuiteCommerce InStore":
                 case "Manufacturing":
+                case "Accounting":
                     parentAreaName = "FS";
                     break;
 
@@ -133,7 +126,8 @@ namespace ScrapeWhatsNew
                 case "Projects":
                 case "SuiteAnalytics":
                 case "SuiteTalk Web Services Integration":
-                    parentAreaName = "BC";
+                case "SuiteScript":
+                    parentAreaName = "MS";
                     break;
 
                 case "Globalization":
@@ -141,21 +135,13 @@ namespace ScrapeWhatsNew
                 case "SuiteApp Distribution":
                 case "SuiteApps (Bundles) Released by NetSuite":
                 case "SuiteCloud SDK":
-                case "Accounting":
-                    parentAreaName = "Other";
+                parentAreaName = "SA";
                     break;
 
-                //case "Taxation":
-                //    parentAreaName = "Tax";
-                //    break;
 
                 default:
                     parentAreaName = "FS";
                     break;
-
-                //default:
-                //    parentAreaName = _areaName;
-                //    break;
 
             }
             return parentAreaName; 
@@ -163,6 +149,7 @@ namespace ScrapeWhatsNew
 
         public string GetParentAreaFriendlyName(string _parentAreaName)
         {
+            //set the easier to read name for the hovering view
             string parentFriendlyName = "";
             switch (_parentAreaName)
             {
@@ -170,24 +157,16 @@ namespace ScrapeWhatsNew
                     parentFriendlyName = "Finance and Operations";
                     break;
 
-                //case "Acc":
-                //    parentFriendlyName = "Accounting";
-                //    break;
-
-                case "CE":
-                    parentFriendlyName = "Customer Engagement";
+                case "Tax":
+                    parentFriendlyName = "Taxation and User";
                     break;
 
-                //case "Tax":
-                //    parentFriendlyName = "Taxation";
-                //    break;
-
-                case "BC":
-                    parentFriendlyName = "Business Central";
+                case "MS":
+                    parentFriendlyName = "Management Services";
                     break;
 
-                case "Other":
-                    parentFriendlyName = "Other";
+                case "SA":
+                    parentFriendlyName = "SuiteApps";
                     break;
 
             }
@@ -222,7 +201,6 @@ namespace ScrapeWhatsNew
                 { 
                     row.Color = colorSet.colorName;
                 }
-                //TODO?
                 row.color = colorSet.color;
                 row.color1 = colorSet.color1;
                 row.color2 = colorSet.color2;
@@ -239,7 +217,7 @@ namespace ScrapeWhatsNew
         public List<PowerWheelRow> ConvertToPowerWheelRows(ReleaseWave _releaseWave)
         {
             List<PowerWheelRow> powerWheelRows = new List<PowerWheelRow>();
-
+            //need to go through every level and set the description
             foreach (var area in _releaseWave.AreaList)
             {
                 SetDescriptionDataForAreaParent(GetParentAreaName(area.Name), _releaseWave, area);
@@ -253,6 +231,7 @@ namespace ScrapeWhatsNew
                         SetDescriptionDataForGroup(_releaseWave, area, product, group);
                         foreach (var feature in group.FeatureList)
                         {
+                            //feature can be null if it is a copy of another page
                             if(feature != null)
                             {
                                 SetDescriptionDataForFeature(_releaseWave, area, product, group, feature);
@@ -269,10 +248,6 @@ namespace ScrapeWhatsNew
 
                 }
 
-                //if (colorIndex < colorSetList.Count - 1)
-                //{
-                //    //colorIndex++; //Change color for each Area
-                //}
             }
 
             return powerWheelRows;
@@ -296,19 +271,15 @@ namespace ScrapeWhatsNew
                 groupName = _group.Name;
             }
             row.SubCategory = groupName;
-            //row.Group = groupName;
 
             row.FeatureType = "";
 
             if (_feature != null)
             {
-                //TODO
                 row.FeatureTitle = _feature.Name;
                 row.BusinessValue = _feature.BusinessValue;
                 row.FeatureDetails = _feature.FeatureDetails;
                 row.ReleaseWave = _releaseWave.Name;
-                //row.PublicPreview = _feature.PublicPreview;
-                //row.DateAvailable = _feature.GeneralAvailability;
             }
             else
             {
@@ -316,19 +287,14 @@ namespace ScrapeWhatsNew
                 row.BusinessValue = "";
                 row.FeatureDetails = "";
                 row.ReleaseWave = "";
-                //row.PublicPreview = "";
-                //row.DateAvailable = "";
             }
 
             if (_header != null)
             {
-                //TODO
                 row.HeaderTitle = _header.Name;
                 row.HeaderDetails = _header.HeaderDetails;
                 row.FeatureDetails = _feature.FeatureDetails;
                 row.ReleaseWave = _releaseWave.Name;
-                //row.PublicPreview = _feature.PublicPreview;
-                //row.DateAvailable = _feature.GeneralAvailability;
             }
             else
             {
@@ -336,11 +302,8 @@ namespace ScrapeWhatsNew
                 row.BusinessValue = "";
                 row.FeatureDetails = "";
                 row.ReleaseWave = "";
-                //row.PublicPreview = "";
-                //row.DateAvailable = "";
             }
 
-            //TODO?
             row.ImpactLevel = "";
             row.BusinessAndProfessionalServices = "";
             row.FoodAndBeverage = "";
@@ -422,7 +385,6 @@ namespace ScrapeWhatsNew
 
             if (descriptionRows.Where(x => x.NodeName == _parentName).FirstOrDefault() == null)
             {
-                //TODO?
                 descriptionRow.ParentNodeName = _parentName;
                 descriptionRow.NodeName = _parentName;
                 descriptionRow.Title = _parentName;
@@ -446,7 +408,6 @@ namespace ScrapeWhatsNew
         {
             DescriptionRow descriptionRow = new DescriptionRow();
 
-            //TODO?
             descriptionRow.ParentNodeName = GetParentAreaName(_area.Name);
             descriptionRow.NodeName = _area.Name;
             descriptionRow.Title = _area.Name;
@@ -470,7 +431,6 @@ namespace ScrapeWhatsNew
         {
             DescriptionRow descriptionRow = new DescriptionRow();
 
-            //TODO?
             descriptionRow.ParentNodeName = GetParentAreaName(_area.Name);
             descriptionRow.NodeName = _product.Name;
             descriptionRow.Title = _product.Name;
@@ -493,7 +453,6 @@ namespace ScrapeWhatsNew
         {
             DescriptionRow descriptionRow = new DescriptionRow();
 
-            //TODO?
             descriptionRow.ParentNodeName = GetParentAreaName(_area.Name);
             descriptionRow.NodeName = _group.Name;
             descriptionRow.Title = _group.Name;
@@ -522,20 +481,6 @@ namespace ScrapeWhatsNew
                 descriptionRow.NodeName = _feature.Name;
                 descriptionRow.Title = _feature.Name;
 
-                //TODO/UPDATE
-                //string businessValue = "";
-                //if (!String.IsNullOrEmpty(_feature.BusinessValue))
-                //{
-                //    businessValue = "<h2>Business Value</h2> <p>" + _feature.BusinessValue + "</p>";
-                //}
-
-                //string featureDetails = "";
-                //if (!String.IsNullOrEmpty(_feature.FeatureDetails))
-                //{
-                //    featureDetails = "<h2>Feature details</h2> <p>" + _feature.FeatureDetails + "</p>";
-                //}
-
-                //TODO?
                 descriptionRow.Description = _feature.Name;
                 descriptionRow.ContactName = "";
                 descriptionRow.EmailAddress = "";
@@ -545,8 +490,6 @@ namespace ScrapeWhatsNew
                 descriptionRow.ExternalOnePage = _feature.URL;
                 descriptionRow.EmailSubject = "";
                 descriptionRow.HTMLResult = "";
-                //descriptionRow.PublicPreview = _feature.PublicPreview;
-                //descriptionRow.GeneralAvailability = _feature.GeneralAvailability;
                 descriptionRow.BusinessValue = _feature.BusinessValue;
                 descriptionRow.FeatureDetails = _feature.FeatureDetails;
 
@@ -572,8 +515,6 @@ namespace ScrapeWhatsNew
             descriptionRow.ExternalOnePage = _header.URL;
             descriptionRow.EmailSubject = "";
             descriptionRow.HTMLResult = "";
-            //descriptionRow.PublicPreview = _feature.PublicPreview;
-            //descriptionRow.GeneralAvailability = _feature.GeneralAvailability;
             descriptionRow.HeaderDetails = _header.HeaderDetails;
             descriptionRow.BusinessValue = _feature.BusinessValue;
             descriptionRow.FeatureDetails = _feature.FeatureDetails;
@@ -592,41 +533,28 @@ namespace ScrapeWhatsNew
 
             try
             {
-                //TODO
-                ///html/body/main/div/div/div/article/div/h5[1]
-                //var body = doc.DocumentNode.SelectNodes(
-                //   @"/html/body/main/div/div/div/article/header/h1").First();
-
+                //grabs the broad view
                 var body = doc.DocumentNode.SelectNodes(
                     @"/html/body").First();
 
+                //splits it up by each of the h5 title tags
                 var tdList = body.SelectNodes("//h5");
                 var tdArray = tdList.ToArray();
 
                 for (int i = 0; i < tdArray.Count(); i++)
                 {
-                    //IDictionary<string, string> numberNames = new Dictionary<string, string>();
                     List<string> urls = new List<string>();
                     var areaNode = tdArray[i];
-                    //var name = areaNode.ChildNodes[1].InnerHtml;
-                    //var Thref = areaNode.ChildNodes[1].Attributes[0].Value;
-                    //var testingUrl = docsMicrosoftBaseURL + Thref;
                     if (areaNode != null
-                        //TODO
-                        //Find areas not needed in the same list
                         && areaNode.ChildNodes != null
                         && areaNode.ChildNodes.Count > 0
-                        //&& areaNode.InnerHtml != "In this article"
-                        //&& areaNode.InnerHtml != "Is this page helpful?"
-                        //&& areaNode.InnerHtml != "Industry accelerators"
-                        //&& areaNode.InnerHtml != "Microsoft Cloud For Industry"
-                        //&& areaNode.InnerHtml != "Microsoft Cloud for Industry Solutions"
                         ) //purposely exclude this node and everything in it.
                     {
                         if (showDebugMessages)
                         {
                             Console.WriteLine("Area: " + CleanInput(areaNode.InnerText));
                         }
+                        //create an area category with products inside
                         Area area = new Area(CleanInput(areaNode.InnerText), _releaseWaveUrl, GetProductList(areaNode,urls));
                         areaList.Add(area);
                     }
@@ -646,105 +574,20 @@ namespace ScrapeWhatsNew
         public List<Product> GetProductList(HtmlNode _areaNode,List<string> urls)
         {
             var productList = new List<Product>();
-            //use the _areaNode to find all of the product nodes, and add them to an list object.
-            //var web = new HtmlWeb();
-            //var doc = web.Load(_releaseWaveUrl);
 
             try
             {
-
-                //HtmlNodeCollection tdList = null;
-                ////var checkNode = _areaNode.NextSibling.NextSibling;
-                ////TODO
-                //if (_areaNode.Name == "p")  //checkNode is a 'paragraph' node.
-                //{
-                //    while (_areaNode.Name == "p") //loop through each paragraph as there may be more than one within a 'header' tag.
-                //    {
-                //        var node = _areaNode.FirstChild; //The first child should be an 'a' link node.
-                //        HtmlNode href = null;
-                //        string productName = "";
-                //        if (node.Name == "a") //wave 2 does not have a bullet point.
-                //        {
-                //            href = node;
-                //            productName = href.InnerText;
-                //        }
-                //        var name = _areaNode.ChildNodes[1].InnerHtml;
-                //        var Thref = _areaNode.ChildNodes[1].Attributes[0].Value;
-                //        var url = docsMicrosoftBaseURL + Thref;
-
-                //        //var url = releaseWaveURL + href.Attributes[0].Value;
-
-                //        if (showDebugMessages)
-                //        {
-                //            Console.WriteLine("    Product: " + productName);
-                //        }
-
-                //        Product product = new Product(productName, url, AltGetFeatureList(_areaNode, productName));
-                //        productList.Add(product);
-
-                //        _areaNode = _areaNode.NextSibling.NextSibling; //go to the next paragraph.  The first sibling is 'text', so we need to move two.
-                //    }
-                //}
-                //else if (_areaNode.Name == "ul")
-                //{
-                //    //TODO
-                //    var body = _areaNode.NextSibling.NextSibling; //this is the ul node
-                //    tdList = body.ChildNodes;
-
-                //    var tdArray = tdList.ToArray();
-
-                //    for (int i = 0; i < tdArray.Count(); i++)
-                //    {
-                //        var node = tdArray[i];
-                //        if (node != null
-                //            && node.ChildNodes != null
-                //            && node.ChildNodes.Count > 0
-                //            && (node.Name == "li"
-                //                || node.Name == "a"))
-
-                //        {
-                //            /*HtmlNode strongTag = null;
-                //            HtmlNode href = null;
-                //            string productName = "";
-                //            //TODO
-                //            if (node.Name == "li")  //wave 1 has a bullet point
-                //            {
-                //                strongTag = node.FirstChild;
-                //                productName = strongTag.InnerText;
-                //                href = strongTag.FirstChild;
-                //            }*/
-                //            /*
-                //            if (node.Name == "a") //wave 2 does not have a bullet point.
-                //            {
-                //                href = node;
-                //                productName = href.InnerText;
-                //            }
-                //            */
-                //            //var productName = _areaNode.ChildNodes[1].InnerHtml;
-                //            //var Thref = _areaNode.ChildNodes[1].Attributes[0].Value;
-                //            //var url = docsMicrosoftBaseURL + Thref;
-                //            var productName = node.ChildNodes[1].ChildNodes[1].InnerHtml;
-                //            var Thref = node.ChildNodes[1].ChildNodes[1].Attributes[0].Value;
-                //            var url = docsMicrosoftBaseURL + Thref;
-
-
-                //            //var url = releaseWaveURL + href.Attributes[0].Value;
-
-                //            if (showDebugMessages)
-                //            {
-                //                Console.WriteLine("    Product: " + productName);
-                //            }
-
-                //            Product product = new Product(productName, url, AltGetFeatureList(_areaNode, url));
-                //            productList.Add(product);
-                //        }
-                //    }
-                //}
+                //set up the information for the product value
                 var productName = _areaNode.ChildNodes[1].InnerHtml;
                 productName = CleanInput(productName);
                 var Thref = _areaNode.ChildNodes[1].Attributes[0].Value;
                 var url = docsMicrosoftBaseURL + Thref;
-                Console.WriteLine("        Product:  " + productName);
+
+                if (showDebugMessages)
+                {
+                    Console.WriteLine("        Product:  " + productName);
+                }
+                //move to group level without breaking down further (just set up the url)
                 Product product = new Product(productName, url, GetGroupList(url, productName, urls));
                 productList.Add(product);
 
@@ -768,10 +611,11 @@ namespace ScrapeWhatsNew
 
             try
             {
-                //TODO
+                //grab the body value
                 var body = doc.DocumentNode.SelectNodes(
                     @"/html/body").First();
 
+                //split up by p and h2 nodes seperately
                 var tdList = body.SelectNodes("//p");
                 var h2Nodes = body.SelectNodes("//h2");
                 var count = 0;
@@ -780,8 +624,10 @@ namespace ScrapeWhatsNew
                     {
                         if (tdList[j].ChildNodes.Count > 1)
                         {
+                        //for each p node check to see if it is a link that should be followed
                             if (tdList[j].ParentNode.Name == "li" && tdList[j].ChildNodes[1].Name == "a")
                             {
+                            //if here then a link has been followed and there is a page further to go to
                                 count++;
                                 var url = docsMicrosoftBaseURL + tdList[j].ChildNodes[1].Attributes[0].Value;
                                 Group group = new Group(_productName + " Testing", url, AltGetFeatureList(tdList[j], url, urls));
@@ -790,12 +636,14 @@ namespace ScrapeWhatsNew
                             }
                             else if (tdList[j].ChildNodes[1].Name == "a")
                             {
+                                //check if the inner portion is a link
                                 if (tdList[j].ParentNode.Name == "li")
                                 {
                                     count++;
                                     Group group = new Group(_productName + " Testing", plannedFeaturesURL.Split("#")[0], AltGetFeatureList(tdList[j], plannedFeaturesURL, urls));
                                     groupList.Add(group);
                                 }
+                                //check if inner portion is a link in a table
                                 else if (tdList[j].ParentNode.ParentNode.Name == "tr")
                                 {
                                     count++;
@@ -803,11 +651,15 @@ namespace ScrapeWhatsNew
                                     Group group = new Group(_productName + " Testing", plannedFeaturesURL.Split("#")[0], AltGetFeatureList(tdList[j], plannedFeaturesURL, urls));
                                     groupList.Add(group);
                                 }
-                                Console.WriteLine("      Group: "+_productName);
+                                if (showDebugMessages)
+                                {
+                                    Console.WriteLine("      Group: " + _productName);
+                                }
+                                
                             }
                         }
                     }
-                
+                //if no links were found just use that page for features
                 if(count == 0)
                 {
                     for (int z = 0; z < h2Nodes.Count; z++)
@@ -834,6 +686,7 @@ namespace ScrapeWhatsNew
 
             try
             {
+                //check if there are multiple nodes to split up or if just text
                 if (_tableNode.ChildNodes.Count > 1)
                 {
                     var body = _tableNode.ChildNodes[1];
@@ -849,34 +702,7 @@ namespace ScrapeWhatsNew
                     featureList.Add(feature);
                 }
 
-                //var tdArray = bodyChildren.ToArray();
-                //List<HtmlNode> trList = new List<HtmlNode>();
-                //Get tr's
-
-                //for (int j = 0; j < tdArray.Count(); j++)
-                //{
-                //    var node = tdArray[j];
-                //    if (node.Name == "tr")
-                //    {
-                //        trList.Add(node);
-                //    }
-                //}
-
-                //loop through each tr and get the feature information
-                //var trArray = trList.ToArray();
-
-                //for (int j = 0; j < trArray.Count(); j++)
-                //{
-
-                //    var node = trArray[j];
-                //    var td = node.ChildNodes[1];
-                //    var aNode = td.ChildNodes[0];
-                //    string featureName = aNode.InnerText;
-                //    string url = _productLineURL;
-
-                //    var feature = GetFeatureDetails(url, featureName);
-                //    featureList.Add(feature);
-                //}
+              
 
             }
             catch (Exception ex)
@@ -886,70 +712,7 @@ namespace ScrapeWhatsNew
             
             return featureList;
         }
-        //public List<Feature> GetFeatureList(HtmlNode _groupNode, string _productLineURL)
-        //{
-        //    var featureList = new List<Feature>();
-        //    //use the _areaNode to find all of the product nodes, and add them to an list object.
-        //    //var web = new HtmlWeb();
-        //    //var doc = web.Load(_releaseWaveUrl);
-
-        //    try
-        //    {
-        //        int counter = 0;
-
-        //        var table = _groupNode.NextSibling;
-        //        while (true)
-        //        {
-        //            if (table.Name == "table" || counter == 20)
-        //            {
-        //                break;
-        //            }
-        //            counter++;
-        //            table = table.NextSibling;
-        //        }
-
-        //        var body = table.ChildNodes[3];
-        //        var bodyChildren = body.ChildNodes;
-        //        var tdArray = bodyChildren.ToArray();
-        //        List<HtmlNode> trList = new List<HtmlNode>();
-        //        //Get tr's
-
-        //        for (int j = 0; j < tdArray.Count(); j++)
-        //        {
-        //            var node = tdArray[j];
-        //            if (node.Name == "tr")
-        //            {
-        //                trList.Add(node);
-        //            }
-
-        //        }
-        //        //loop through each tr and get the feature information
-
-        //        var trArray = trList.ToArray();
-
-        //        for (int j = 0; j < trArray.Count(); j++)
-        //        {
-        //            var node = trArray[j];
-        //            var td = node.ChildNodes[1];
-        //            var aNode = td.ChildNodes[0];
-        //            string featureName = aNode.InnerText;
-        //            string url = _productLineURL + aNode.Attributes[0].Value;
-
-        //            if (showDebugMessages)
-        //            {
-        //                Console.WriteLine("            Feature: " + featureName);
-        //            }
-
-        //            var feature = GetFeatureDetails(url, featureName);
-        //            featureList.Add(feature);
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.WriteLine("error: node not found in GetFeatureList: " + ex.Message);
-        //    }
-        //    return featureList;
-        //}
+        
 
         public Feature GetFeatureDetails(string _url, string _featureName, List<string> urls)
         {
@@ -958,12 +721,8 @@ namespace ScrapeWhatsNew
 
             var body = doc.DocumentNode.SelectNodes(
                     @"/html/body/article").First();
-            //var body = doc.DocumentNode.SelectNodes(
-            //        @"/html/body").First();
-
-            //var tdList = body.SelectNodes("//h5");
-            //var tdArray = tdList.ToArray();
             var div = body.SelectNodes("//div");
+            //split into each "div" node
             var tdArray = div.ToArray();
             var actualDiv = tdArray[1];
             Feature feature = null;
@@ -972,6 +731,8 @@ namespace ScrapeWhatsNew
             {
                 if (!urls.Contains(_url.Split("#")[0]))
                 {
+                    //check if this url has been scraped yet
+                    //if not then add to scraped list and create a new feature
                     _featureName = RemoveCountry(_featureName);
                     feature = new Feature("", "", _url.Split("#")[0], _featureName, GetHeaderList(actualDiv, _url));
                     Console.WriteLine("                Individual Feature: " + _featureName);
@@ -988,6 +749,7 @@ namespace ScrapeWhatsNew
 
         public String RemoveCountry(string c)
         {
+            //remove the starting country value in features
             c = c.Replace("Australia ", "");
             c = c.Replace("Belgium ", "");
             c = c.Replace("China ", "");
@@ -1015,11 +777,13 @@ namespace ScrapeWhatsNew
 
             var headerList = new List<Header>();
             var h2nodes = body.SelectNodes("//div");
+            //split up by div
             if (h2nodes.Count > 0)
             {
                 var startNode = h2nodes[2];
                 while (startNode != null)
                 {
+                    //as long as nodes exist continue to make new header objects
                     if (startNode.ChildNodes.Count > 1 && startNode.ChildNodes[1].Name == "h2")
                     {
                         var name = startNode.ChildNodes[1].InnerText;
@@ -1033,36 +797,7 @@ namespace ScrapeWhatsNew
             return headerList;
         }
 
-        //public string GetListValuesString(HtmlNode node,String result)
-        //{
-        //    while (node != null)
-        //    {
-        //        if (node!=null && node.ChildNodes[1].Name == "a")
-        //        {
-        //            //CONTINUE FROM HERE
-        //            //NEXT STEPS: Add for other options besides list and other options beside href value
-        //            result += "\t\u2022" + "<a href =\""+CleanInput(node.ChildNodes[1].Attributes[0].Value)+"\">" + CleanInput(node.InnerText)+"</a>" + "\n\n";
-        //        }
-        //        node = node.NextSibling.NextSibling;
-        //    }
-
-        //    return ProcessReleaseWave.CleanInput(result);
-        //}
-
-        //public string GetFeatureDetailsString(HtmlNode _featureDetailsNode)
-        //{
-        //    string result = "";
-        //    while (_featureDetailsNode != null && (_featureDetailsNode.Name != "h2" || _featureDetailsNode.Name != "div" || _featureDetailsNode.Name != "img"))
-        //    {
-        //        _featureDetailsNode = _featureDetailsNode.NextSibling;
-        //        if (_featureDetailsNode != null)
-        //        {
-        //            result += CleanInput(_featureDetailsNode.InnerText) + " ";
-        //        }
-
-        //    }
-        //    return ProcessReleaseWave.CleanInput(result);
-        //}
+        
 
 
 
@@ -1132,12 +867,9 @@ namespace ScrapeWhatsNew
             // Replace invalid characters with empty strings.
             try
             {
-                //string cleaned =  Regex.Replace(strIn, @"[^\w\.@-]", "",
 
-                //                     RegexOptions.None, TimeSpan.FromSeconds(1.5));
 
                 string cleaned = Regex.Replace(strIn, @"<[^>]+>|&nbsp;", "").Trim();
-                /*cleaned = Regex.Replace(cleaned, @"[^\u0020-\u007F]", String.Empty);*/
                 cleaned = cleaned.Replace(",", "");
 
                 cleaned = cleaned.Replace("\n", "").Replace("\r", "");

@@ -20,7 +20,7 @@ namespace ScrapeWhatsNew
         {
             FeatureDetails = ProcessReleaseWave.CleanInput(_featureDetails);
             BusinessValue = ProcessReleaseWave.CleanInput(_businessValue);
-            HeaderList = _headerList;
+            HeaderList = _headerList; //Added list for headers inside
             URL = _url;
             Name = ProcessReleaseWave.CleanInput(_name.Replace(",", ""));
         }
