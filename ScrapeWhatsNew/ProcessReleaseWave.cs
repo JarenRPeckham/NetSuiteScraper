@@ -253,13 +253,17 @@ namespace ScrapeWhatsNew
                         SetDescriptionDataForGroup(_releaseWave, area, product, group);
                         foreach (var feature in group.FeatureList)
                         {
-                            SetDescriptionDataForFeature(_releaseWave, area, product, group, feature);
-                            foreach (var header in feature.HeaderList)
+                            if(feature != null)
                             {
-                                SetDescriptionDataForHeader(_releaseWave, area, product, group, feature, header);
-                                powerWheelRows.Add(populatePowerWheelRow(_releaseWave, area, product, group, feature, header));
+                                SetDescriptionDataForFeature(_releaseWave, area, product, group, feature);
+                                foreach (var header in feature.HeaderList)
+                                {
+                                    SetDescriptionDataForHeader(_releaseWave, area, product, group, feature, header);
+                                    powerWheelRows.Add(populatePowerWheelRow(_releaseWave, area, product, group, feature, header));
 
+                                }
                             }
+                            
                         }
                     }
 
@@ -510,43 +514,46 @@ namespace ScrapeWhatsNew
 
         public void SetDescriptionDataForFeature(ReleaseWave _releaseWave, Area _area, Product _product, Group _group, Feature _feature)
         {
-            DescriptionRow descriptionRow = new DescriptionRow();
+            if(_feature != null)
+            {
+                DescriptionRow descriptionRow = new DescriptionRow();
 
-            descriptionRow.ParentNodeName = GetParentAreaName(_area.Name);
-            descriptionRow.NodeName = _feature.Name;
-            descriptionRow.Title = _feature.Name;
+                descriptionRow.ParentNodeName = GetParentAreaName(_area.Name);
+                descriptionRow.NodeName = _feature.Name;
+                descriptionRow.Title = _feature.Name;
 
-            //TODO/UPDATE
-            //string businessValue = "";
-            //if (!String.IsNullOrEmpty(_feature.BusinessValue))
-            //{
-            //    businessValue = "<h2>Business Value</h2> <p>" + _feature.BusinessValue + "</p>";
-            //}
+                //TODO/UPDATE
+                //string businessValue = "";
+                //if (!String.IsNullOrEmpty(_feature.BusinessValue))
+                //{
+                //    businessValue = "<h2>Business Value</h2> <p>" + _feature.BusinessValue + "</p>";
+                //}
 
-            //string featureDetails = "";
-            //if (!String.IsNullOrEmpty(_feature.FeatureDetails))
-            //{
-            //    featureDetails = "<h2>Feature details</h2> <p>" + _feature.FeatureDetails + "</p>";
-            //}
+                //string featureDetails = "";
+                //if (!String.IsNullOrEmpty(_feature.FeatureDetails))
+                //{
+                //    featureDetails = "<h2>Feature details</h2> <p>" + _feature.FeatureDetails + "</p>";
+                //}
 
-            //TODO?
-            descriptionRow.Description = _feature.Name;
-            descriptionRow.ContactName = "";
-            descriptionRow.EmailAddress = "";
-            descriptionRow.ImageFileName = "";
-            descriptionRow.ExternalURL = ""; //_feature.URL;
-            descriptionRow.InternalURL = "";
-            descriptionRow.ExternalOnePage = _feature.URL;
-            descriptionRow.EmailSubject = "";
-            descriptionRow.HTMLResult = "";
-            //descriptionRow.PublicPreview = _feature.PublicPreview;
-            //descriptionRow.GeneralAvailability = _feature.GeneralAvailability;
-            descriptionRow.BusinessValue = _feature.BusinessValue;
-            descriptionRow.FeatureDetails = _feature.FeatureDetails;
+                //TODO?
+                descriptionRow.Description = _feature.Name;
+                descriptionRow.ContactName = "";
+                descriptionRow.EmailAddress = "";
+                descriptionRow.ImageFileName = "";
+                descriptionRow.ExternalURL = ""; //_feature.URL;
+                descriptionRow.InternalURL = "";
+                descriptionRow.ExternalOnePage = _feature.URL;
+                descriptionRow.EmailSubject = "";
+                descriptionRow.HTMLResult = "";
+                //descriptionRow.PublicPreview = _feature.PublicPreview;
+                //descriptionRow.GeneralAvailability = _feature.GeneralAvailability;
+                descriptionRow.BusinessValue = _feature.BusinessValue;
+                descriptionRow.FeatureDetails = _feature.FeatureDetails;
 
-            descriptionRows.Add(descriptionRow);
+                descriptionRows.Add(descriptionRow);
 
-            excelRows.Add(populateExcelRow(descriptionRow.ParentNodeName, _releaseWave, _area, _product, _group, _feature,null, "No"));
+                excelRows.Add(populateExcelRow(descriptionRow.ParentNodeName, _releaseWave, _area, _product, _group, _feature, null, "No"));
+            }
         }
 
         public void SetDescriptionDataForHeader(ReleaseWave _releaseWave, Area _area, Product _product, Group _group, Feature _feature, Header _header)
@@ -598,6 +605,8 @@ namespace ScrapeWhatsNew
 
                 for (int i = 0; i < tdArray.Count(); i++)
                 {
+                    //IDictionary<string, string> numberNames = new Dictionary<string, string>();
+                    List<string> urls = new List<string>();
                     var areaNode = tdArray[i];
                     //var name = areaNode.ChildNodes[1].InnerHtml;
                     //var Thref = areaNode.ChildNodes[1].Attributes[0].Value;
@@ -616,9 +625,9 @@ namespace ScrapeWhatsNew
                     {
                         if (showDebugMessages)
                         {
-                            Console.WriteLine("Area: " + areaNode.InnerText);
+                            Console.WriteLine("Area: " + CleanInput(areaNode.InnerText));
                         }
-                        Area area = new Area(areaNode.InnerText, _releaseWaveUrl, GetProductList(areaNode));
+                        Area area = new Area(CleanInput(areaNode.InnerText), _releaseWaveUrl, GetProductList(areaNode,urls));
                         areaList.Add(area);
                     }
                 }
@@ -634,7 +643,7 @@ namespace ScrapeWhatsNew
 
 
 
-        public List<Product> GetProductList(HtmlNode _areaNode)
+        public List<Product> GetProductList(HtmlNode _areaNode,List<string> urls)
         {
             var productList = new List<Product>();
             //use the _areaNode to find all of the product nodes, and add them to an list object.
@@ -732,10 +741,11 @@ namespace ScrapeWhatsNew
                 //    }
                 //}
                 var productName = _areaNode.ChildNodes[1].InnerHtml;
+                productName = CleanInput(productName);
                 var Thref = _areaNode.ChildNodes[1].Attributes[0].Value;
                 var url = docsMicrosoftBaseURL + Thref;
                 Console.WriteLine("        Product:  " + productName);
-                Product product = new Product(productName, url, GetGroupList(url, productName));
+                Product product = new Product(productName, url, GetGroupList(url, productName, urls));
                 productList.Add(product);
 
             }
@@ -747,7 +757,7 @@ namespace ScrapeWhatsNew
             return productList;
         }
 
-        public List<Group> GetGroupList(string _productLineURL, string _productName)
+        public List<Group> GetGroupList(string _productLineURL, string _productName, List<string> urls)
         {
             _productName = CleanInput(_productName);
             var plannedFeaturesURL = _productLineURL;
@@ -774,7 +784,7 @@ namespace ScrapeWhatsNew
                             {
                                 count++;
                                 var url = docsMicrosoftBaseURL + tdList[j].ChildNodes[1].Attributes[0].Value;
-                                Group group = new Group(_productName + " Testing", url, AltGetFeatureList(tdList[j], url));
+                                Group group = new Group(_productName + " Testing", url, AltGetFeatureList(tdList[j], url, urls));
                                 groupList.Add(group);
 
                             }
@@ -783,14 +793,14 @@ namespace ScrapeWhatsNew
                                 if (tdList[j].ParentNode.Name == "li")
                                 {
                                     count++;
-                                    Group group = new Group(_productName + " Testing", plannedFeaturesURL, AltGetFeatureList(tdList[j], plannedFeaturesURL));
+                                    Group group = new Group(_productName + " Testing", plannedFeaturesURL.Split("#")[0], AltGetFeatureList(tdList[j], plannedFeaturesURL, urls));
                                     groupList.Add(group);
                                 }
                                 else if (tdList[j].ParentNode.ParentNode.Name == "tr")
                                 {
                                     count++;
                                 
-                                    Group group = new Group(_productName + " Testing", plannedFeaturesURL, AltGetFeatureList(tdList[j], plannedFeaturesURL));
+                                    Group group = new Group(_productName + " Testing", plannedFeaturesURL.Split("#")[0], AltGetFeatureList(tdList[j], plannedFeaturesURL, urls));
                                     groupList.Add(group);
                                 }
                                 Console.WriteLine("      Group: "+_productName);
@@ -803,7 +813,7 @@ namespace ScrapeWhatsNew
                     for (int z = 0; z < h2Nodes.Count; z++)
                     {
                         var name = h2Nodes[z].InnerText;
-                        Group group = new Group(name, plannedFeaturesURL, AltGetFeatureList(h2Nodes[z], plannedFeaturesURL));
+                        Group group = new Group(name, plannedFeaturesURL.Split("#")[0], AltGetFeatureList(h2Nodes[z], plannedFeaturesURL, urls));
                         groupList.Add(group);
                     }
                 }    
@@ -812,11 +822,13 @@ namespace ScrapeWhatsNew
             {
                 Console.WriteLine("error: node not found in GetGroupList: " + ex.Message);
             }
-            return groupList;
+
+            var bar = groupList.GroupBy(x => x.Url).Select(x => x.First()).ToList();
+            return bar;
         }
 
 
-        public List<Feature> AltGetFeatureList(HtmlNode _tableNode, string _productLineURL)
+        public List<Feature> AltGetFeatureList(HtmlNode _tableNode, string _productLineURL, List<string> urls)
         {
             var featureList = new List<Feature>();
 
@@ -826,14 +838,14 @@ namespace ScrapeWhatsNew
                 {
                     var body = _tableNode.ChildNodes[1];
                     var name = body.InnerHtml;
-                    var feature = GetFeatureDetails(_productLineURL, name);
+                    var feature = GetFeatureDetails(_productLineURL, name, urls);
                     featureList.Add(feature);
                 }
                 else
                 {
                     var body = _tableNode.ChildNodes[0];
                     var name = body.InnerHtml;
-                    var feature = GetFeatureDetails(_productLineURL, name);
+                    var feature = GetFeatureDetails(_productLineURL, name, urls);
                     featureList.Add(feature);
                 }
 
@@ -871,6 +883,7 @@ namespace ScrapeWhatsNew
             {
                 Console.WriteLine("error: node not found in AltGetFeaturesList: " + ex.Message);
             }
+            
             return featureList;
         }
         //public List<Feature> GetFeatureList(HtmlNode _groupNode, string _productLineURL)
@@ -938,7 +951,7 @@ namespace ScrapeWhatsNew
         //    return featureList;
         //}
 
-        public Feature GetFeatureDetails(string _url, string _featureName)
+        public Feature GetFeatureDetails(string _url, string _featureName, List<string> urls)
         {
             var web = new HtmlWeb();
             var doc = web.Load(_url);
@@ -957,8 +970,13 @@ namespace ScrapeWhatsNew
 
             try
             {
-                feature = new Feature("", "", _url, _featureName,GetHeaderList(actualDiv,_url));
-                Console.WriteLine("                     Individual Feature: " + _featureName);
+                if (!urls.Contains(_url.Split("#")[0]))
+                {
+                    _featureName = RemoveCountry(_featureName);
+                    feature = new Feature("", "", _url.Split("#")[0], _featureName, GetHeaderList(actualDiv, _url));
+                    Console.WriteLine("                Individual Feature: " + _featureName);
+                    urls.Add(_url.Split("#")[0]);
+                }
             }
             catch (Exception ex)
             {
@@ -966,6 +984,25 @@ namespace ScrapeWhatsNew
             }
 
             return feature;
+        }
+
+        public String RemoveCountry(string c)
+        {
+            c = c.Replace("Australia ", "");
+            c = c.Replace("Belgium ", "");
+            c = c.Replace("China ", "");
+            c = c.Replace("Germany ", "");
+            c = c.Replace("India ", "");
+            c = c.Replace("Ireland ", "");
+            c = c.Replace("Japan ", "");
+            c = c.Replace("Mexico ", "");
+            c = c.Replace("Netherlands ", "");
+            c = c.Replace("Norway ", "");
+            c = c.Replace("Philippines ", "");
+            c = c.Replace("Portugal ", "");
+            c = c.Replace("Sweden ", "");
+            c = c.Replace("United Kingdom ", "");
+            return c;
         }
 
         public List<Header> GetHeaderList(HtmlNode _tableNode, string _featureLineURL)
@@ -978,7 +1015,7 @@ namespace ScrapeWhatsNew
 
             var headerList = new List<Header>();
             var h2nodes = body.SelectNodes("//div");
-            if(h2nodes.Count > 0)
+            if (h2nodes.Count > 0)
             {
                 var startNode = h2nodes[2];
                 while (startNode != null)
@@ -986,14 +1023,13 @@ namespace ScrapeWhatsNew
                     if (startNode.ChildNodes.Count > 1 && startNode.ChildNodes[1].Name == "h2")
                     {
                         var name = startNode.ChildNodes[1].InnerText;
-                        Header header = new Header(startNode.InnerHtml, _featureLineURL, name);
+                        Header header = new Header(CleanInput(startNode.InnerHtml), _featureLineURL.Split("#")[0], name);
                         headerList.Add(header);
                         Console.WriteLine("             Header: " + name);
                     }
                     startNode = startNode.NextSibling.NextSibling;
                 }
             }
-            //var bar = headerList.GroupBy(x => x.ParentNode).Select(x => x.First()).ToList();
             return headerList;
         }
 
@@ -1106,7 +1142,12 @@ namespace ScrapeWhatsNew
 
                 cleaned = cleaned.Replace("\n", "").Replace("\r", "");
                 cleaned = cleaned.Replace("Ã¢Â€Â“","-");
-                cleaned = cleaned.Replace("Ã¢Â€Â™","'");
+                cleaned = cleaned.Replace("Ã¢Â€Â”","-");
+                cleaned = cleaned.Replace("â", "");
+                cleaned = cleaned.Replace("??", "");
+                cleaned = cleaned.Replace("A·", "");
+                cleaned = cleaned.Replace("Ã¢Â€Â™","'"); 
+                cleaned = cleaned.Replace("\u0080\u0094", "");
                 return cleaned;
             }
 
