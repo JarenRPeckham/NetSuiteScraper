@@ -22,6 +22,7 @@ namespace ScrapeWhatsNew
         List<DescriptionRow> descriptionRows = new List<DescriptionRow>();
         List<UserAddedRow> userAddedRows = new List<UserAddedRow>();
         List<ExcelRow> excelRows = new List<ExcelRow>();
+        List<Feature> features = new List<Feature>();
         ReleaseWave releaseWave = null;
         bool showDebugMessages = true;
 
@@ -37,6 +38,8 @@ namespace ScrapeWhatsNew
             string descriptionFileName = @"NetSuiteWhatsNewDescriptionData2022.csv";
             string userAddedFileName = @"NetSuiteWhatsNewUserAddedData2022.csv";
             string excelFileName = @"ReleaseWaveData2022.csv";
+
+            releaseWave = SetAreaListComplete(releaseWave);
 
             SetColorSetList();
             //AddDummyDescriptionRow();
@@ -73,6 +76,63 @@ namespace ScrapeWhatsNew
                 WriteFile(csvStringUserAddedData, excelFileName);
             }
 
+            return releaseWave;
+        }
+
+        //Hard Coded function ******** Needs to be changed for each version
+        public ReleaseWave SetAreaListComplete(ReleaseWave releaseWave)
+        {
+            //Hard Coded value for number of repeated groups
+            var counter = 4;
+
+           Feature test = null;
+            Feature test2 = null;
+            foreach (var area in releaseWave.AreaList)
+            {
+                foreach (var product in area.ProductList)
+                {
+                    foreach (var group in product.GroupList)
+                    {
+                        //checks each group to see if it contains a duplicate value with 20 leaf nodes
+                        //if it does then it overwrites the same test2 value to give only one of the same features
+                        if(group.FeatureList.Count() != 0)
+                        {
+                            Console.WriteLine("Count: " + group.FeatureList.Count());
+                            if (group.FeatureList[0].HeaderList.Count() == 20)
+                            {
+                                test = group.FeatureList[0];
+                                test2 = test;
+                            }
+                            //if (group.FeatureList.Where(s => s.HeaderList.Count() == 20).Count() > 0)
+                            //{
+                            //    test = group.FeatureList.Where(s => s.HeaderList.Count() == 20).ToList();
+                            //    test2 = test.ElementAt(0);
+                            //}
+
+
+
+                            //Count is also hardcoded for version
+                            //group.FeatureList.RemoveAll(s => s.HeaderList.Count() == 20);
+                            if (group.FeatureList[0].HeaderList.Count() == 20)
+                            {
+                                group.FeatureList.RemoveAt(0);
+                            }
+                            counter = counter - 1;
+                            Console.WriteLine("Removed");
+                        }
+                        
+                            
+                        List<Feature> temp = new List<Feature>();
+                        
+                    }
+                }
+            }
+            //adds back in one of the duplicate values making it so the wheel only has one value
+            if(test2 != null)
+            {
+                releaseWave.AreaList.First().ProductList.First().GroupList.First().FeatureList.Add(test2);
+                Console.WriteLine("testing");
+            }
             return releaseWave;
         }
 
@@ -540,10 +600,10 @@ namespace ScrapeWhatsNew
                 //splits it up by each of the h5 title tags
                 var tdList = body.SelectNodes("//h5");
                 var tdArray = tdList.ToArray();
+                    List<string> urls = new List<string>();
 
                 for (int i = 0; i < tdArray.Count(); i++)
                 {
-                    List<string> urls = new List<string>();
                     var areaNode = tdArray[i];
                     if (areaNode != null
                         && areaNode.ChildNodes != null
@@ -628,27 +688,40 @@ namespace ScrapeWhatsNew
                             if (tdList[j].ParentNode.Name == "li" && tdList[j].ChildNodes[1].Name == "a")
                             {
                             //if here then a link has been followed and there is a page further to go to
-                                count++;
-                                var url = docsMicrosoftBaseURL + tdList[j].ChildNodes[1].Attributes[0].Value;
-                                Group group = new Group(_productName + " Testing", url, AltGetFeatureList(tdList[j], url, urls));
-                                groupList.Add(group);
-
+                                
+                                
+                                    count++;
+                                    if (tdList[j].ChildNodes[1].Attributes[0].Value.Contains("section"))
+                                    {
+                                        var url = docsMicrosoftBaseURL + tdList[j].ChildNodes[1].Attributes[0].Value;
+                                        Group group = new Group(_productName + " Testing", url, AltGetFeatureList(tdList[j], url, urls));
+                                        groupList.Add(group);
+                                    }
+                                    else
+                                    {
+                                        var url = _productLineURL + tdList[j].ChildNodes[1].Attributes[0].Value;
+                                        Group group = new Group(_productName + " Testing", url, AltGetFeatureList(tdList[j], url, urls));
+                                        groupList.Add(group);
+                                    }
+                                
+                                
                             }
                             else if (tdList[j].ChildNodes[1].Name == "a")
                             {
-                                //check if the inner portion is a link
+                                //check if the inner portion is a list
                                 if (tdList[j].ParentNode.Name == "li")
                                 {
                                     count++;
-                                    Group group = new Group(_productName + " Testing", plannedFeaturesURL.Split("#")[0], AltGetFeatureList(tdList[j], plannedFeaturesURL, urls));
+                                    var url = docsMicrosoftBaseURL + tdList[j].ChildNodes[1].Attributes[0].Value;
+                                    Group group = new Group(_productName + " Testing", url, AltGetFeatureList(tdList[j], url, urls));
                                     groupList.Add(group);
                                 }
                                 //check if inner portion is a link in a table
                                 else if (tdList[j].ParentNode.ParentNode.Name == "tr")
                                 {
                                     count++;
-                                
-                                    Group group = new Group(_productName + " Testing", plannedFeaturesURL.Split("#")[0], AltGetFeatureList(tdList[j], plannedFeaturesURL, urls));
+                                    var url = docsMicrosoftBaseURL + tdList[j].ChildNodes[1].Attributes[0].Value;
+                                    Group group = new Group(_productName + " Testing", url, AltGetFeatureList(tdList[j], url, urls));
                                     groupList.Add(group);
                                 }
                                 if (showDebugMessages)
@@ -656,6 +729,12 @@ namespace ScrapeWhatsNew
                                     Console.WriteLine("      Group: " + _productName);
                                 }
                                 
+                            }
+                            else if (tdList[j].InnerText == "SuiteTax")
+                            {
+                                count++;
+                                var url = docsMicrosoftBaseURL + tdList[j+1].ChildNodes[1].Attributes[0].Value;
+                                Group group = new Group("SuiteTax", url, AltGetFeatureList(tdList[j+1], url, urls));
                             }
                         }
                     }
@@ -665,7 +744,8 @@ namespace ScrapeWhatsNew
                     for (int z = 0; z < h2Nodes.Count; z++)
                     {
                         var name = h2Nodes[z].InnerText;
-                        Group group = new Group(name, plannedFeaturesURL.Split("#")[0], AltGetFeatureList(h2Nodes[z], plannedFeaturesURL, urls));
+                        var url = docsMicrosoftBaseURL + "#" + h2Nodes[z].Id;
+                        Group group = new Group(name, url, AltGetFeatureList(h2Nodes[z], url, urls));
                         groupList.Add(group);
                     }
                 }    
@@ -729,15 +809,14 @@ namespace ScrapeWhatsNew
 
             try
             {
-                if (!urls.Contains(_url.Split("#")[0]))
-                {
+                
                     //check if this url has been scraped yet
                     //if not then add to scraped list and create a new feature
                     _featureName = RemoveCountry(_featureName);
                     feature = new Feature("", "", _url.Split("#")[0], _featureName, GetHeaderList(actualDiv, _url));
                     Console.WriteLine("                Individual Feature: " + _featureName);
-                    urls.Add(_url.Split("#")[0]);
-                }
+                    urls.Add(_url);
+                features.Add(feature);
             }
             catch (Exception ex)
             {
@@ -777,27 +856,79 @@ namespace ScrapeWhatsNew
 
             var headerList = new List<Header>();
             var h2nodes = body.SelectNodes("//div");
+            var counter = 0;
             //split up by div
+
             if (h2nodes.Count > 0)
             {
                 var startNode = h2nodes[2];
+
+
                 while (startNode != null)
                 {
                     //as long as nodes exist continue to make new header objects
                     if (startNode.ChildNodes.Count > 1 && startNode.ChildNodes[1].Name == "h2")
                     {
                         var name = startNode.ChildNodes[1].InnerText;
-                        Header header = new Header(CleanInput(startNode.InnerHtml), _featureLineURL.Split("#")[0], name);
+                        if (name != "Legacy Tax Suite Apps" || name != "SuiteTaxSuiteApps")
+                        {
+                            var url = _featureLineURL.Split("#")[0] + "#" + startNode.ChildNodes[1].Id;
+                            Header header = new Header(CleanInput(startNode.InnerHtml), url, name);
+                            headerList.Add(header);
+                            Console.WriteLine("             Header: " + name);
+                            counter++;
+                        }
+                    }
+                    
+
+                    startNode = startNode.NextSibling.NextSibling;
+                }
+
+                
+                //if (counter == 0)
+                //{
+                //    var body2 = doc.DocumentNode.SelectNodes(@"/html/body/article").First();
+                //    var h3nodes = body2.SelectNodes("//h3");
+                //    var h3Arr = h3nodes.ToArray();
+                //    HtmlNode start = null;
+                //    if (h3Arr.Count() > 0)
+                //    {
+                //        start = h3Arr[0];
+                //    }
+                //    while (start != null)
+                //    {
+                //        if (start.Name == "h3" && start.ChildNodes[1].InnerText != "Related Topics")
+                //        {
+                //            var name = start.ChildNodes[1].InnerText;
+                //            var url = _featureLineURL.Split("#")[0] + "#" + start.ChildNodes[1].Id;
+                //            Header header = new Header(CleanInput(start.InnerHtml), url, name);
+                //            headerList.Add(header);
+                //            counter++;
+                //        }
+                //        start=start.NextSibling.NextSibling;
+                //    }
+                //}
+
+                if (counter == 0)
+                {
+                    var h1nodes = body.SelectNodes(@"/html/body/article/header").First();
+
+                    if (h1nodes.ChildNodes[3].Name == "h1")
+                    {
+                        var name = h1nodes.ChildNodes[3].InnerText;
+                        var url = _featureLineURL;
+                        Header header = new Header(CleanInput(h1nodes.ChildNodes[3].InnerHtml), url, name);
                         headerList.Add(header);
                         Console.WriteLine("             Header: " + name);
                     }
-                    startNode = startNode.NextSibling.NextSibling;
+                    
                 }
             }
+
             return headerList;
         }
 
-        
+
 
 
 
