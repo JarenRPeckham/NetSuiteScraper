@@ -82,49 +82,53 @@ namespace ScrapeWhatsNew
         //Hard Coded function ******** Needs to be changed for each version
         public ReleaseWave SetAreaListComplete(ReleaseWave releaseWave)
         {
-            //Hard Coded value for number of repeated groups
-            var counter = 4;
 
            Feature test = null;
             Feature test2 = null;
+            List<String> groupsName = new List<String>();
+            
             foreach (var area in releaseWave.AreaList)
             {
                 foreach (var product in area.ProductList)
                 {
+                    List<Group> groups = new List<Group>();
                     foreach (var group in product.GroupList)
                     {
                         //checks each group to see if it contains a duplicate value with 20 leaf nodes
                         //if it does then it overwrites the same test2 value to give only one of the same features
                         if(group.FeatureList.Count() != 0)
                         {
-                            Console.WriteLine("Count: " + group.FeatureList.Count());
-                            if (group.FeatureList[0].HeaderList.Count() == 20)
-                            {
-                                test = group.FeatureList[0];
-                                test2 = test;
-                            }
-                            //if (group.FeatureList.Where(s => s.HeaderList.Count() == 20).Count() > 0)
+                            //if (group.FeatureList[0].HeaderList.Count() == 20)
                             //{
-                            //    test = group.FeatureList.Where(s => s.HeaderList.Count() == 20).ToList();
-                            //    test2 = test.ElementAt(0);
+                            //    test = group.FeatureList[0];
+                            //    test2 = test;
                             //}
 
+                            if (!groupsName.Contains(group.FeatureList[0].HeaderList[0].Name))
+                            {
+                                groupsName.Add(group.FeatureList[0].HeaderList[0].Name);
+                                groups.Add(group);
 
+                            }
+                            else
+                            {
+
+                                Console.WriteLine("Removed");
+                            }
+
+                            List<Header> headers = group.FeatureList[0].HeaderList.GroupBy(p => p.Name).Select(g => g.First()).ToList();
+                            group.FeatureList[0].HeaderList = headers;
 
                             //Count is also hardcoded for version
                             //group.FeatureList.RemoveAll(s => s.HeaderList.Count() == 20);
-                            if (group.FeatureList[0].HeaderList.Count() == 20)
-                            {
-                                group.FeatureList.RemoveAt(0);
-                            }
-                            counter = counter - 1;
-                            Console.WriteLine("Removed");
+                            //if (group.FeatureList[0].HeaderList.Count() == 20)
+                            //{
+                            //    group.FeatureList.RemoveAt(0);
+                            //}
+
                         }
-                        
-                            
-                        List<Feature> temp = new List<Feature>();
-                        
                     }
+                    product.GroupList = groups;
                 }
             }
             //adds back in one of the duplicate values making it so the wheel only has one value
@@ -870,10 +874,10 @@ namespace ScrapeWhatsNew
                     if (startNode.ChildNodes.Count > 1 && startNode.ChildNodes[1].Name == "h2")
                     {
                         var name = startNode.ChildNodes[1].InnerText;
-                        if (name != "Legacy Tax Suite Apps" || name != "SuiteTaxSuiteApps")
+                        if (name != "Legacy Tax Suite Apps" && name != "SuiteTaxSuiteApps")
                         {
                             var url = _featureLineURL.Split("#")[0] + "#" + startNode.ChildNodes[1].Id;
-                            Header header = new Header(CleanInput(startNode.InnerHtml), url, name);
+                            Header header = new Header(startNode.InnerHtml, url, name);
                             headerList.Add(header);
                             Console.WriteLine("             Header: " + name);
                             counter++;
