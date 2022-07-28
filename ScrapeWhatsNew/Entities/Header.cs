@@ -17,7 +17,7 @@ namespace ScrapeWhatsNew
         //Constructor for creating the header
         public Header(string _headerDetails, string _url, string _name)
         {
-            HeaderDetails = ProcessReleaseWave.CleanInput(_headerDetails);
+            HeaderDetails = _headerDetails;
             URL = _url;
             Name = ProcessReleaseWave.CleanInput(_name.Replace(",", ""));
         }

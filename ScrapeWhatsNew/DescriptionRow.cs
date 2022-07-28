@@ -17,22 +17,15 @@ namespace ScrapeWhatsNew
         public string ExternalOnePage { get; set; }
         public string EmailSubject { get; set; }
         public string HTMLResult { get; set; }
-        public string PublicPreview { get; set; }
-        public string GeneralAvailability { get; set; }
+       
 
-        public string BusinessValue {  get; set; }
-
-        public string FeatureDetails { get; set; }
+        
         public string HeaderDetails { get; set; }
 
         public string ParentNodeName { get; set; }
 
         public DescriptionRow()
         {
-            PublicPreview = "";
-            GeneralAvailability = "";
-            BusinessValue = "";
-            FeatureDetails = "";
             Description = "";
             HeaderDetails = "";
         }

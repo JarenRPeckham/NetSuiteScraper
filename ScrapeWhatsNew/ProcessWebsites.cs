@@ -243,7 +243,7 @@ namespace ScrapeWhatsNew
 
             descriptionRow.NodeName = _feature.Name;
             descriptionRow.Title = _feature.Name;
-            descriptionRow.Description = _feature.BusinessValue + " /r/n " + _feature.FeatureDetails;
+            //descriptionRow.Description = _feature.BusinessValue + " /r/n " + _feature.FeatureDetails;
             descriptionRow.ContactName = "";
             descriptionRow.EmailAddress = "";
             descriptionRow.ImageFileName = "";
@@ -465,7 +465,7 @@ namespace ScrapeWhatsNew
                 var featureDetails = doc.DocumentNode.SelectNodes(
                    @"/html/body/div[2]/div/section/div/div[1]/main/p[2]"
                     ).First();
-                //TODODOODODOODO
+                //TODO
                 //feature = new Feature(ProcessWebsites.CleanInput(featureDetails.InnerText), ProcessWebsites.CleanInput(businessValue.InnerText), _url, _featureName,);
             }
             catch (Exception ex)

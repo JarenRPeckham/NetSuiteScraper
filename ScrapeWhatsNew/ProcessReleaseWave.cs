@@ -83,7 +83,6 @@ namespace ScrapeWhatsNew
         public ReleaseWave SetAreaListComplete(ReleaseWave releaseWave)
         {
 
-           Feature test = null;
             Feature test2 = null;
             List<String> groupsName = new List<String>();
             
@@ -151,10 +150,7 @@ namespace ScrapeWhatsNew
                 //and are just used as parent grouping nodes in the powerWheel.
                 //Those rows won't have a business value.
                 ////Set the GroupNode to 'Yes' so we know which these are and we can filter them out in excel.
-                if (descriptionRow.BusinessValue == "") 
-                {
-                    userAddedRow.GroupNode = "Yes";
-                }
+                userAddedRow.GroupNode = "Yes";
                 userAddedRows.Add(userAddedRow);
             }
         }
@@ -340,16 +336,10 @@ namespace ScrapeWhatsNew
 
             if (_feature != null)
             {
-                row.FeatureTitle = _feature.Name;
-                row.BusinessValue = _feature.BusinessValue;
-                row.FeatureDetails = _feature.FeatureDetails;
                 row.ReleaseWave = _releaseWave.Name;
             }
             else
             {
-                row.FeatureTitle = "";
-                row.BusinessValue = "";
-                row.FeatureDetails = "";
                 row.ReleaseWave = "";
             }
 
@@ -357,14 +347,12 @@ namespace ScrapeWhatsNew
             {
                 row.HeaderTitle = _header.Name;
                 row.HeaderDetails = _header.HeaderDetails;
-                row.FeatureDetails = _feature.FeatureDetails;
                 row.ReleaseWave = _releaseWave.Name;
             }
             else
             {
-                row.FeatureTitle = "";
-                row.BusinessValue = "";
-                row.FeatureDetails = "";
+                row.HeaderDetails = "";
+                row.HeaderTitle = "";
                 row.ReleaseWave = "";
             }
 
@@ -554,8 +542,7 @@ namespace ScrapeWhatsNew
                 descriptionRow.ExternalOnePage = _feature.URL;
                 descriptionRow.EmailSubject = "";
                 descriptionRow.HTMLResult = "";
-                descriptionRow.BusinessValue = _feature.BusinessValue;
-                descriptionRow.FeatureDetails = _feature.FeatureDetails;
+                
 
                 descriptionRows.Add(descriptionRow);
 
@@ -580,8 +567,6 @@ namespace ScrapeWhatsNew
             descriptionRow.EmailSubject = "";
             descriptionRow.HTMLResult = "";
             descriptionRow.HeaderDetails = _header.HeaderDetails;
-            descriptionRow.BusinessValue = _feature.BusinessValue;
-            descriptionRow.FeatureDetails = _feature.FeatureDetails;
 
             descriptionRows.Add(descriptionRow);
 
@@ -748,7 +733,7 @@ namespace ScrapeWhatsNew
                     for (int z = 0; z < h2Nodes.Count; z++)
                     {
                         var name = h2Nodes[z].InnerText;
-                        var url = docsMicrosoftBaseURL + "#" + h2Nodes[z].Id;
+                        var url = _productLineURL + "#" + h2Nodes[z].Id;
                         Group group = new Group(name, url, AltGetFeatureList(h2Nodes[z], url, urls));
                         groupList.Add(group);
                     }
@@ -816,10 +801,10 @@ namespace ScrapeWhatsNew
                 
                     //check if this url has been scraped yet
                     //if not then add to scraped list and create a new feature
-                    _featureName = RemoveCountry(_featureName);
-                    feature = new Feature("", "", _url.Split("#")[0], _featureName, GetHeaderList(actualDiv, _url));
-                    Console.WriteLine("                Individual Feature: " + _featureName);
-                    urls.Add(_url);
+                _featureName = RemoveCountry(_featureName);
+                feature = new Feature(_url.Split("#")[0], _featureName, GetHeaderList(actualDiv, _url));
+                Console.WriteLine("                Individual Feature: " + _featureName);
+                urls.Add(_url);
                 features.Add(feature);
             }
             catch (Exception ex)
@@ -877,9 +862,9 @@ namespace ScrapeWhatsNew
                         if (name != "Legacy Tax Suite Apps" && name != "SuiteTaxSuiteApps")
                         {
                             var url = _featureLineURL.Split("#")[0] + "#" + startNode.ChildNodes[1].Id;
-                            Header header = new Header(startNode.InnerHtml, url, name);
+                            Header header = new Header(startNode.OuterHtml.Replace(name, "").Replace("<p>\r\n","<p>").Replace(",", "").Replace("<li>\r\n", "<li>").Replace("<ul>\r\n", "<ul>").Replace("\r\n","<br>"), url, name);
                             headerList.Add(header);
-                            Console.WriteLine("             Header: " + name);
+                            Console.WriteLine("                     Header: " + name);
                             counter++;
                         }
                     }
@@ -921,9 +906,9 @@ namespace ScrapeWhatsNew
                     {
                         var name = h1nodes.ChildNodes[3].InnerText;
                         var url = _featureLineURL;
-                        Header header = new Header(CleanInput(h1nodes.ChildNodes[3].InnerHtml), url, name);
+                        Header header = new Header(h1nodes.ChildNodes[3].OuterHtml.Replace(name,"").Replace(",", "").Replace("<li>\r\n", "<li>").Replace("<ul>\r\n", "<ul>").Replace("\r\n", "<br>"), url, name);
                         headerList.Add(header);
-                        Console.WriteLine("             Header: " + name);
+                        Console.WriteLine("                    Header: " + name);
                     }
                     
                 }
